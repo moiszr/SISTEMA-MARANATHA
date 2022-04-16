@@ -1,0 +1,12 @@
+C:\Users\moise\Desktop\SistemaMaranatha\Entidades\bin\Debug\Entidades.dll
+C:\Users\moise\Desktop\SistemaMaranatha\Entidades\bin\Debug\Entidades.pdb
+C:\Users\moise\Desktop\SistemaMaranatha\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\moise\Desktop\SistemaMaranatha\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\moise\Desktop\SistemaMaranatha\Entidades\obj\Debug\Entidades.dll
+C:\Users\moise\Desktop\SistemaMaranatha\Entidades\obj\Debug\Entidades.pdb
+D:\SistemaMaranatha\Entidades\bin\Debug\Entidades.dll
+D:\SistemaMaranatha\Entidades\bin\Debug\Entidades.pdb
+D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.dll
+D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.pdb
