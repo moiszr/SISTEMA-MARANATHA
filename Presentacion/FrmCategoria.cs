@@ -144,5 +144,30 @@ namespace Presentacion
                 MessageBox.Show("Seleccione la fila que desea eliminar");
             }    
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+            worksheet = workbook.Sheets[1];
+            worksheet.Name = "Categorias";
+
+            for (int i = 1; i < tblCategoria.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = tblCategoria.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < tblCategoria.Rows.Count; i++)
+            {
+                for (int j = 0; j < tblCategoria.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = tblCategoria.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            app.Visible = true;
+        }
     }
 }

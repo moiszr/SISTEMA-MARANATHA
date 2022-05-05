@@ -133,5 +133,30 @@ namespace Presentacion
             lblProductos.Text = entidades.TotalProductos;
             lblStock.Text = entidades.TotalStock;
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+            worksheet = workbook.Sheets[1];
+            worksheet.Name = "Productos";
+
+            for(int i = 1; i < TablaProductos.Columns.Count +1; i++)
+            {
+                worksheet.Cells[1, i] = TablaProductos.Columns[i - 1].HeaderText;
+            }
+
+            for(int i = 0; i < TablaProductos.Rows.Count; i++)
+            {
+                for(int j = 0; j < TablaProductos.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = TablaProductos.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            app.Visible = true;
+        }
     }
 }

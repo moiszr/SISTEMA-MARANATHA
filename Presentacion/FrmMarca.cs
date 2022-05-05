@@ -151,5 +151,30 @@ namespace Presentacion
         {
             Close();
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+            worksheet = workbook.Sheets[1];
+            worksheet.Name = "Productos";
+
+            for (int i = 1; i < tblMarca.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = tblMarca.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < tblMarca.Rows.Count; i++)
+            {
+                for (int j = 0; j < tblMarca.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = tblMarca.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            app.Visible = true;
+        }
     }
 }
