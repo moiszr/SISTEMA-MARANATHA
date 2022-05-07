@@ -46,6 +46,7 @@
     <Compile Include="E_Marca.cs" />
     <Compile Include="E_Productos.cs" />
     <Compile Include="E_Rol.cs" />
+    <Compile Include="E_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,7 +10,7 @@ using Entidades;
 
 namespace Negocio
 {
-    internal class N_Rol
+    public class N_Rol
     {
         D_Rol objMarca = new D_Rol();
 
