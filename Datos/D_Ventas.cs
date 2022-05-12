@@ -47,7 +47,7 @@ namespace Datos
             return Listar;
         }
 
-        public void InsertarUsuario(E_Ventas Ventas)
+        public void InsertarVentas(E_Ventas Ventas)
         {
             SqlCommand cmd = new SqlCommand("SP_VENTA", conn);
             cmd.CommandType = CommandType.StoredProcedure;

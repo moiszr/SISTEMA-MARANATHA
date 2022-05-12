@@ -16,10 +16,10 @@ namespace Datos
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar"].ConnectionString);
 
 
-        public List<E_Compras> ListaVenta(string buscar)
+        public List<E_Compras> ListaCompra(string buscar)
         {
             SqlDataReader reader = null;
-            SqlCommand cmd = new SqlCommand("SP_BUSCARCOMPRA", conn);
+            SqlCommand cmd = new SqlCommand("SP_BUSCAR_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
@@ -49,7 +49,7 @@ namespace Datos
             return Listar;
         }
 
-        public void InsertarUsuario(E_Compras Compras)
+        public void InsertarCompra(E_Compras Compras)
         {
             SqlCommand cmd = new SqlCommand("SP_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
