@@ -43,11 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="D_Categoria.cs" />
+    <Compile Include="D_Compras.cs" />
+    <Compile Include="D_Detalle_Compras.cs" />
+    <Compile Include="D_Detalle_Ventas.cs" />
     <Compile Include="D_Empleado.cs" />
     <Compile Include="D_Marca.cs" />
     <Compile Include="D_Productos.cs" />
     <Compile Include="D_Rol.cs" />
     <Compile Include="D_Usuario.cs" />
+    <Compile Include="D_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
