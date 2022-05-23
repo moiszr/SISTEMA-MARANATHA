@@ -17,7 +17,6 @@ namespace Entidades
         private int _idcategoria;
         private int _idmarca;
         private string buscar;
-
         private string totalCategoria;
         private string totalmarca;
         private string totalProductos;
@@ -32,7 +31,6 @@ namespace Entidades
         public int Idcategoria { get => _idcategoria; set => _idcategoria = value; }
         public int Idmarca { get => _idmarca; set => _idmarca = value; }
         public string Buscar { get => buscar; set => buscar = value; }
-
         public string TotalCategoria { get => totalCategoria; set => totalCategoria = value; }
         public string Totalmarca { get => totalmarca; set => totalmarca = value; }
         public string TotalProductos { get => totalProductos; set => totalProductos = value; }

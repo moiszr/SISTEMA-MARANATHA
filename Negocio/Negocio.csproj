@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="N_Credito.cs" />
+    <Compile Include="N_Garante.cs" />
+    <Compile Include="N_Pagos.cs" />
     <Compile Include="N_Ventas.cs" />
     <Compile Include="N_Categoria.cs" />
     <Compile Include="N_Compras.cs" />

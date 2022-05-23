@@ -12,7 +12,6 @@ namespace Entidades
         private string _rol;
     
         public int Idrol { get => _idrol; set => _idrol = value; }
-            
         public string Rol { get => _rol; set => _rol = value; }
 
 

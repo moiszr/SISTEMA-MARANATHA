@@ -16,15 +16,10 @@ namespace Entidades
 		private int _idproveedores;
 
 		public int Idcompra { get => _idcompra; set => _idcompra = value; }
-
 		public string Codigo { get => _codigo; set => _codigo = value; }
-
 		public DateTime Fecha { get => _fecha; set => _fecha = value; }
-
 		public Decimal Total { get => _total; set => _total = value; }
-
 		public int Idempleados { get => _idempleados; set => _idempleados = value; }
-
 		public int Idproveedores { get => _idproveedores; set => _idproveedores = value; }
 	}
 
