@@ -16,5 +16,12 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnNewCliente_Click(object sender, EventArgs e)
+        {
+            FrmMantenimientoClientes1 frm = new FrmMantenimientoClientes1();
+            frm.ShowDialog();
+            //frm.Update = false;
+        }
     }
 }

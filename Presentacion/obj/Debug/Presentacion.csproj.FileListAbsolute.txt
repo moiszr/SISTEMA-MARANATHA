@@ -48,7 +48,11 @@ D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmDashboard.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmProductos.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmClientes.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmCompras.resources
-D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacion.resources
-D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmProveedores.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmVentas.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmMantenimientoProductos.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmMantenimientoClientes1.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmMantenimientoClientes2.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmVentasDetalle.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacionRedito.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacionContado.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmPagos.resources

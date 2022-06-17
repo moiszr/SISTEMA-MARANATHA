@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bunifu.Framework.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,14 +28,15 @@ namespace Presentacion
 
         public void SeleccionBotones(Bunifu.Framework.UI.BunifuFlatButton sender)
         {
-            btnDashboard.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnFacturacion.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnProductos.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnVentas.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnCompras.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnClientes.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnProveedores.Textcolor = Color.FromArgb(180, 180, 180);;
-            btnLogout.Textcolor = Color.FromArgb(180, 180, 180);;
+            btnDashboard.Textcolor = Color.FromArgb(180, 180, 180);
+            btnFacturacionContado.Textcolor = Color.FromArgb(180, 180, 180);
+            btnFacturacionRedito.Textcolor = Color.FromArgb(180, 180, 180);
+            btnPagar.Textcolor = Color.FromArgb(180, 180, 180);
+            btnProductos.Textcolor = Color.FromArgb(180, 180, 180);
+            btnVentas.Textcolor = Color.FromArgb(180, 180, 180);
+            btnCompras.Textcolor = Color.FromArgb(180, 180, 180);
+            btnClientes.Textcolor = Color.FromArgb(180, 180, 180);
+            btnLogout.Textcolor = Color.FromArgb(180, 180, 180);
 
             sender.selected = true;
 
@@ -58,7 +60,6 @@ namespace Presentacion
             Wrapper.Tag = formHijo;
             formHijo.BringToFront();
             formHijo.Show();
-            
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -86,11 +87,25 @@ namespace Presentacion
             lblIdentificador.Text = "DASHBOARD";
         }
 
-        private void btnFacturacion_Click(object sender, EventArgs e)
+        private void btnFacturacionRedito_Click(object sender, EventArgs e)
         {
             SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
-            AbrirFormEnWrapper(new FrmFacturacion());
-            lblIdentificador.Text = "FACTURACIÓN";
+            AbrirFormEnWrapper(new FrmFacturacionRedito());
+            lblIdentificador.Text = "FACTURACIÓN RÉDITO";
+        }
+
+        private void btnFacturacionContado_Click(object sender, EventArgs e)
+        {
+            SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormEnWrapper(new FrmFacturacionContado());
+            lblIdentificador.Text = "FACTURACIÓN CONTADO";
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormEnWrapper(new FrmPagos());
+            lblIdentificador.Text = "PAGOS";
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -119,13 +134,6 @@ namespace Presentacion
             SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
             AbrirFormEnWrapper(new FrmClientes());
             lblIdentificador.Text = "CLIENTES";
-        }
-
-        private void btnProveedores_Click(object sender, EventArgs e)
-        {
-            SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
-            AbrirFormEnWrapper(new FrmProveedores());
-            lblIdentificador.Text = "PROVEEDOR";
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

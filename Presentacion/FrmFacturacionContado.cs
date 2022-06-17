@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FrmProveedores : Form
+    public partial class FrmFacturacionContado : Form
     {
-        public FrmProveedores()
+        public FrmFacturacionContado()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class FrmFacturacion
+    partial class FrmPagos
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 38);
+            this.label1.Location = new System.Drawing.Point(645, 438);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Este es el Formuladio de Facturacion";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Pagos";
             // 
-            // FrmFacturacion
+            // FrmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1650, 1000);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmFacturacion";
-            this.Text = "FrmFacturacion";
+            this.Name = "FrmPagos";
+            this.Text = "FrmPagos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

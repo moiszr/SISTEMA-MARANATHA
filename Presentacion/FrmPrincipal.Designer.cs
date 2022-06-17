@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.Sidebar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnProveedores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnVentas = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPagar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProductos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnFacturacion = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnFacturacionRedito = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnFacturacionContado = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -55,14 +57,16 @@
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(41)))));
+            this.Sidebar.Controls.Add(this.label1);
             this.Sidebar.Controls.Add(this.label4);
             this.Sidebar.Controls.Add(this.btnLogout);
-            this.Sidebar.Controls.Add(this.btnProveedores);
             this.Sidebar.Controls.Add(this.btnClientes);
             this.Sidebar.Controls.Add(this.btnCompras);
             this.Sidebar.Controls.Add(this.btnVentas);
+            this.Sidebar.Controls.Add(this.btnPagar);
             this.Sidebar.Controls.Add(this.btnProductos);
-            this.Sidebar.Controls.Add(this.btnFacturacion);
+            this.Sidebar.Controls.Add(this.btnFacturacionRedito);
+            this.Sidebar.Controls.Add(this.btnFacturacionContado);
             this.Sidebar.Controls.Add(this.btnDashboard);
             this.Sidebar.Controls.Add(this.label2);
             this.Sidebar.Controls.Add(this.pictureBox2);
@@ -73,12 +77,23 @@
             this.Sidebar.Size = new System.Drawing.Size(270, 940);
             this.Sidebar.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(47, 188);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Menu Facturación";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(47, 127);
+            this.label4.Location = new System.Drawing.Point(47, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 2;
@@ -121,42 +136,6 @@
             this.btnLogout.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnProveedores
-            // 
-            this.btnProveedores.Activecolor = System.Drawing.Color.Transparent;
-            this.btnProveedores.BackColor = System.Drawing.Color.Transparent;
-            this.btnProveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProveedores.BorderRadius = 7;
-            this.btnProveedores.ButtonText = "     Proveedores";
-            this.btnProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProveedores.DisabledColor = System.Drawing.Color.Gray;
-            this.btnProveedores.ForeColor = System.Drawing.Color.Gray;
-            this.btnProveedores.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnProveedores.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Iconimage")));
-            this.btnProveedores.Iconimage_right = null;
-            this.btnProveedores.Iconimage_right_Selected = null;
-            this.btnProveedores.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Iconimage_Selected")));
-            this.btnProveedores.IconMarginLeft = 25;
-            this.btnProveedores.IconMarginRight = 0;
-            this.btnProveedores.IconRightVisible = true;
-            this.btnProveedores.IconRightZoom = 0D;
-            this.btnProveedores.IconVisible = true;
-            this.btnProveedores.IconZoom = 55D;
-            this.btnProveedores.IsTab = true;
-            this.btnProveedores.Location = new System.Drawing.Point(23, 444);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnProveedores.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
-            this.btnProveedores.OnHoverTextColor = System.Drawing.Color.DarkGray;
-            this.btnProveedores.selected = false;
-            this.btnProveedores.Size = new System.Drawing.Size(220, 40);
-            this.btnProveedores.TabIndex = 0;
-            this.btnProveedores.Text = "     Proveedores";
-            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Textcolor = System.Drawing.Color.DarkGray;
-            this.btnProveedores.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
-            // 
             // btnClientes
             // 
             this.btnClientes.Activecolor = System.Drawing.Color.Transparent;
@@ -179,7 +158,7 @@
             this.btnClientes.IconVisible = true;
             this.btnClientes.IconZoom = 55D;
             this.btnClientes.IsTab = true;
-            this.btnClientes.Location = new System.Drawing.Point(23, 398);
+            this.btnClientes.Location = new System.Drawing.Point(23, 543);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Normalcolor = System.Drawing.Color.Transparent;
             this.btnClientes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
@@ -215,7 +194,7 @@
             this.btnCompras.IconVisible = true;
             this.btnCompras.IconZoom = 55D;
             this.btnCompras.IsTab = true;
-            this.btnCompras.Location = new System.Drawing.Point(23, 352);
+            this.btnCompras.Location = new System.Drawing.Point(23, 497);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Normalcolor = System.Drawing.Color.Transparent;
             this.btnCompras.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
@@ -251,7 +230,7 @@
             this.btnVentas.IconVisible = true;
             this.btnVentas.IconZoom = 55D;
             this.btnVentas.IsTab = true;
-            this.btnVentas.Location = new System.Drawing.Point(23, 306);
+            this.btnVentas.Location = new System.Drawing.Point(23, 451);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Normalcolor = System.Drawing.Color.Transparent;
             this.btnVentas.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
@@ -264,6 +243,42 @@
             this.btnVentas.Textcolor = System.Drawing.Color.DarkGray;
             this.btnVentas.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // btnPagar
+            // 
+            this.btnPagar.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPagar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPagar.BorderRadius = 7;
+            this.btnPagar.ButtonText = "     Pagos";
+            this.btnPagar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPagar.ForeColor = System.Drawing.Color.Gray;
+            this.btnPagar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPagar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPagar.Iconimage")));
+            this.btnPagar.Iconimage_right = null;
+            this.btnPagar.Iconimage_right_Selected = null;
+            this.btnPagar.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnPagar.Iconimage_Selected")));
+            this.btnPagar.IconMarginLeft = 25;
+            this.btnPagar.IconMarginRight = 0;
+            this.btnPagar.IconRightVisible = true;
+            this.btnPagar.IconRightZoom = 0D;
+            this.btnPagar.IconVisible = true;
+            this.btnPagar.IconZoom = 55D;
+            this.btnPagar.IsTab = true;
+            this.btnPagar.Location = new System.Drawing.Point(23, 359);
+            this.btnPagar.Name = "btnPagar";
+            this.btnPagar.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnPagar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
+            this.btnPagar.OnHoverTextColor = System.Drawing.Color.DarkGray;
+            this.btnPagar.selected = false;
+            this.btnPagar.Size = new System.Drawing.Size(220, 40);
+            this.btnPagar.TabIndex = 0;
+            this.btnPagar.Text = "     Pagos";
+            this.btnPagar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagar.Textcolor = System.Drawing.Color.DarkGray;
+            this.btnPagar.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnProductos
             // 
@@ -287,7 +302,7 @@
             this.btnProductos.IconVisible = true;
             this.btnProductos.IconZoom = 55D;
             this.btnProductos.IsTab = true;
-            this.btnProductos.Location = new System.Drawing.Point(23, 260);
+            this.btnProductos.Location = new System.Drawing.Point(23, 405);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Normalcolor = System.Drawing.Color.Transparent;
             this.btnProductos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
@@ -301,41 +316,77 @@
             this.btnProductos.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // btnFacturacion
+            // btnFacturacionRedito
             // 
-            this.btnFacturacion.Activecolor = System.Drawing.Color.Transparent;
-            this.btnFacturacion.BackColor = System.Drawing.Color.Transparent;
-            this.btnFacturacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFacturacion.BorderRadius = 7;
-            this.btnFacturacion.ButtonText = "     Facturación";
-            this.btnFacturacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFacturacion.DisabledColor = System.Drawing.Color.Gray;
-            this.btnFacturacion.ForeColor = System.Drawing.Color.Gray;
-            this.btnFacturacion.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnFacturacion.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Iconimage")));
-            this.btnFacturacion.Iconimage_right = null;
-            this.btnFacturacion.Iconimage_right_Selected = null;
-            this.btnFacturacion.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Iconimage_Selected")));
-            this.btnFacturacion.IconMarginLeft = 25;
-            this.btnFacturacion.IconMarginRight = 0;
-            this.btnFacturacion.IconRightVisible = true;
-            this.btnFacturacion.IconRightZoom = 0D;
-            this.btnFacturacion.IconVisible = true;
-            this.btnFacturacion.IconZoom = 55D;
-            this.btnFacturacion.IsTab = true;
-            this.btnFacturacion.Location = new System.Drawing.Point(23, 214);
-            this.btnFacturacion.Name = "btnFacturacion";
-            this.btnFacturacion.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnFacturacion.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
-            this.btnFacturacion.OnHoverTextColor = System.Drawing.Color.DarkGray;
-            this.btnFacturacion.selected = false;
-            this.btnFacturacion.Size = new System.Drawing.Size(220, 40);
-            this.btnFacturacion.TabIndex = 0;
-            this.btnFacturacion.Text = "     Facturación";
-            this.btnFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturacion.Textcolor = System.Drawing.Color.DarkGray;
-            this.btnFacturacion.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
+            this.btnFacturacionRedito.Activecolor = System.Drawing.Color.Transparent;
+            this.btnFacturacionRedito.BackColor = System.Drawing.Color.Transparent;
+            this.btnFacturacionRedito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFacturacionRedito.BorderRadius = 7;
+            this.btnFacturacionRedito.ButtonText = "     A Rédito";
+            this.btnFacturacionRedito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFacturacionRedito.DisabledColor = System.Drawing.Color.Gray;
+            this.btnFacturacionRedito.ForeColor = System.Drawing.Color.Gray;
+            this.btnFacturacionRedito.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnFacturacionRedito.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnFacturacionRedito.Iconimage")));
+            this.btnFacturacionRedito.Iconimage_right = null;
+            this.btnFacturacionRedito.Iconimage_right_Selected = null;
+            this.btnFacturacionRedito.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnFacturacionRedito.Iconimage_Selected")));
+            this.btnFacturacionRedito.IconMarginLeft = 25;
+            this.btnFacturacionRedito.IconMarginRight = 0;
+            this.btnFacturacionRedito.IconRightVisible = true;
+            this.btnFacturacionRedito.IconRightZoom = 0D;
+            this.btnFacturacionRedito.IconVisible = true;
+            this.btnFacturacionRedito.IconZoom = 55D;
+            this.btnFacturacionRedito.IsTab = true;
+            this.btnFacturacionRedito.Location = new System.Drawing.Point(23, 222);
+            this.btnFacturacionRedito.Name = "btnFacturacionRedito";
+            this.btnFacturacionRedito.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnFacturacionRedito.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
+            this.btnFacturacionRedito.OnHoverTextColor = System.Drawing.Color.DarkGray;
+            this.btnFacturacionRedito.selected = false;
+            this.btnFacturacionRedito.Size = new System.Drawing.Size(220, 40);
+            this.btnFacturacionRedito.TabIndex = 0;
+            this.btnFacturacionRedito.Text = "     A Rédito";
+            this.btnFacturacionRedito.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturacionRedito.Textcolor = System.Drawing.Color.DarkGray;
+            this.btnFacturacionRedito.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturacionRedito.Click += new System.EventHandler(this.btnFacturacionRedito_Click);
+            // 
+            // btnFacturacionContado
+            // 
+            this.btnFacturacionContado.Activecolor = System.Drawing.Color.Transparent;
+            this.btnFacturacionContado.BackColor = System.Drawing.Color.Transparent;
+            this.btnFacturacionContado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFacturacionContado.BorderRadius = 7;
+            this.btnFacturacionContado.ButtonText = "     Al Contado";
+            this.btnFacturacionContado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFacturacionContado.DisabledColor = System.Drawing.Color.Gray;
+            this.btnFacturacionContado.ForeColor = System.Drawing.Color.Gray;
+            this.btnFacturacionContado.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnFacturacionContado.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnFacturacionContado.Iconimage")));
+            this.btnFacturacionContado.Iconimage_right = null;
+            this.btnFacturacionContado.Iconimage_right_Selected = null;
+            this.btnFacturacionContado.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnFacturacionContado.Iconimage_Selected")));
+            this.btnFacturacionContado.IconMarginLeft = 25;
+            this.btnFacturacionContado.IconMarginRight = 0;
+            this.btnFacturacionContado.IconRightVisible = true;
+            this.btnFacturacionContado.IconRightZoom = 0D;
+            this.btnFacturacionContado.IconVisible = true;
+            this.btnFacturacionContado.IconZoom = 55D;
+            this.btnFacturacionContado.IsTab = true;
+            this.btnFacturacionContado.Location = new System.Drawing.Point(23, 268);
+            this.btnFacturacionContado.Name = "btnFacturacionContado";
+            this.btnFacturacionContado.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnFacturacionContado.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
+            this.btnFacturacionContado.OnHoverTextColor = System.Drawing.Color.DarkGray;
+            this.btnFacturacionContado.selected = false;
+            this.btnFacturacionContado.Size = new System.Drawing.Size(220, 40);
+            this.btnFacturacionContado.TabIndex = 0;
+            this.btnFacturacionContado.Text = "     Al Contado";
+            this.btnFacturacionContado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturacionContado.Textcolor = System.Drawing.Color.DarkGray;
+            this.btnFacturacionContado.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturacionContado.Click += new System.EventHandler(this.btnFacturacionContado_Click);
             // 
             // btnDashboard
             // 
@@ -359,7 +410,7 @@
             this.btnDashboard.IconVisible = true;
             this.btnDashboard.IconZoom = 55D;
             this.btnDashboard.IsTab = true;
-            this.btnDashboard.Location = new System.Drawing.Point(23, 168);
+            this.btnDashboard.Location = new System.Drawing.Point(23, 133);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Normalcolor = System.Drawing.Color.Transparent;
             this.btnDashboard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
@@ -478,16 +529,18 @@
         private System.Windows.Forms.Panel Navbar;
         private System.Windows.Forms.Label lblIdentificador;
         private System.Windows.Forms.PictureBox Salir;
-        private System.Windows.Forms.Panel Wrapper;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuFlatButton btnDashboard;
-        private Bunifu.Framework.UI.BunifuFlatButton btnFacturacion;
+        private Bunifu.Framework.UI.BunifuFlatButton btnFacturacionContado;
         private Bunifu.Framework.UI.BunifuFlatButton btnVentas;
         private Bunifu.Framework.UI.BunifuFlatButton btnProductos;
         private Bunifu.Framework.UI.BunifuFlatButton btnClientes;
         private Bunifu.Framework.UI.BunifuFlatButton btnCompras;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
-        private Bunifu.Framework.UI.BunifuFlatButton btnProveedores;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Panel Wrapper;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPagar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnFacturacionRedito;
     }
 }
