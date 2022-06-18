@@ -78,6 +78,12 @@
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDescuento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDescuento.Designer.cs">
+      <DependentUpon>FrmDescuento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFacturacionContado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDescuento.resx">
+      <DependentUpon>FrmDescuento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFacturacionContado.resx">
       <DependentUpon>FrmFacturacionContado.cs</DependentUpon>

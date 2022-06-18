@@ -4,14 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
-    public partial class FrmInformation : Form
+    public partial class FrmDescuento : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -102,10 +102,14 @@ namespace Presentacion
                 m.Result = (IntPtr)HTCAPTION;
         }
 
-        public FrmInformation(string mensaje)
+        public FrmDescuento()
         {
             InitializeComponent();
-            lblMensaje.Text = mensaje;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -113,9 +117,9 @@ namespace Presentacion
             this.DialogResult = DialogResult.OK;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            this.DialogResult= DialogResult.Cancel;
+            Close();
         }
     }
 }
