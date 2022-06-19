@@ -16,3 +16,12 @@ D:\SistemaMaranatha\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 D:\SistemaMaranatha\Datos\obj\Debug\Datos.csproj.CopyComplete
 D:\SistemaMaranatha\Datos\obj\Debug\Datos.dll
 D:\SistemaMaranatha\Datos\obj\Debug\Datos.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\bin\Debug\Datos.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\bin\Debug\Datos.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\bin\Debug\Entidades.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\bin\Debug\Entidades.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\obj\Debug\Datos.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Datos\obj\Debug\Datos.pdb

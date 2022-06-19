@@ -134,7 +134,8 @@ namespace Presentacion
             tblCategoria.Columns[0].Visible = false;
             tblCategoria.Columns[1].Width = 90;
             tblCategoria.Columns[2].Width = 190;
-
+            tblCategoria.Columns[3].Width = 90;
+            tblCategoria.Columns[4].Width = 90;
             tblCategoria.ClearSelection();
         }
 
@@ -185,8 +186,10 @@ namespace Presentacion
             {
                 try
                 {
-                    objEntidad.NombreCategoria = txtPorcientoPrecio.Text.ToUpper();
+                    objEntidad.NombreCategoria = txtName.Text.ToUpper();
                     objEntidad.DescripcionCategoria = txtDescription.Text.ToUpper();
+                    objEntidad.Porciento_Venta = Convert.ToDecimal(txtPorcientoPrecio.Text);
+                    objEntidad.Porciento_Descuento = Convert.ToDecimal(txtPorcientoDescuento.Text);
 
                     objNegocio.InsertarCategoria(objEntidad);
 
@@ -205,8 +208,10 @@ namespace Presentacion
                 try
                 {
                     objEntidad.IdCategoria = Convert.ToInt32(IDCategoria);
-                    objEntidad.NombreCategoria = txtPorcientoPrecio.Text.ToUpper();
+                    objEntidad.NombreCategoria = txtName.Text.ToUpper();
                     objEntidad.DescripcionCategoria = txtDescription.Text.ToUpper();
+                    objEntidad.Porciento_Venta = Convert.ToDecimal(txtPorcientoPrecio.Text);
+                    objEntidad.Porciento_Descuento = Convert.ToDecimal(txtPorcientoDescuento.Text);
 
                     objNegocio.EditarCategoria(objEntidad);
 
@@ -261,6 +266,11 @@ namespace Presentacion
             }
 
             app.Visible = true;
+        }
+
+        private void tblCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

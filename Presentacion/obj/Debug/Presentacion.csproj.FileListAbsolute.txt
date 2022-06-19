@@ -56,6 +56,48 @@ D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmVentasDetalle.resourc
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacionRedito.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacionContado.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmPagos.resources
+<<<<<<< HEAD
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmDescuento.resources
+<<<<<<< HEAD
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmUsuarios.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmMantenimientoUsuarios.resources
+=======
+=======
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Entidades.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Negocio.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Datos.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\bin\Debug\Datos.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmCategoria.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmClientes.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmCompras.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmDashboard.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmFacturacionContado.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmFacturacionRedito.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmInformation.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmMantenimientoClientes1.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmMantenimientoClientes2.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmMantenimientoProductos.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmMarca.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmPagos.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmPrincipal.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmProductos.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmSuccess.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmVentas.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmVentasDetalle.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.pdb
+>>>>>>> bf82e53 (Vinculacion de clientes)
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Presentacion\obj\Debug\Presentacion.FrmDescuento.resources
+>>>>>>> refs/remotes/origin/main

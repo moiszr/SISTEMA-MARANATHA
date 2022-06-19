@@ -119,9 +119,92 @@ namespace Presentacion
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            decimal SalarioMensual = 0;
+            decimal SalarioMensualConyugue = 0;
+
+            if (txtSalarioMensual.Text != "")
+            {
+                SalarioMensual = Convert.ToDecimal(txtSalarioMensual.Text);
+            }
+            if (txtSalarioMensualConyugue.Text != "")
+            {
+                SalarioMensualConyugue = Convert.ToDecimal(txtSalarioMensualConyugue.Text);
+            }
+
             FrmMantenimientoClientes2 frm = new FrmMantenimientoClientes2();
+
+            frm.CodigoCliente = txtIdCliente.Text.ToUpper();
+            frm.Nombre = txtNombreCliente.Text.ToUpper();
+            frm.Apellido = txtApellidoCliente.Text.ToUpper();
+            frm.Cedula = txtCedula.Text.ToUpper();
+            frm.Apodo = txtApodoCliente.Text.ToUpper();
+            frm.Telefono1 = txtTelefonoResidencial.Text.ToUpper();
+            frm.Telefono2 = txtOtroTelefono.Text.ToUpper();
+            frm.Celular = txtTelefonoCelularCliente.Text.ToUpper();
+            frm.Direccion = txtDireccion.Text.ToUpper();
+            frm.LugarDeTrabajo = txtLugarDeTrabajo.Text.ToUpper();
+            frm.TelefonoTrabajo = txtTelefonoTrabajo.Text.ToUpper();
+            frm.NombreSuperior = txtNombredelSuperiorInmediato.Text.ToUpper();
+            frm.TelefonoSuperior = txtTelefonoDelSuperiorInmediato.Text.ToUpper();
+            frm.TiempoLaborando = txtTiempoLaborando.Text.ToUpper();
+            frm.SalarioMensual = SalarioMensual;
+            frm.NombreConyugue = txtNombreDelConyugue.Text.ToUpper();
+            frm.TelefonoConyuge = txtTelefonoDelConyugue.Text.ToUpper();
+            frm.TrabajoConyugue = txtLugarDeTrabajoDelConyugue.Text.ToUpper();
+            frm.TelefonoTrabajoConyugue = txtTelefonoDeTrabajoDelConyugue.Text.ToUpper();
+            frm.NombreSuperiorConyugue = txtNombreDelSuperiorConyugue.Text.ToUpper();
+            frm.TelefonoSuperiorConyugue = txtTelefonoSuperiorConyugue.Text.ToUpper();
+            frm.TiempoLaborandoConyugue = txtTiempoLaborandoConyugue.Text.ToUpper();
+            frm.SalarioMensualConyugue = SalarioMensualConyugue;
+
+           
+
+            if (rdbPropia.Checked)
+            {
+                frm.Casa = "Propia".ToUpper();
+            }
+            if (rdbAlquilada.Checked)
+            {
+                frm.Casa = "Alquilada".ToUpper();
+            }
+
+            this.Hide();
             frm.ShowDialog();
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSalarioMensual_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar > 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtSalarioMensualConyugue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar > 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

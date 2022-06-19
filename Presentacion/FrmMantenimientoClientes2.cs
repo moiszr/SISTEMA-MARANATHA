@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
+using Entidades;
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -103,6 +105,41 @@ namespace Presentacion
 
         }
 
+        FrmClientes frm = new FrmClientes();
+        FrmMantenimientoClientes1 frmC1 = new FrmMantenimientoClientes1();
+        E_Cliente entidades = new E_Cliente();
+        N_Cliente negocio = new N_Cliente();
+
+        public bool Update = false;
+
+
+        //Variables data
+        public string CodigoCliente;
+        public string Nombre;
+        public string Apellido;
+        public string Cedula;
+        public string Apodo;
+        public string Telefono1;
+        public string Telefono2;
+        public string Celular;
+        public string Direccion;
+        public string Casa;
+        public string LugarDeTrabajo;
+        public string TelefonoTrabajo;
+        public string NombreSuperior;
+        public string TelefonoSuperior;
+        public string TiempoLaborando;
+        public decimal SalarioMensual;
+        public string NombreConyugue;
+        public string TelefonoConyuge;
+        public string LugarDeTrabajoDelConyugue;
+        public string TrabajoConyugue;
+        public string TelefonoTrabajoConyugue;
+        public string NombreSuperiorConyugue;
+        public string TelefonoSuperiorConyugue;
+        public string TiempoLaborandoConyugue;
+        public decimal SalarioMensualConyugue;
+
         public FrmMantenimientoClientes2()
         {
             m_aeroEnabled = false;
@@ -120,6 +157,106 @@ namespace Presentacion
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (Update == false)
+            {
+                try
+                {
+
+                    entidades.Nombre = Nombre;
+                    entidades.Apellido = Apellido;
+                    entidades.Cedula = Cedula;
+                    entidades.Apodo = Apodo;
+                    entidades.Telefono1 = Telefono1;
+                    entidades.Telefono2 = Telefono2;
+                    entidades.Celular = Celular;
+                    entidades.Direccion = Direccion;
+                    entidades.Casa = Casa;
+                    entidades.LugarDeTrabajo = LugarDeTrabajo;
+                    entidades.TelefonoTrabajo = TelefonoTrabajo;
+                    entidades.NombreSuperior = NombreSuperior;
+                    entidades.TelefonoSuperior = TelefonoSuperior;
+                    entidades.TiempoLaborando = TiempoLaborando;
+                    entidades.SalarioMensual = SalarioMensual;
+                    entidades.NombreConyugue = NombreConyugue;
+                    entidades.TelefonoConyuge = TelefonoConyuge;
+                    entidades.TrabajoConyugue = TrabajoConyugue;
+                    entidades.TelefonoTrabajoConyugue = TelefonoTrabajoConyugue;
+                    entidades.NombreSuperiorConyugue = NombreSuperiorConyugue;
+                    entidades.TelefonoSuperiorConyugue = TelefonoSuperiorConyugue;
+                    entidades.TiempoLaborandoConyugue = TiempoLaborandoConyugue;
+                    entidades.SalarioMensualConyugue = SalarioMensualConyugue;
+                    entidades.Nombre_Apellido_Telefono_Referencia1 = txtNombreReferenciaPer1.Text.ToUpper() + "  " + txtApellidosReferenciaPer1.Text.ToUpper() + "  " + txtTelefonoReferenciaPer1.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Referencia2 = txtNombreReferenciaPer2.Text.ToUpper() + "  " + txtApellidosReferenciaPer2.Text.ToUpper() + "  " + txtTelefonoReferenciaPer2.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Referencia3 = txtNombreReferenciaPer3.Text.ToUpper() + "  " + txtApellidosReferenciaPer3.Text.ToUpper() + "  " + txtTelefonoReferenciaPer3.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Familiar1 = txtNombreFamilaresCerc1.Text.ToUpper() + "  " + txtApellidosFamilaresCerc1.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc1.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Familiar2 = txtNombreFamilaresCerc2.Text.ToUpper() + "  " + txtApellidosFamilaresCerc2.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc2.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Familiar3 = txtNombreFamilaresCerc3.Text.ToUpper() + "  " + txtApellidosFamilaresCerc3.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc3.Text.ToUpper();
+
+
+                    negocio.InsertarCliente(entidades);
+
+                    FrmSuccess.ConfirmacionForm("CLIENTE GUARDADO");
+
+                    Close();
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo guardar el cliente" + ex);
+                }
+            }
+            if (Update == true)
+            {
+                try
+                {
+                    entidades.IdCliente = 3;
+                    entidades.Nombre = Nombre;
+                    entidades.Apellido = Apellido;
+                    entidades.Cedula = Cedula;
+                    entidades.Apodo = Apodo;
+                    entidades.Telefono1 = Telefono1;
+                    entidades.Telefono2 = Telefono2;
+                    entidades.Celular = Celular;
+                    entidades.Direccion = Direccion;
+                    entidades.Casa = Casa;
+                    entidades.LugarDeTrabajo = LugarDeTrabajo;
+                    entidades.TelefonoTrabajo = TelefonoTrabajo;
+                    entidades.NombreSuperior = NombreSuperior;
+                    entidades.TelefonoSuperior = TelefonoSuperior;
+                    entidades.TiempoLaborando = TiempoLaborando;
+                    entidades.SalarioMensual = SalarioMensual;
+                    entidades.NombreConyugue = NombreConyugue;
+                    entidades.TelefonoConyuge = TelefonoConyuge;
+                    entidades.TrabajoConyugue = TrabajoConyugue;
+                    entidades.TelefonoTrabajoConyugue = TelefonoTrabajoConyugue;
+                    entidades.NombreSuperiorConyugue = NombreSuperiorConyugue;
+                    entidades.TelefonoSuperiorConyugue = TelefonoSuperiorConyugue;
+                    entidades.TiempoLaborandoConyugue = TiempoLaborandoConyugue;
+                    entidades.SalarioMensualConyugue = SalarioMensualConyugue;
+                    entidades.Nombre_Apellido_Telefono_Referencia1 = txtNombreReferenciaPer1.Text.ToUpper() + "  " + txtApellidosReferenciaPer1.Text.ToUpper() + "  " + txtTelefonoReferenciaPer1.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Referencia2 = txtNombreReferenciaPer2.Text.ToUpper() + "  " + txtApellidosReferenciaPer2.Text.ToUpper() + "  " + txtTelefonoReferenciaPer2.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Referencia3 = txtNombreReferenciaPer3.Text.ToUpper() + "  " + txtApellidosReferenciaPer3.Text.ToUpper() + "  " + txtTelefonoReferenciaPer3.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Familiar1 = txtNombreFamilaresCerc1.Text.ToUpper() + "  " + txtApellidosFamilaresCerc1.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc1.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Familiar2 = txtNombreFamilaresCerc2.Text.ToUpper() + "  " + txtApellidosFamilaresCerc2.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc2.Text.ToUpper();
+                    entidades.Nombre_Apellido_Telefono_Familiar3 = txtNombreFamilaresCerc3.Text.ToUpper() + "  " + txtApellidosFamilaresCerc3.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc3.Text.ToUpper();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo editar el cliente" + ex);
+                }
+            }
+
+        }
+
+        private void txtTelefonoReferenciaPer1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
