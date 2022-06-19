@@ -36,6 +36,7 @@ namespace Presentacion
             btnVentas.Textcolor = Color.FromArgb(180, 180, 180);
             btnCompras.Textcolor = Color.FromArgb(180, 180, 180);
             btnClientes.Textcolor = Color.FromArgb(180, 180, 180);
+            btnUsuarios.Textcolor = Color.FromArgb(180, 180, 180);
             btnLogout.Textcolor = Color.FromArgb(180, 180, 180);
 
             sender.selected = true;
@@ -139,6 +140,13 @@ namespace Presentacion
         private void btnLogout_Click(object sender, EventArgs e)
         {
             SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormEnWrapper(new FrmUsuarios());
+            lblIdentificador.Text = "USUARIOS";
         }
     }
 }

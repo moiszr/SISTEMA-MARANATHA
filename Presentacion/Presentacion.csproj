@@ -120,6 +120,12 @@
     <Compile Include="FrmMantenimientoProductos.Designer.cs">
       <DependentUpon>FrmMantenimientoProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>FrmMantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     </Compile>
     <Compile Include="FrmSuccess.Designer.cs">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVentas.cs">
       <SubType>Form</SubType>
@@ -197,6 +209,9 @@
     <EmbeddedResource Include="FrmMantenimientoProductos.resx">
       <DependentUpon>FrmMantenimientoProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoUsuarios.resx">
+      <DependentUpon>FrmMantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMarca.resx">
       <DependentUpon>FrmMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSuccess.resx">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>

@@ -57,3 +57,5 @@ D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacionRedito.res
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmFacturacionContado.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmPagos.resources
 D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmDescuento.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmUsuarios.resources
+D:\SistemaMaranatha\Presentacion\obj\Debug\Presentacion.FrmMantenimientoUsuarios.resources

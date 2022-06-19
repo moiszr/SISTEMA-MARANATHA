@@ -48,6 +48,8 @@
             this.lblIdentificador = new System.Windows.Forms.Label();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.Wrapper = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -58,11 +60,13 @@
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(41)))));
             this.Sidebar.Controls.Add(this.label1);
+            this.Sidebar.Controls.Add(this.label5);
             this.Sidebar.Controls.Add(this.label4);
             this.Sidebar.Controls.Add(this.btnLogout);
             this.Sidebar.Controls.Add(this.btnClientes);
             this.Sidebar.Controls.Add(this.btnCompras);
             this.Sidebar.Controls.Add(this.btnVentas);
+            this.Sidebar.Controls.Add(this.btnUsuarios);
             this.Sidebar.Controls.Add(this.btnPagar);
             this.Sidebar.Controls.Add(this.btnProductos);
             this.Sidebar.Controls.Add(this.btnFacturacionRedito);
@@ -499,6 +503,53 @@
             this.Wrapper.Size = new System.Drawing.Size(1170, 870);
             this.Wrapper.TabIndex = 2;
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Activecolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUsuarios.BorderRadius = 7;
+            this.btnUsuarios.ButtonText = "     Usuarios";
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.ForeColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage")));
+            this.btnUsuarios.Iconimage_right = null;
+            this.btnUsuarios.Iconimage_right_Selected = null;
+            this.btnUsuarios.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage_Selected")));
+            this.btnUsuarios.IconMarginLeft = 25;
+            this.btnUsuarios.IconMarginRight = 0;
+            this.btnUsuarios.IconRightVisible = true;
+            this.btnUsuarios.IconRightZoom = 0D;
+            this.btnUsuarios.IconVisible = true;
+            this.btnUsuarios.IconZoom = 55D;
+            this.btnUsuarios.IsTab = true;
+            this.btnUsuarios.Location = new System.Drawing.Point(23, 678);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
+            this.btnUsuarios.OnHoverTextColor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.selected = false;
+            this.btnUsuarios.Size = new System.Drawing.Size(220, 40);
+            this.btnUsuarios.TabIndex = 0;
+            this.btnUsuarios.Text = "     Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Textcolor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(47, 642);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Menu Settings";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,5 +593,7 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnPagar;
         private Bunifu.Framework.UI.BunifuFlatButton btnFacturacionRedito;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnUsuarios;
     }
 }
