@@ -36,6 +36,8 @@ namespace Datos
                     CodigoCategoria = reader.GetString(1),
                     NombreCategoria = reader.GetString(2),
                     DescripcionCategoria = reader.GetString(3),
+                    Porciento_Venta = reader.GetDecimal(4),
+                    Porciento_Descuento = reader.GetDecimal(5),
                 });
             }
 
@@ -54,6 +56,9 @@ namespace Datos
 
             cmd.Parameters.AddWithValue("@NOMBRE", categoria.NombreCategoria);
             cmd.Parameters.AddWithValue("@DESCRIPCION", categoria.DescripcionCategoria);
+            cmd.Parameters.AddWithValue("@PORCIENTO_VENTA", categoria.Porciento_Venta);
+            cmd.Parameters.AddWithValue("@PORCIENTO_DESCUENTO", categoria.Porciento_Descuento);
+
 
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -69,6 +74,8 @@ namespace Datos
             cmd.Parameters.AddWithValue("@IDCATEGORIA", categoria.IdCategoria);
             cmd.Parameters.AddWithValue("@NOMBRE", categoria.NombreCategoria);
             cmd.Parameters.AddWithValue("@DESCRIPCION", categoria.DescripcionCategoria);
+            cmd.Parameters.AddWithValue("@PORCIENTO_VENTA", categoria.Porciento_Venta);
+            cmd.Parameters.AddWithValue("@PORCIENTO_DESCUENTO", categoria.Porciento_Descuento);
 
             cmd.ExecuteNonQuery();
             conn.Close();

@@ -191,5 +191,10 @@ namespace Presentacion
                 }
             }
         }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

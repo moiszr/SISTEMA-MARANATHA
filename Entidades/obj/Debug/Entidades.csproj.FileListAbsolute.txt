@@ -10,3 +10,9 @@ D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
 D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.dll
 D:\SistemaMaranatha\Entidades\obj\Debug\Entidades.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Entidades\bin\Debug\Entidades.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Entidades\bin\Debug\Entidades.pdb
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Entidades\obj\Debug\Entidades.dll
+C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Entidades\obj\Debug\Entidades.pdb
