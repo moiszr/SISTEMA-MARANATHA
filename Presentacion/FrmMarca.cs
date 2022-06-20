@@ -152,6 +152,7 @@ namespace Presentacion
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+
             tblMarca.ClearSelection();
             Editarse = false;
             LimpiarCajas();
@@ -268,6 +269,11 @@ namespace Presentacion
             }
 
             app.Visible = true;
+        }
+
+        private void tblMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

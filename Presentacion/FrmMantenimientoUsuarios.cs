@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
+using Entidades;
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -101,14 +103,96 @@ namespace Presentacion
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT)     // drag the form
                 m.Result = (IntPtr)HTCAPTION;
         }
+
+        FrmUsuarios frm = new FrmUsuarios();
+        E_Usuario entidades = new E_Usuario();
+        N_Usuario negocio = new N_Usuario();
+
+        public bool Update = false;
+
         public FrmMantenimientoUsuarios()
         {
             InitializeComponent();
+            ListarRol();
+            
+        }
+        public void ListarRol()
+        {
+            N_Rol nrol = new N_Rol();
+            cmbRoles.DataSource = nrol.ListaRol("");
+            cmbRoles.ValueMember = "Idrol";
+            cmbRoles.DisplayMember = "Rol";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña1.Text == txtContraseña2.Text)
+            {
+                if (Update == false)
+                {
+                    try
+                    {
+
+                        entidades.Nombre = txtNombre.Text.ToUpper();
+                        entidades.Apellido = txtApellido.Text.ToUpper();
+                        entidades.Usario = txtUsuario.Text.ToUpper();
+                        entidades.Contraseña = txtContraseña1.Text.ToUpper();
+                        entidades.Idrol = Convert.ToInt32(cmbRoles.SelectedValue);
+
+                        negocio.InsertarUsuario(entidades);
+
+                        FrmSuccess.ConfirmacionForm("USUSARIO GUARDADO");
+
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo guardar el usuario" + ex);
+                    }
+                }
+                if (Update == true)
+                {
+                    try
+                    {
+                        entidades.Idusuario = Convert.ToInt32(txtIdUsusario.Text);
+                        entidades.Nombre = txtNombre.Text.ToUpper();
+                        entidades.Apellido = txtApellido.Text.ToUpper();
+                        entidades.Usario = txtUsuario.Text.ToUpper();
+                        entidades.Contraseña = txtContraseña1.Text.ToUpper();
+                        entidades.Idrol = Convert.ToInt32(cmbRoles.SelectedValue);
+
+                        negocio.EditarUsuario(entidades);
+
+                        FrmSuccess.ConfirmacionForm("USUSARIO EDITADO");
+
+                        Close();
+
+                        Update = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo guardar el usuario" + ex);
+                    }
+                }
+            }
+            else
+            {
+                Form message = new FrmInformation("LAS CONTRASEÑAS SON DIFERENTES VERIFICALAS");
+                DialogResult result = message.ShowDialog();
+
+                txtContraseña2.Text = "";
+                txtContraseña1.Text = "";
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

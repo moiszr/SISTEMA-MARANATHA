@@ -454,6 +454,7 @@
             this.tblMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblMarca.Size = new System.Drawing.Size(553, 277);
             this.tblMarca.TabIndex = 51;
+            this.tblMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblMarca_CellContentClick);
             // 
             // pictureBox2
             // 

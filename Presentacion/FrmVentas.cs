@@ -16,5 +16,11 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.ShowDialog();
+        }
     }
 }

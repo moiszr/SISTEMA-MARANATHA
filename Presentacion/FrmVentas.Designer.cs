@@ -208,6 +208,7 @@
             this.btnNuevaVenta.Size = new System.Drawing.Size(224, 46);
             this.btnNuevaVenta.TabIndex = 14;
             this.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // label9
             // 

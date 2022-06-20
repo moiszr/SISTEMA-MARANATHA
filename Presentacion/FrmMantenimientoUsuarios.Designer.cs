@@ -61,6 +61,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
+            this.txtIdUsusario = new System.Windows.Forms.TextBox();
+            this.textcdusuario = new System.Windows.Forms.TextBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -197,6 +199,7 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.Textcolor = System.Drawing.Color.White;
             this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label9
             // 
@@ -373,6 +376,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 60;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox2
             // 
@@ -424,12 +428,34 @@
             this.txtContraseña1.Size = new System.Drawing.Size(244, 20);
             this.txtContraseña1.TabIndex = 48;
             // 
+            // txtIdUsusario
+            // 
+            this.txtIdUsusario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsusario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdUsusario.ForeColor = System.Drawing.Color.Gray;
+            this.txtIdUsusario.Location = new System.Drawing.Point(344, 109);
+            this.txtIdUsusario.Name = "txtIdUsusario";
+            this.txtIdUsusario.Size = new System.Drawing.Size(244, 20);
+            this.txtIdUsusario.TabIndex = 71;
+            // 
+            // textcdusuario
+            // 
+            this.textcdusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textcdusuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textcdusuario.ForeColor = System.Drawing.Color.Gray;
+            this.textcdusuario.Location = new System.Drawing.Point(35, 109);
+            this.textcdusuario.Name = "textcdusuario";
+            this.textcdusuario.Size = new System.Drawing.Size(244, 20);
+            this.textcdusuario.TabIndex = 72;
+            // 
             // FrmMantenimientoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(620, 484);
+            this.Controls.Add(this.textcdusuario);
+            this.Controls.Add(this.txtIdUsusario);
             this.Controls.Add(this.txtIdProductos);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.cmbRoles);
@@ -510,5 +536,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.TextBox txtContraseña1;
         private System.Windows.Forms.PictureBox pictureBox8;
+        public System.Windows.Forms.TextBox txtIdUsusario;
+        public System.Windows.Forms.TextBox textcdusuario;
     }
 }

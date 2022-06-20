@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataUser.cs" />
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +102,12 @@
     </Compile>
     <Compile Include="FrmInformation.Designer.cs">
       <DependentUpon>FrmInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMantenimientoClientes1.cs">
       <SubType>Form</SubType>
@@ -199,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInformation.resx">
       <DependentUpon>FrmInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoClientes1.resx">
       <DependentUpon>FrmMantenimientoClientes1.cs</DependentUpon>
@@ -315,6 +325,7 @@
     <Content Include="Img\Iconos\save.png" />
     <Content Include="Img\Iconos\search.png" />
     <Content Include="Img\Iconos\totals.png" />
+    <None Include="Resources\LogoTop-1.png" />
     <None Include="Img\Logo\LogoTop-1.png" />
     <None Include="Img\Logo\LogoTop.png" />
   </ItemGroup>

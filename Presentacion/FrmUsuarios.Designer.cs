@@ -39,7 +39,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.TablaProductos = new System.Windows.Forms.DataGridView();
+            this.TablaUsuario = new System.Windows.Forms.DataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -54,7 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -83,9 +83,8 @@
             this.label14.ForeColor = System.Drawing.Color.Gray;
             this.label14.Location = new System.Drawing.Point(1198, 115);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 20);
+            this.label14.Size = new System.Drawing.Size(0, 20);
             this.label14.TabIndex = 13;
-            this.label14.Text = "STOCK";
             // 
             // label13
             // 
@@ -95,9 +94,9 @@
             this.label13.ForeColor = System.Drawing.Color.Gray;
             this.label13.Location = new System.Drawing.Point(1029, 115);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 20);
+            this.label13.Size = new System.Drawing.Size(0, 20);
             this.label13.TabIndex = 13;
-            this.label13.Text = "P.VENTA";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
@@ -105,7 +104,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(859, 115);
+            this.label12.Location = new System.Drawing.Point(1058, 115);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 20);
             this.label12.TabIndex = 13;
@@ -117,7 +116,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(640, 115);
+            this.label11.Location = new System.Drawing.Point(779, 115);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 20);
             this.label11.TabIndex = 13;
@@ -141,7 +140,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(425, 115);
+            this.label10.Location = new System.Drawing.Point(495, 119);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 20);
             this.label10.TabIndex = 13;
@@ -159,7 +158,7 @@
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.TablaProductos);
+            this.panel9.Controls.Add(this.TablaUsuario);
             this.panel9.Controls.Add(this.btnExcel);
             this.panel9.Controls.Add(this.btnNuevoUsuario);
             this.panel9.Controls.Add(this.txtSearch);
@@ -183,20 +182,20 @@
             this.label9.TabIndex = 12;
             this.label9.Text = "#";
             // 
-            // TablaProductos
+            // TablaUsuario
             // 
-            this.TablaProductos.AllowUserToAddRows = false;
-            this.TablaProductos.AllowUserToDeleteRows = false;
-            this.TablaProductos.AllowUserToOrderColumns = true;
-            this.TablaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TablaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.TablaProductos.BackgroundColor = System.Drawing.Color.White;
-            this.TablaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TablaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.TablaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProductos.ColumnHeadersVisible = false;
-            this.TablaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TablaUsuario.AllowUserToAddRows = false;
+            this.TablaUsuario.AllowUserToDeleteRows = false;
+            this.TablaUsuario.AllowUserToOrderColumns = true;
+            this.TablaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TablaUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaUsuario.BackgroundColor = System.Drawing.Color.White;
+            this.TablaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TablaUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TablaUsuario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaUsuario.ColumnHeadersVisible = false;
+            this.TablaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDITAR,
             this.ELIMINAR});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -207,14 +206,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaProductos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TablaProductos.Location = new System.Drawing.Point(47, 148);
-            this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaProductos.RowHeadersVisible = false;
-            this.TablaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.TablaProductos.Size = new System.Drawing.Size(1487, 624);
-            this.TablaProductos.TabIndex = 11;
+            this.TablaUsuario.DefaultCellStyle = dataGridViewCellStyle1;
+            this.TablaUsuario.Location = new System.Drawing.Point(47, 148);
+            this.TablaUsuario.Name = "TablaUsuario";
+            this.TablaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaUsuario.RowHeadersVisible = false;
+            this.TablaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.TablaUsuario.Size = new System.Drawing.Size(1487, 624);
+            this.TablaUsuario.TabIndex = 11;
+            this.TablaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProductos_CellContentClick);
             // 
             // EDITAR
             // 
@@ -289,6 +289,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(283, 22);
             this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pictureBox5
             // 
@@ -386,7 +387,7 @@
             this.Text = "FrmUsuarios";
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -409,7 +410,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView TablaProductos;
+        private System.Windows.Forms.DataGridView TablaUsuario;
         private System.Windows.Forms.DataGridViewImageColumn EDITAR;
         private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;

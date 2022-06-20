@@ -31,3 +31,14 @@ C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Negocio\obj\Debug\Ne
 C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.dll
 C:\Users\perey\OneDrive\Desktop\Maranatha\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.pdb
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\bin\Debug\Negocio.dll
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\bin\Debug\Negocio.pdb
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\bin\Debug\Datos.dll
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\bin\Debug\Entidades.dll
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\bin\Debug\Datos.pdb
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\bin\Debug\Entidades.pdb
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.dll
+C:\Users\perey\OneDrive\Desktop\SISTEMA-MARANATHA\Negocio\obj\Debug\Negocio.pdb
