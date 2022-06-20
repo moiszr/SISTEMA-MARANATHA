@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturacionContado));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label27 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.btnNuevoProducto = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPagar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnimprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -108,9 +109,9 @@
             this.label28.ForeColor = System.Drawing.Color.Gray;
             this.label28.Location = new System.Drawing.Point(824, 649);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(121, 17);
+            this.label28.Size = new System.Drawing.Size(49, 17);
             this.label28.TabIndex = 49;
-            this.label28.Text = "CUOTAS EN MESES";
+            this.label28.Text = "Monto";
             // 
             // txtCantidad
             // 
@@ -153,6 +154,7 @@
             // 
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.btnimprimir);
             this.panel9.Controls.Add(this.label27);
             this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.label28);
@@ -191,6 +193,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1598, 939);
             this.panel9.TabIndex = 4;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // txtCliente
             // 
@@ -256,6 +259,7 @@
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(414, 28);
             this.cmbProducto.TabIndex = 44;
+            this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -487,15 +491,15 @@
             this.TablaFactContado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDITAR,
             this.ELIMINAR});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaFactContado.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TablaFactContado.DefaultCellStyle = dataGridViewCellStyle1;
             this.TablaFactContado.Location = new System.Drawing.Point(47, 353);
             this.TablaFactContado.Name = "TablaFactContado";
             this.TablaFactContado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -567,6 +571,7 @@
             this.btnPagar.Size = new System.Drawing.Size(268, 73);
             this.btnPagar.TabIndex = 8;
             this.btnPagar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnAgregar
             // 
@@ -593,6 +598,17 @@
             this.btnAgregar.Size = new System.Drawing.Size(224, 48);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnimprimir
+            // 
+            this.btnimprimir.Location = new System.Drawing.Point(148, 736);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnimprimir.TabIndex = 127;
+            this.btnimprimir.Text = "button1";
+            this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
             // FrmFacturacionContado
             // 
@@ -655,5 +671,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnAgregar;
         public System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnimprimir;
     }
 }

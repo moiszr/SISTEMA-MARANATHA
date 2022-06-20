@@ -18,10 +18,15 @@ namespace Negocio
             return objDato.ListaVenta(buscar);
         }
 
-        public void InsertarVentas(E_Ventas ventas)
+        public void InsertarVentas(E_Ventas ventas, List<E_Detalle_Ventas> e_Detalle_Ventas)
         {
-            objDato.InsertarVentas(ventas);
+            objDato.InsertarVentas(ventas, e_Detalle_Ventas);
 
+        }
+
+        public List<E_Productos> Datafactura(int id)
+        {
+            return objDato.Datafactura(id);
         }
     }
 }

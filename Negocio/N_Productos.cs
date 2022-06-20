@@ -44,5 +44,12 @@ namespace Negocio
         {
             datos.MostrarTotal(productos);
         }
+
+        public List<E_Productos> ListarProductos()
+        {
+            return datos.ListarProductoCB();
+        }
+
+
     }
 }

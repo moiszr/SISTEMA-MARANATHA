@@ -126,5 +126,44 @@ namespace Datos
 
             conn.Close();
         }
+
+
+        public List<E_Productos> ListarProductoCB()
+        {
+            SqlDataReader reader = null;
+            SqlCommand cmd = new SqlCommand("SP_LISTARPRODUC", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conn.Open();
+
+
+            reader = cmd.ExecuteReader();
+
+            List<E_Productos> Listar = new List<E_Productos>();
+
+            while (reader.Read())
+            {
+                Listar.Add(new E_Productos
+                {
+                    IdProductos = reader.GetInt32(0),
+                    CodigoProducto = reader.GetString(1),
+                    Producto = reader.GetString(2),
+                    PrecioCompra = reader.GetDecimal(3),
+                    PrecioVenta = reader.GetDecimal(4),
+                    Stock = reader.GetInt32(5),
+                    Idcategoria = reader.GetInt32(6),
+                    Idmarca = reader.GetInt32(7),
+
+                });
+            }
+
+            conn.Close();
+            reader.Close();
+
+            return Listar;
+        }
+
+
+
     }
 }

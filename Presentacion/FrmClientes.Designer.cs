@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -72,10 +72,9 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(1847, 143);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(1351, 121);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 25);
+            this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 13;
             this.label15.Text = "DETALLE";
             // 
@@ -85,10 +84,9 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(1597, 143);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(994, 121);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 25);
+            this.label14.Size = new System.Drawing.Size(89, 20);
             this.label14.TabIndex = 13;
             this.label14.Text = "DIRECCION";
             // 
@@ -98,10 +96,9 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(1372, 143);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(851, 121);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 25);
+            this.label13.Size = new System.Drawing.Size(74, 20);
             this.label13.TabIndex = 13;
             this.label13.Text = "CELULAR";
             // 
@@ -111,10 +108,9 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(1145, 143);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(683, 121);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 25);
+            this.label12.Size = new System.Drawing.Size(84, 20);
             this.label12.TabIndex = 13;
             this.label12.Text = "TELÉFONO";
             // 
@@ -124,12 +120,11 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(913, 143);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(528, 120);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 25);
+            this.label11.Size = new System.Drawing.Size(67, 20);
             this.label11.TabIndex = 13;
-            this.label11.Text = "APELLIDO";
+            this.label11.Text = "CEDULA";
             // 
             // label16
             // 
@@ -137,12 +132,11 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(275, 143);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(183, 120);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(85, 25);
+            this.label16.Size = new System.Drawing.Size(74, 20);
             this.label16.TabIndex = 13;
-            this.label16.Text = "CEDULA";
+            this.label16.Text = "NOMBRE";
             // 
             // label10
             // 
@@ -150,12 +144,11 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(567, 143);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(347, 120);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 25);
+            this.label10.Size = new System.Drawing.Size(80, 20);
             this.label10.TabIndex = 13;
-            this.label10.Text = "NOMBRE";
+            this.label10.Text = "APELLIDO";
             // 
             // label9
             // 
@@ -163,10 +156,9 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(80, 143);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(60, 116);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 32);
+            this.label9.Size = new System.Drawing.Size(23, 25);
             this.label9.TabIndex = 12;
             this.label9.Text = "#";
             // 
@@ -175,10 +167,9 @@
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(131, 50);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(98, 41);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(377, 27);
+            this.txtSearch.Size = new System.Drawing.Size(283, 22);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -186,10 +177,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(75, 47);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(56, 38);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(37, 34);
+            this.pictureBox5.Size = new System.Drawing.Size(28, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
@@ -226,10 +216,10 @@
             this.panel9.Controls.Add(this.txtSearch);
             this.panel9.Controls.Add(this.pictureBox5);
             this.panel9.Controls.Add(this.pictureBox6);
-            this.panel9.Location = new System.Drawing.Point(36, 182);
-            this.panel9.Margin = new System.Windows.Forms.Padding(36, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(27, 147);
+            this.panel9.Margin = new System.Windows.Forms.Padding(27, 3, 3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(2131, 1009);
+            this.panel9.Size = new System.Drawing.Size(1598, 820);
             this.panel9.TabIndex = 4;
             // 
             // btnExcel
@@ -250,10 +240,10 @@
             this.btnExcel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
             this.btnExcel.IdleForecolor = System.Drawing.Color.White;
             this.btnExcel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
-            this.btnExcel.Location = new System.Drawing.Point(1747, 30);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnExcel.Location = new System.Drawing.Point(1310, 24);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(299, 59);
+            this.btnExcel.Size = new System.Drawing.Size(224, 48);
             this.btnExcel.TabIndex = 17;
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
@@ -276,10 +266,10 @@
             this.btnNewCliente.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.btnNewCliente.IdleForecolor = System.Drawing.Color.White;
             this.btnNewCliente.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.btnNewCliente.Location = new System.Drawing.Point(1331, 30);
-            this.btnNewCliente.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnNewCliente.Location = new System.Drawing.Point(998, 24);
+            this.btnNewCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNewCliente.Name = "btnNewCliente";
-            this.btnNewCliente.Size = new System.Drawing.Size(299, 59);
+            this.btnNewCliente.Size = new System.Drawing.Size(224, 48);
             this.btnNewCliente.TabIndex = 16;
             this.btnNewCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNewCliente.Click += new System.EventHandler(this.btnNewCliente_Click);
@@ -300,33 +290,31 @@
             this.TablaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDITAR,
             this.ELIMINAR});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaClientes.DefaultCellStyle = dataGridViewCellStyle3;
-            this.TablaClientes.Location = new System.Drawing.Point(63, 183);
-            this.TablaClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TablaClientes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TablaClientes.Location = new System.Drawing.Point(47, 149);
             this.TablaClientes.Name = "TablaClientes";
             this.TablaClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.TablaClientes.RowHeadersVisible = false;
             this.TablaClientes.RowHeadersWidth = 51;
             this.TablaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.TablaClientes.Size = new System.Drawing.Size(1983, 768);
+            this.TablaClientes.Size = new System.Drawing.Size(1487, 624);
             this.TablaClientes.TabIndex = 11;
             this.TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaClientes_CellContentClick);
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(63, 39);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(47, 32);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(459, 49);
+            this.pictureBox6.Size = new System.Drawing.Size(344, 40);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
@@ -340,18 +328,16 @@
             this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Controls.Add(this.panel9);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(2200, 1231);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1650, 1000);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 170);
+            this.panel1.Size = new System.Drawing.Size(405, 138);
             this.panel1.TabIndex = 0;
             // 
             // panel5
@@ -361,10 +347,9 @@
             this.panel5.Controls.Add(this.lblClientes);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Location = new System.Drawing.Point(40, 7);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(30, 6);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(467, 160);
+            this.panel5.Size = new System.Drawing.Size(350, 130);
             this.panel5.TabIndex = 0;
             // 
             // lblClientes
@@ -372,10 +357,9 @@
             this.lblClientes.AutoSize = true;
             this.lblClientes.BackColor = System.Drawing.Color.Transparent;
             this.lblClientes.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(185, 60);
-            this.lblClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClientes.Location = new System.Drawing.Point(139, 49);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(85, 50);
+            this.lblClientes.Size = new System.Drawing.Size(68, 40);
             this.lblClientes.TabIndex = 2;
             this.lblClientes.Text = "100";
             // 
@@ -385,10 +369,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.label1.Location = new System.Drawing.Point(83, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 19);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clientes";
             // 
@@ -396,46 +379,41 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(552, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(414, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 170);
+            this.panel2.Size = new System.Drawing.Size(405, 138);
             this.panel2.TabIndex = 1;
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(1100, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(825, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(540, 170);
+            this.panel4.Size = new System.Drawing.Size(405, 138);
             this.panel4.TabIndex = 2;
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(1648, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Location = new System.Drawing.Point(1236, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(540, 170);
+            this.panel7.Size = new System.Drawing.Size(405, 138);
             this.panel7.TabIndex = 3;
             // 
             // FrmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2200, 1102);
+            this.ClientSize = new System.Drawing.Size(1650, 894);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

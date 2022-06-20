@@ -105,6 +105,11 @@ namespace Presentacion
                 DataUser.apellido = entidades[0].Apellido;
                 DataUser.rol = entidades[0].Idrol;
 
+                FrmPrincipal frm = new FrmPrincipal();
+
+                this.Hide();
+                frm.ShowDialog();
+
 
             }
             else

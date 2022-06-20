@@ -21,6 +21,61 @@ namespace Presentacion
         {
             InitializeComponent();
             MostrarTablaClientes();
+            OcultarMoverAncharColumnas();
+        }
+        public void OcultarMoverAncharColumnas()
+        {
+            TablaClientes.Columns[2].Visible = false;
+            TablaClientes.Columns[7].Visible = false;
+            TablaClientes.Columns[9].Visible = false;
+            TablaClientes.Columns[12].Visible = false;
+            TablaClientes.Columns[13].Visible = false;
+            TablaClientes.Columns[14].Visible = false;
+            TablaClientes.Columns[15].Visible = false;
+            TablaClientes.Columns[16].Visible = false;
+            TablaClientes.Columns[17].Visible = false;
+            TablaClientes.Columns[18].Visible = false;
+            TablaClientes.Columns[19].Visible = false;
+            TablaClientes.Columns[20].Visible = false;
+            TablaClientes.Columns[21].Visible = false;
+            TablaClientes.Columns[22].Visible = false;
+            TablaClientes.Columns[23].Visible = false; 
+            TablaClientes.Columns[24].Visible = false;
+            TablaClientes.Columns[25].Visible = false;
+            TablaClientes.Columns[26].Visible = false;
+            TablaClientes.Columns[27].Visible = false;
+            TablaClientes.Columns[28].Visible = false;
+            TablaClientes.Columns[29].Visible = false;
+            TablaClientes.Columns[30].Visible = false;
+            TablaClientes.Columns[31].Visible = false;
+            TablaClientes.Columns[32].Visible = false;
+
+            TablaClientes.Columns[0].DisplayIndex = 11;
+            TablaClientes.Columns[1].DisplayIndex = 11;
+
+            TablaClientes.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[3].Width = 140;
+
+            TablaClientes.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[4].Width = 170;
+
+            TablaClientes.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[5].Width = 170;
+
+            TablaClientes.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[6].Width = 160;
+
+            TablaClientes.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[8].Width = 160;
+
+            TablaClientes.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[10].Width = 160;
+
+            TablaClientes.Columns[11].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaClientes.Columns[11].Width = 260;
+
+
+
         }
 
 
