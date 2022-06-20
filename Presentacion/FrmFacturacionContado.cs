@@ -10,8 +10,12 @@ using System.Windows.Forms;
 using Negocio;
 using Entidades;
 using System.Runtime.InteropServices;
+
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+
 namespace Presentacion
 {
     public partial class FrmFacturacionContado : Form
@@ -49,18 +53,20 @@ namespace Presentacion
             List<E_Productos> entidades = new List<E_Productos>();
             N_Ventas nproductos = new N_Ventas();
             entidades = nproductos.Datafactura(Idproducto);
-            decimal Preciocompra = entidades[0].PrecioVenta;
+            string Producto = entidades[0].Producto;
+            decimal PrecioVenta = entidades[0].PrecioVenta;
             int Cantidad = Convert.ToInt32(txtCantidad.Text);
-            decimal SubtotalP = Cantidad * Preciocompra;
+            decimal SubtotalP = Cantidad * PrecioVenta;
             
 
             DataUser.eproductos.Add(new E_Detalle_Ventas
             {
-                    Preciocompra = Preciocompra,
+                    Preciocompra = PrecioVenta,
                     Cantidad = Cantidad,
                     Subtotal = SubtotalP,
                     Idproducto = Idproducto,
-                    
+                    Producto = Producto,
+
             });
             
             txtCantidad.Text = "";
@@ -68,8 +74,9 @@ namespace Presentacion
             Subtotal += SubtotalP;
             Total = Subtotal - Descuento;
             lblTotal.Text = Total.ToString();
-            lblSubtotal.Text = Subtotal.ToString(); 
+            lblSubtotal.Text = Subtotal.ToString();
 
+            
         }
 
         private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,7 +105,57 @@ namespace Presentacion
         private void btnimprimir_Click(object sender, EventArgs e)
         {
             SaveFileDialog guardar = new SaveFileDialog();
-            guardar.ShowDialog();
+            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+
+            string paginahtml_text = Properties.Resources.plantilla_factura.ToString();
+            paginahtml_text = paginahtml_text.Replace("@CLIENTE", txtCliente.Text);
+            paginahtml_text = paginahtml_text.Replace("@USUARIO", DataUser.idusuario.ToString());
+            paginahtml_text = paginahtml_text.Replace("@FECHA", DateTime.Now.ToString());
+            paginahtml_text = paginahtml_text.Replace("@TOTAL", lblSubtotal.Text);
+
+            string filas = string.Empty;
+
+            foreach (E_Detalle_Ventas DVentas in DataUser.eproductos)
+            {
+              
+                filas += "<tr>";
+                filas += "<td>" + DVentas.Producto + "</td>";
+                filas += "<td>" + DVentas.Preciocompra + "</td>";
+                filas += "<td>" + DVentas.Cantidad + "</td>";
+                filas += "<td>" + DVentas.Subtotal + "</td>";
+                filas += "</tr>";
+            }
+            paginahtml_text = paginahtml_text.Replace("@FILAS", filas);
+
+
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+                    pdfDoc.Open();
+
+                    pdfDoc.Add(new Phrase(""));
+
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.LogoTop_1, System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(120, 90);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 30);
+                    pdfDoc.Add(img);
+
+                    using (StringReader sr = new StringReader(paginahtml_text))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+                    pdfDoc.Close();
+
+                    stream.Close();
+                }
+
+            }
         }
     }
 }

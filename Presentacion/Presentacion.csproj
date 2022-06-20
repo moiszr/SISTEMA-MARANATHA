@@ -331,6 +331,7 @@
     <Content Include="Img\Iconos\save.png" />
     <Content Include="Img\Iconos\search.png" />
     <Content Include="Img\Iconos\totals.png" />
+    <None Include="Resources\plantilla_factura.html" />
     <None Include="Resources\LogoTop-1.png" />
     <None Include="Img\Logo\LogoTop-1.png" />
     <None Include="Img\Logo\LogoTop.png" />

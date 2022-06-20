@@ -69,5 +69,22 @@ namespace Presentacion.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt; Hola&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///
+        ///&lt;body&gt;
+        ///&lt;/body&gt;
+        ///&lt;/html&gt;.
+        /// </summary>
+        internal static string plantilla_factura {
+            get {
+                return ResourceManager.GetString("plantilla_factura", resourceCulture);
+            }
+        }
     }
 }
