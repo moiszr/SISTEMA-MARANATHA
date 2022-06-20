@@ -15,6 +15,7 @@ namespace Entidades
 		private Decimal _subtotal;
 		private int _idcompra;
 		private int _idproducto;
+		private string _productos;
 
 		public int IDdetallecompra { get => _iddetallecompra; set => _iddetallecompra = value; }
 		public string Codigo { get => _codigo; set => _codigo = value; }
@@ -23,5 +24,7 @@ namespace Entidades
 		public Decimal Subtotal { get => _subtotal; set => _subtotal = value; }
 		public int Idcompra { get => _idcompra; set => _idcompra = value; }
 		public int Idproducto { get => _idproducto; set => _idproducto = value; }
+		public string Producto { get => _productos; set => _productos = value; }
+
 	}
 }

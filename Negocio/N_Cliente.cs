@@ -39,5 +39,11 @@ namespace Negocio
         {
             objCliente.EliminarCliente(id);
         }
+
+        public List<E_Cliente> ListarClienteCB()
+        {
+            return objCliente.ListarClienteCB();
+        }
+
     }
 }

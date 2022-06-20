@@ -240,6 +240,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(224, 48);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnNuevoCliente
             // 
@@ -998,6 +999,7 @@
             this.btnPagar.Size = new System.Drawing.Size(268, 73);
             this.btnPagar.TabIndex = 8;
             this.btnPagar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // flowLayoutPanel1
             // 

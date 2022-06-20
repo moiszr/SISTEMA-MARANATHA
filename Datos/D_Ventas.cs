@@ -18,12 +18,11 @@ namespace Datos
         public List<E_Ventas> ListaVenta(string buscar)
         {
             SqlDataReader reader = null;
-            SqlCommand cmd = new SqlCommand("SP_BUSCAR_VENTA", conn);
+            SqlCommand cmd = new SqlCommand("SP_MOSTRAR_VENTA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@BUSCAR", buscar);
 
             reader = cmd.ExecuteReader();
 
@@ -34,10 +33,11 @@ namespace Datos
                 Listar.Add(new E_Ventas
                 {
                     Idventa = reader.GetInt32(0),
-                    Fecha = reader.GetDateTime(1),
-                    Total = reader.GetInt32(2),
-                    Nombre_cliente = reader.GetString(3),
-                    Idusuario = reader.GetInt32(4),
+                    Codigo = reader.GetString(1),
+                    Fecha = reader.GetDateTime(2),
+                    Total = reader.GetDecimal(3),
+                    Nombre_cliente = reader.GetString(4),
+                    Idusuario = reader.GetInt32(5),
 
                 });
             }
@@ -70,8 +70,6 @@ namespace Datos
 
             int ID = (int)cmd2.ExecuteScalar();
             conn.Close();
-
-
 
 
             foreach (E_Detalle_Ventas DVentas in e_Detalle_Ventas)

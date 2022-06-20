@@ -42,67 +42,7 @@ namespace Presentacion
             cmbProducto.ValueMember = "IdProductos";
             cmbProducto.DisplayMember = "Producto";
         }
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            int Idproducto = Convert.ToInt32(cmbProducto.SelectedValue);
-            List<E_Productos> entidades = new List<E_Productos>();
-            N_Ventas nproductos = new N_Ventas();
-            entidades = nproductos.Datafactura(Idproducto);
-            string Producto = entidades[0].Producto;
-            decimal PrecioVenta = entidades[0].PrecioVenta;
-            int Cantidad = Convert.ToInt32(txtCantidad.Text);
-            decimal SubtotalP = Cantidad * PrecioVenta;
-            
-
-            DataUser.eproductos.Add(new E_Detalle_Ventas
-            {
-                    Preciocompra = PrecioVenta,
-                    Cantidad = Cantidad,
-                    Subtotal = SubtotalP,
-                    Idproducto = Idproducto,
-                    Producto = Producto,
-
-            });
-            
-            txtCantidad.Text = "";
-            TablaFactContado.DataSource = DataUser.eproductos;
-            Subtotal += SubtotalP;
-            Total = Subtotal - Descuento;
-            lblTotal.Text = Total.ToString();
-            lblSubtotal.Text = Subtotal.ToString();
-
-            
-        }
-
-        private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPagar_Click(object sender, EventArgs e)
-        {
-            E_Ventas eventa = new E_Ventas();
-            N_Ventas nventa = new N_Ventas();
-
-            eventa.Fecha = DateTime.Now;
-            eventa.Total = Convert.ToDecimal(lblTotal.Text);
-            eventa.Nombre_cliente = txtCliente.Text;
-            eventa.Idusuario = DataUser.idusuario;
-
-            nventa.InsertarVentas(eventa, DataUser.eproductos);
-
-            decimal devuelta = Convert.ToDecimal(txtPagoEnEfectivo.Text) - Convert.ToDecimal(lblTotal.Text);
-
-            FrmSuccess.ConfirmacionForm("PROCESO COMPLETO" + devuelta);
-
-        }
-
-        private void btnimprimir_Click(object sender, EventArgs e)
+        public void imprimir()
         {
             SaveFileDialog guardar = new SaveFileDialog();
             guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
@@ -112,12 +52,13 @@ namespace Presentacion
             paginahtml_text = paginahtml_text.Replace("@USUARIO", DataUser.idusuario.ToString());
             paginahtml_text = paginahtml_text.Replace("@FECHA", DateTime.Now.ToString());
             paginahtml_text = paginahtml_text.Replace("@TOTAL", lblSubtotal.Text);
+            paginahtml_text = paginahtml_text.Replace("@TIPO", "CONTANDO");
 
             string filas = string.Empty;
 
             foreach (E_Detalle_Ventas DVentas in DataUser.eproductos)
             {
-              
+
                 filas += "<tr>";
                 filas += "<td>" + DVentas.Producto + "</td>";
                 filas += "<td>" + DVentas.Preciocompra + "</td>";
@@ -141,9 +82,9 @@ namespace Presentacion
                     pdfDoc.Add(new Phrase(""));
 
                     iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.LogoTop_1, System.Drawing.Imaging.ImageFormat.Png);
-                    img.ScaleToFit(120, 90);
+                    img.ScaleToFit(150, 90);
                     img.Alignment = iTextSharp.text.Image.UNDERLYING;
-                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 30);
+                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 70);
                     pdfDoc.Add(img);
 
                     using (StringReader sr = new StringReader(paginahtml_text))
@@ -154,8 +95,83 @@ namespace Presentacion
 
                     stream.Close();
                 }
-
             }
+        }
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            int Idproducto = Convert.ToInt32(cmbProducto.SelectedValue);
+            List<E_Productos> entidades = new List<E_Productos>();
+            N_Ventas nproductos = new N_Ventas();
+            entidades = nproductos.Datafactura(Idproducto);
+            string Producto = entidades[0].Producto;
+            decimal PrecioVenta = entidades[0].PrecioVenta;
+            int Cantidad = Convert.ToInt32(txtCantidad.Text);
+            decimal SubtotalP = Cantidad * PrecioVenta;
+
+            if (Cantidad <= entidades[0].Stock)
+            {
+                DataUser.eproductos.Add(new E_Detalle_Ventas
+                {
+                    Preciocompra = PrecioVenta,
+                    Cantidad = Cantidad,
+                    Subtotal = SubtotalP,
+                    Idproducto = Idproducto,
+                    Producto = Producto,
+
+                });
+
+                txtCantidad.Text = "";
+                TablaFactContado.DataSource = DataUser.eproductos;
+                Subtotal += SubtotalP;
+                Total = Subtotal - Descuento;
+                lblTotal.Text = Total.ToString();
+                lblSubtotal.Text = Subtotal.ToString();
+            }
+            else 
+            {
+                FrmSuccess.ConfirmacionForm("No hay suficiente en stock");
+                txtCantidad.Text = "";
+            }
+
+        }
+
+        private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            E_Ventas eventa = new E_Ventas();
+            N_Ventas nventa = new N_Ventas();
+
+            eventa.Fecha = DateTime.Now;
+            eventa.Total = Convert.ToDecimal(lblTotal.Text);
+            eventa.Nombre_cliente = txtCliente.Text;
+            eventa.Idusuario = DataUser.idusuario;
+
+            nventa.InsertarVentas(eventa, DataUser.eproductos);
+
+            
+            decimal devuelta = Convert.ToDecimal(txtPagoEnEfectivo.Text) - Convert.ToDecimal(lblTotal.Text);
+
+            lblDevuelta.Text = devuelta.ToString();
+
+            FrmSuccess.ConfirmacionForm("PROCESO COMPLETO");
+            imprimir();
+
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+          
+                
+         
         }
     }
 }

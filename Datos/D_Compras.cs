@@ -37,8 +37,8 @@ namespace Datos
                     Idcompra = reader.GetInt32(0),
                     Fecha = reader.GetDateTime(1),
                     Total = reader.GetInt32(2),
-                    Idempleados = reader.GetInt32(3),
-                    Idproveedores = reader.GetInt32(4),
+                    Idusuario = reader.GetInt32(3),
+                   
 
                 });
             }
@@ -49,7 +49,7 @@ namespace Datos
             return Listar;
         }
 
-        public void InsertarCompra(E_Compras Compras)
+        public void InsertarCompra(E_Compras Compras, List<E_Detalle_Compras> e_Detalle_Compras)
         {
             SqlCommand cmd = new SqlCommand("SP_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -58,12 +58,40 @@ namespace Datos
 
             cmd.Parameters.AddWithValue("@FECHA", Compras.Fecha);
             cmd.Parameters.AddWithValue("@TOTAL", Compras.Total);
-            cmd.Parameters.AddWithValue("@IDEMPLEADO", Compras.Idempleados);
-            cmd.Parameters.AddWithValue("@IDPROVEEDORES", Compras.Idproveedores);
+            cmd.Parameters.AddWithValue("@IDUSUARIO", Compras.Idusuario);
+
+            cmd.ExecuteNonQuery();
+            var cmd2 = conn.CreateCommand();
+
+            cmd2.CommandType = CommandType.StoredProcedure;
+
+            cmd2.CommandText = "SP_OBTENER_ID_COMPRAR";
+
+            int ID = (int)cmd2.ExecuteScalar();
+            conn.Close();
+
+
+            foreach (E_Detalle_Compras DComprar in e_Detalle_Compras)
+            {
+                InsertarDetalle_Ventas(DComprar, ID);
+            }
+
+        }
+        public void InsertarDetalle_Ventas(E_Detalle_Compras DetalleCompra, int id)
+        {
+            SqlCommand cmd = new SqlCommand("SP_DETALLE_COMPRA", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conn.Open();
+
+            cmd.Parameters.AddWithValue("@PRECIOCOMPRA", DetalleCompra.Preciocompra);
+            cmd.Parameters.AddWithValue("@CANTIDAD", DetalleCompra.Cantidad);
+            cmd.Parameters.AddWithValue("@SUBTOTAL", DetalleCompra.Subtotal);
+            cmd.Parameters.AddWithValue("@IDCOMPRA", id);
+            cmd.Parameters.AddWithValue("@IDPRODUCTO", DetalleCompra.Idproducto);
 
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-
     }
 }

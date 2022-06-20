@@ -146,5 +146,40 @@ namespace Datos
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        public List<E_Cliente> ListarClienteCB()
+        {
+            SqlDataReader reader = null;
+            SqlCommand cmd = new SqlCommand("SP_LISTARCLIENTE", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conn.Open();
+
+
+            reader = cmd.ExecuteReader();
+
+            List<E_Cliente> Listar = new List<E_Cliente>();
+
+            while (reader.Read())
+            {
+                Listar.Add(new E_Cliente
+                {
+                    IdCliente = reader.GetInt32(0),
+                    CodigoCliente = reader.GetString(1),
+                    Nombre = reader.GetString(2),
+                    Apellido = reader.GetString(3),
+                    Cedula = reader.GetString(4),
+                    Telefono1 = reader.GetString(6),
+                    Celular = reader.GetString(8),
+                    Direccion = reader.GetString(9),
+
+                });
+            }
+
+            conn.Close();
+            reader.Close();
+
+            return Listar;
+        }
     }
 }

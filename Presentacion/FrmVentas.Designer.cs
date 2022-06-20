@@ -254,6 +254,7 @@
             this.TablaVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.TablaVentas.Size = new System.Drawing.Size(1487, 624);
             this.TablaVentas.TabIndex = 11;
+            this.TablaVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaVentas_CellContentClick);
             // 
             // EDITAR
             // 

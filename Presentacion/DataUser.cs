@@ -23,6 +23,8 @@ namespace Presentacion
 
 
         static public List<E_Detalle_Ventas> eproductos = new List<E_Detalle_Ventas>();
+        static public List<E_Detalle_Compras> eclientes = new List<E_Detalle_Compras>();
+
 
     }
 }
