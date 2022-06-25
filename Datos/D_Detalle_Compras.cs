@@ -15,15 +15,15 @@ namespace Datos
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar"].ConnectionString);
 
-        public List<E_Detalle_Compras> ListaDetalle_Compras(string buscar)
+        public List<E_Detalle_Compras> ListaDetalle_Compras(int id)
         {
             SqlDataReader reader = null;
-            SqlCommand cmd = new SqlCommand("SP_BUSCAR_DETALLE_COMPRA", conn);
+            SqlCommand cmd = new SqlCommand("SP_LISTAR_DETALLE_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@BUSCAR", buscar);
+            cmd.Parameters.AddWithValue("@ID", id);
 
             reader = cmd.ExecuteReader();
 
@@ -33,12 +33,12 @@ namespace Datos
             {
                 Listar.Add(new E_Detalle_Compras
                 {
-                    IDdetallecompra = reader.GetInt32(0),
-                    Preciocompra = reader.GetDecimal(1),
-                    Cantidad = reader.GetInt32(2),
-                    Subtotal = reader.GetDecimal(3),
-                    Idcompra = reader.GetInt32(4),
-                    Idproducto = reader.GetInt32(5),
+                    Codigo = reader.GetString(0),
+                    Producto = reader.GetString(2),
+                    Preciocompra = reader.GetDecimal(3),
+                    Cantidad = reader.GetInt32(4),
+                    Subtotal = reader.GetDecimal(5),
+                  
 
                 });
             }
@@ -49,7 +49,7 @@ namespace Datos
             return Listar;
         }
 
-        public void InsertarDetalle_Compras(E_Detalle_Compras DetalleCompras)
+        public void InsertarDetalle_Compras(E_Detalle_Compras DetalleCompras, int id)
         {
             SqlCommand cmd = new SqlCommand("SP_DETALLE_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -59,7 +59,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@PRECIOCOMPRA", DetalleCompras.Preciocompra);
             cmd.Parameters.AddWithValue("@CANTIDAD", DetalleCompras.Cantidad);
             cmd.Parameters.AddWithValue("@SUBTOTAL", DetalleCompras.Subtotal);
-            cmd.Parameters.AddWithValue("@IDCOMPRA", DetalleCompras.Idcompra);
+            cmd.Parameters.AddWithValue("@IDCOMPRA", id);
             cmd.Parameters.AddWithValue("@IDPRODUCTO", DetalleCompras.Idproducto);
 
             cmd.ExecuteNonQuery();
