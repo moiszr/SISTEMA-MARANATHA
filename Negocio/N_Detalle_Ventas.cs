@@ -13,15 +13,9 @@ namespace Negocio
     {
         D_Detalle_Ventas objDato = new D_Detalle_Ventas();
 
-        public List<E_Detalle_Ventas> ListarDetalle_Ventas(string buscar)
+        public List<E_Detalle_Ventas> ListarDetalle_Ventas(int id)
         {
-            return objDato.ListaDetalle_Ventas(buscar);
-        }
-
-        public void InsertarDetalle_Ventas(E_Detalle_Ventas Detalle_Ventas)
-        {
-            objDato.InsertarDetalle_Ventas(Detalle_Ventas);
-
+            return objDato.ListaDetalle_Ventas(id);
         }
     }
 }

@@ -31,5 +31,10 @@ namespace Negocio
         {
             objDato.EliminarCategoria(categoria);
         }
+
+        public List<E_Categoria> BuscarCategoriasXID(int id)
+        {
+            return objDato.BuscarCategoriasXID(id);
+        }
     }
 }

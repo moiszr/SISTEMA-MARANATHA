@@ -37,11 +37,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnNuevaVenta = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label9 = new System.Windows.Forms.Label();
             this.TablaVentas = new System.Windows.Forms.DataGridView();
-            this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DETALLE = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -83,11 +81,11 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(1378, 112);
+            this.label15.Location = new System.Drawing.Point(1399, 112);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 20);
+            this.label15.Size = new System.Drawing.Size(82, 20);
             this.label15.TabIndex = 13;
-            this.label15.Text = "DETALLE";
+            this.label15.Text = "OPCIONES";
             // 
             // label12
             // 
@@ -95,11 +93,11 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(1103, 112);
+            this.label12.Location = new System.Drawing.Point(1119, 112);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 20);
+            this.label12.Size = new System.Drawing.Size(54, 20);
             this.label12.TabIndex = 13;
-            this.label12.Text = "CLIENTE";
+            this.label12.Text = "TOTAL";
             // 
             // label11
             // 
@@ -107,11 +105,11 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(817, 112);
+            this.label11.Location = new System.Drawing.Point(922, 112);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 20);
+            this.label11.Size = new System.Drawing.Size(56, 20);
             this.label11.TabIndex = 13;
-            this.label11.Text = "EMPLEADO";
+            this.label11.Text = "FECHA";
             // 
             // label16
             // 
@@ -119,11 +117,11 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(293, 112);
+            this.label16.Location = new System.Drawing.Point(224, 112);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 20);
+            this.label16.Size = new System.Drawing.Size(68, 20);
             this.label16.TabIndex = 13;
-            this.label16.Text = "FECHA";
+            this.label16.Text = "CLIENTE";
             // 
             // label10
             // 
@@ -131,18 +129,17 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(547, 112);
+            this.label10.Location = new System.Drawing.Point(574, 112);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 20);
+            this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 13;
-            this.label10.Text = "TOTAL $";
+            this.label10.Text = "EMPLEADO";
             // 
             // panel9
             // 
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel9.Controls.Add(this.btnExcel);
-            this.panel9.Controls.Add(this.btnNuevaVenta);
             this.panel9.Controls.Add(this.label15);
             this.panel9.Controls.Add(this.label12);
             this.panel9.Controls.Add(this.label11);
@@ -184,43 +181,17 @@
             this.btnExcel.TabIndex = 15;
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnNuevaVenta
-            // 
-            this.btnNuevaVenta.ActiveBorderThickness = 1;
-            this.btnNuevaVenta.ActiveCornerRadius = 20;
-            this.btnNuevaVenta.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.btnNuevaVenta.ActiveForecolor = System.Drawing.Color.White;
-            this.btnNuevaVenta.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
-            this.btnNuevaVenta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevaVenta.BackgroundImage")));
-            this.btnNuevaVenta.ButtonText = "NUEVA VENTA";
-            this.btnNuevaVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnNuevaVenta.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IdleBorderThickness = 1;
-            this.btnNuevaVenta.IdleCornerRadius = 20;
-            this.btnNuevaVenta.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.btnNuevaVenta.IdleForecolor = System.Drawing.Color.White;
-            this.btnNuevaVenta.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.btnNuevaVenta.Location = new System.Drawing.Point(1024, 22);
-            this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(224, 46);
-            this.btnNuevaVenta.TabIndex = 14;
-            this.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Gray;
             this.label9.Location = new System.Drawing.Point(53, 112);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.Size = new System.Drawing.Size(67, 20);
             this.label9.TabIndex = 12;
-            this.label9.Text = "#";
+            this.label9.Text = "CODIGO";
             // 
             // TablaVentas
             // 
@@ -236,8 +207,7 @@
             this.TablaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaVentas.ColumnHeadersVisible = false;
             this.TablaVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EDITAR,
-            this.ELIMINAR});
+            this.DETALLE});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,17 +226,11 @@
             this.TablaVentas.TabIndex = 11;
             this.TablaVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaVentas_CellContentClick);
             // 
-            // EDITAR
+            // DETALLE
             // 
-            this.EDITAR.HeaderText = "EDITAR";
-            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
-            this.EDITAR.Name = "EDITAR";
-            // 
-            // ELIMINAR
-            // 
-            this.ELIMINAR.HeaderText = "ELIMINAR";
-            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
-            this.ELIMINAR.Name = "ELIMINAR";
+            this.DETALLE.HeaderText = "DETALLE";
+            this.DETALLE.Image = ((System.Drawing.Image)(resources.GetObject("DETALLE.Image")));
+            this.DETALLE.Name = "DETALLE";
             // 
             // txtSearch
             // 
@@ -513,8 +477,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView TablaVentas;
-        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
-        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -534,7 +496,7 @@
         private System.Windows.Forms.Label lblTotalDetalle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnNuevaVenta;
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;
+        private System.Windows.Forms.DataGridViewImageColumn DETALLE;
     }
 }

@@ -60,7 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataUser.cs" />
+    <Compile Include="Data\DataProduct.cs" />
+    <Compile Include="Data\DataUser.cs" />
+    <Compile Include="Data\DataVentas.cs" />
+    <Compile Include="Data\Factura.cs" />
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +130,12 @@
     <Compile Include="FrmMantenimientoClientes2.Designer.cs">
       <DependentUpon>FrmMantenimientoClientes2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoFactContado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoFactContado.Designer.cs">
+      <DependentUpon>FrmMantenimientoFactContado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMantenimientoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +196,18 @@
     <Compile Include="FrmVentasDetalle.Designer.cs">
       <DependentUpon>FrmVentasDetalle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVistaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVistaProductos.Designer.cs">
+      <DependentUpon>FrmVistaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWarning.Designer.cs">
+      <DependentUpon>FrmWarning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCategoria.resx">
@@ -222,6 +243,9 @@
     <EmbeddedResource Include="FrmMantenimientoClientes2.resx">
       <DependentUpon>FrmMantenimientoClientes2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoFactContado.resx">
+      <DependentUpon>FrmMantenimientoFactContado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoProductos.resx">
       <DependentUpon>FrmMantenimientoProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +275,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentasDetalle.resx">
       <DependentUpon>FrmVentasDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVistaProductos.resx">
+      <DependentUpon>FrmVistaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWarning.resx">
+      <DependentUpon>FrmWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

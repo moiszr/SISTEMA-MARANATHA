@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Presentacion.Data;
+using Negocio;
+using Entidades;
 
 namespace Presentacion
 {
     public partial class FrmDescuento : Form
     {
+        public decimal DescuentoMax;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -114,7 +119,25 @@ namespace Presentacion
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            decimal descuento = Convert.ToDecimal(txtDescuento.Text.ToString());
+
+            if (descuento <= DescuentoMax && descuento >= 0)
+            {
+                int id = (int)Convert.ToInt32(txtIdProductos.Text);
+                foreach(var item in DataVentas.ListDetalle_v)
+                {
+                    if(item.Idproducto == id)
+                    {
+                    
+                        item.Descuento = descuento;
+                    }
+                }
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                FrmWarning.AdvertenciaForm("EL DESCUENTO ESTÁ FUERA DEL LÍMITES");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

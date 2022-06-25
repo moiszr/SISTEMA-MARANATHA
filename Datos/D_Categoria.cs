@@ -93,5 +93,38 @@ namespace Datos
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        public List<E_Categoria> BuscarCategoriasXID(int id)
+        {
+            SqlDataReader reader = null;
+            SqlCommand cmd = new SqlCommand("SP_BUSCARCATEGORIAXID", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conn.Open();
+
+            cmd.Parameters.AddWithValue("@ID", id);
+
+            reader = cmd.ExecuteReader();
+
+            List<E_Categoria> Listar = new List<E_Categoria>();
+
+            while (reader.Read())
+            {
+                Listar.Add(new E_Categoria
+                {
+                    IdCategoria = reader.GetInt32(0),
+                    CodigoCategoria = reader.GetString(1),
+                    NombreCategoria = reader.GetString(2),
+                    DescripcionCategoria = reader.GetString(3),
+                    Porciento_Venta = reader.GetDecimal(4),
+                    Porciento_Descuento = reader.GetDecimal(5),
+                });
+            }
+
+            conn.Close();
+            reader.Close();
+
+            return Listar;
+        }
     }
 }

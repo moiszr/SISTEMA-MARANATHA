@@ -13,9 +13,9 @@ namespace Negocio
     {
         D_Ventas objDato = new D_Ventas();
 
-        public List<E_Ventas> ListarVentas(string buscar)
+        public List<E_Ventas> ListarVentas()
         {
-            return objDato.ListaVenta(buscar);
+            return objDato.ListaVenta();
         }
 
         public void InsertarVentas(E_Ventas ventas, List<E_Detalle_Ventas> e_Detalle_Ventas)

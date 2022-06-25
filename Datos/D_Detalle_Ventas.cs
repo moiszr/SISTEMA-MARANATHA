@@ -14,15 +14,15 @@ namespace Datos
     public class D_Detalle_Ventas
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar"].ConnectionString);
-        public List<E_Detalle_Ventas> ListaDetalle_Ventas(string buscar)
+        public List<E_Detalle_Ventas> ListaDetalle_Ventas(int id)
         {
             SqlDataReader reader = null;
-            SqlCommand cmd = new SqlCommand("SP_BUSCAR_DETALLE_VENTA", conn);
+            SqlCommand cmd = new SqlCommand("SP_LISTAR_DETALLE_VENTA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@BUSCAR", buscar);
+            cmd.Parameters.AddWithValue("@ID", id);
 
             reader = cmd.ExecuteReader();
 
@@ -32,33 +32,33 @@ namespace Datos
             {
                 Listar.Add(new E_Detalle_Ventas
                 {
-                    IDdetalleventa = reader.GetInt32(0),
-                    Preciocompra = reader.GetDecimal(1),
-                    Cantidad = reader.GetInt32(2),
-                    Subtotal = reader.GetDecimal(3),
-                    Idventa = reader.GetInt32(4),
-                    Idproducto = reader.GetInt32(5),
-
+                    Codigo = reader.GetString(0),
+                    CodigoVent = reader.GetString(1),
+                    Producto = reader.GetString(2),
+                    Preciocompra = reader.GetDecimal(3),
+                    Cantidad = reader.GetInt32(4),
+                    Descuento = reader.GetDecimal(5),
+                    Subtotal = reader.GetDecimal(6),
                 });
             }
-
             conn.Close();
             reader.Close();
 
             return Listar;
         }
 
-        public void InsertarDetalle_Ventas(E_Detalle_Ventas DetalleVentas)
+        public void InsertarDetalle_Ventas(E_Detalle_Ventas DetalleVentas, int id)
         {
             SqlCommand cmd = new SqlCommand("SP_DETALLE_VENTA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@PRECIOCOMPRA", DetalleVentas.Preciocompra);
+            cmd.Parameters.AddWithValue("@PRECIOVENTA", DetalleVentas.Preciocompra);
             cmd.Parameters.AddWithValue("@CANTIDAD", DetalleVentas.Cantidad);
+            cmd.Parameters.AddWithValue("@DESCUENTO", DetalleVentas.Descuento);
             cmd.Parameters.AddWithValue("@SUBTOTAL", DetalleVentas.Subtotal);
-            cmd.Parameters.AddWithValue("@IDCOMPRA", DetalleVentas.Idventa);
+            cmd.Parameters.AddWithValue("@IDVENTA", id);
             cmd.Parameters.AddWithValue("@IDPRODUCTO", DetalleVentas.Idproducto);
 
             cmd.ExecuteNonQuery();

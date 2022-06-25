@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturacionContado));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label27 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -56,7 +56,9 @@
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,7 +66,8 @@
             this.TablaFactContado = new System.Windows.Forms.DataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnNuevoProducto = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.DESCUENTO_PRO = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnVerProductos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPagar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -105,7 +108,7 @@
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Gray;
-            this.label28.Location = new System.Drawing.Point(824, 649);
+            this.label28.Location = new System.Drawing.Point(780, 649);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(49, 17);
             this.label28.TabIndex = 49;
@@ -175,13 +178,15 @@
             this.panel9.Controls.Add(this.lblSubtotal);
             this.panel9.Controls.Add(this.label2);
             this.panel9.Controls.Add(this.label1);
+            this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.label7);
             this.panel9.Controls.Add(this.label12);
             this.panel9.Controls.Add(this.label11);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.TablaFactContado);
-            this.panel9.Controls.Add(this.btnNuevoProducto);
+            this.panel9.Controls.Add(this.btnVerProductos);
             this.panel9.Controls.Add(this.btnPagar);
             this.panel9.Controls.Add(this.btnAgregar);
             this.panel9.Location = new System.Drawing.Point(27, 26);
@@ -189,7 +194,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1598, 939);
             this.panel9.TabIndex = 4;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // txtCliente
             // 
@@ -216,15 +220,16 @@
             this.txtPagoEnEfectivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPagoEnEfectivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPagoEnEfectivo.ForeColor = System.Drawing.Color.Gray;
-            this.txtPagoEnEfectivo.Location = new System.Drawing.Point(835, 684);
+            this.txtPagoEnEfectivo.Location = new System.Drawing.Point(791, 684);
             this.txtPagoEnEfectivo.Name = "txtPagoEnEfectivo";
             this.txtPagoEnEfectivo.Size = new System.Drawing.Size(244, 20);
             this.txtPagoEnEfectivo.TabIndex = 47;
+            this.txtPagoEnEfectivo.TextChanged += new System.EventHandler(this.txtPagoEnEfectivo_TextChanged);
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(825, 677);
+            this.pictureBox12.Location = new System.Drawing.Point(781, 677);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(265, 36);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,7 +260,6 @@
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(414, 28);
             this.cmbProducto.TabIndex = 44;
-            this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -285,7 +289,7 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.Gray;
-            this.lblTotal.Location = new System.Drawing.Point(1330, 728);
+            this.lblTotal.Location = new System.Drawing.Point(1286, 728);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(71, 30);
             this.lblTotal.TabIndex = 13;
@@ -297,7 +301,7 @@
             this.lblDevuelta.BackColor = System.Drawing.Color.Transparent;
             this.lblDevuelta.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblDevuelta.ForeColor = System.Drawing.Color.Gray;
-            this.lblDevuelta.Location = new System.Drawing.Point(1331, 776);
+            this.lblDevuelta.Location = new System.Drawing.Point(1287, 776);
             this.lblDevuelta.Name = "lblDevuelta";
             this.lblDevuelta.Size = new System.Drawing.Size(49, 20);
             this.lblDevuelta.TabIndex = 13;
@@ -309,7 +313,7 @@
             this.lblDescuento.BackColor = System.Drawing.Color.Transparent;
             this.lblDescuento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblDescuento.ForeColor = System.Drawing.Color.Gray;
-            this.lblDescuento.Location = new System.Drawing.Point(1331, 690);
+            this.lblDescuento.Location = new System.Drawing.Point(1287, 690);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(49, 20);
             this.lblDescuento.TabIndex = 13;
@@ -321,7 +325,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(1160, 728);
+            this.label4.Location = new System.Drawing.Point(1116, 728);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 30);
             this.label4.TabIndex = 13;
@@ -333,7 +337,7 @@
             this.lblItbis.BackColor = System.Drawing.Color.Transparent;
             this.lblItbis.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblItbis.ForeColor = System.Drawing.Color.Gray;
-            this.lblItbis.Location = new System.Drawing.Point(1331, 652);
+            this.lblItbis.Location = new System.Drawing.Point(1287, 652);
             this.lblItbis.Name = "lblItbis";
             this.lblItbis.Size = new System.Drawing.Size(49, 20);
             this.lblItbis.TabIndex = 13;
@@ -345,7 +349,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(1161, 776);
+            this.label5.Location = new System.Drawing.Point(1117, 776);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 13;
@@ -357,7 +361,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(1161, 690);
+            this.label3.Location = new System.Drawing.Point(1117, 690);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 13;
@@ -369,7 +373,7 @@
             this.lblSubtotal.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.Gray;
-            this.lblSubtotal.Location = new System.Drawing.Point(1331, 614);
+            this.lblSubtotal.Location = new System.Drawing.Point(1287, 614);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(49, 20);
             this.lblSubtotal.TabIndex = 13;
@@ -381,7 +385,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(1161, 652);
+            this.label2.Location = new System.Drawing.Point(1117, 652);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 13;
@@ -393,11 +397,23 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(1161, 614);
+            this.label1.Location = new System.Drawing.Point(1117, 614);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "SUBTOTAL :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(1325, 320);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "OPCIONES";
             // 
             // label13
             // 
@@ -405,11 +421,23 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(1297, 324);
+            this.label13.Location = new System.Drawing.Point(1099, 324);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 20);
             this.label13.TabIndex = 13;
             this.label13.Text = "SUBTOTAL";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(890, 320);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "DESCUENTO";
             // 
             // label12
             // 
@@ -417,7 +445,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(991, 324);
+            this.label12.Location = new System.Drawing.Point(691, 324);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 20);
             this.label12.TabIndex = 13;
@@ -429,7 +457,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(711, 324);
+            this.label11.Location = new System.Drawing.Point(488, 324);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 20);
             this.label11.TabIndex = 13;
@@ -441,7 +469,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(362, 324);
+            this.label10.Location = new System.Drawing.Point(214, 324);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 13;
@@ -451,13 +479,13 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(60, 320);
+            this.label9.Location = new System.Drawing.Point(61, 324);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.Size = new System.Drawing.Size(67, 20);
             this.label9.TabIndex = 12;
-            this.label9.Text = "#";
+            this.label9.Text = "CÓDIGO";
             // 
             // TablaFactContado
             // 
@@ -474,16 +502,17 @@
             this.TablaFactContado.ColumnHeadersVisible = false;
             this.TablaFactContado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDITAR,
-            this.ELIMINAR});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaFactContado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ELIMINAR,
+            this.DESCUENTO_PRO});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TablaFactContado.DefaultCellStyle = dataGridViewCellStyle1;
             this.TablaFactContado.Location = new System.Drawing.Point(47, 353);
             this.TablaFactContado.Name = "TablaFactContado";
             this.TablaFactContado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -491,6 +520,7 @@
             this.TablaFactContado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.TablaFactContado.Size = new System.Drawing.Size(1487, 233);
             this.TablaFactContado.TabIndex = 11;
+            this.TablaFactContado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaFactContado_CellContentClick);
             // 
             // EDITAR
             // 
@@ -504,31 +534,38 @@
             this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
             this.ELIMINAR.Name = "ELIMINAR";
             // 
-            // btnNuevoProducto
+            // DESCUENTO_PRO
             // 
-            this.btnNuevoProducto.ActiveBorderThickness = 1;
-            this.btnNuevoProducto.ActiveCornerRadius = 20;
-            this.btnNuevoProducto.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
-            this.btnNuevoProducto.ActiveForecolor = System.Drawing.Color.White;
-            this.btnNuevoProducto.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
-            this.btnNuevoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
-            this.btnNuevoProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoProducto.BackgroundImage")));
-            this.btnNuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevoProducto.ButtonText = "NUEVO PRODUCTO";
-            this.btnNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoProducto.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoProducto.IdleBorderThickness = 1;
-            this.btnNuevoProducto.IdleCornerRadius = 20;
-            this.btnNuevoProducto.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
-            this.btnNuevoProducto.IdleForecolor = System.Drawing.Color.White;
-            this.btnNuevoProducto.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
-            this.btnNuevoProducto.Location = new System.Drawing.Point(704, 132);
-            this.btnNuevoProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNuevoProducto.Name = "btnNuevoProducto";
-            this.btnNuevoProducto.Size = new System.Drawing.Size(224, 48);
-            this.btnNuevoProducto.TabIndex = 10;
-            this.btnNuevoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DESCUENTO_PRO.HeaderText = "DESCUENTO";
+            this.DESCUENTO_PRO.Image = ((System.Drawing.Image)(resources.GetObject("DESCUENTO_PRO.Image")));
+            this.DESCUENTO_PRO.Name = "DESCUENTO_PRO";
+            // 
+            // btnVerProductos
+            // 
+            this.btnVerProductos.ActiveBorderThickness = 1;
+            this.btnVerProductos.ActiveCornerRadius = 20;
+            this.btnVerProductos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
+            this.btnVerProductos.ActiveForecolor = System.Drawing.Color.White;
+            this.btnVerProductos.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
+            this.btnVerProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
+            this.btnVerProductos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVerProductos.BackgroundImage")));
+            this.btnVerProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVerProductos.ButtonText = "VER PRODUCTOS";
+            this.btnVerProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerProductos.ForeColor = System.Drawing.Color.White;
+            this.btnVerProductos.IdleBorderThickness = 1;
+            this.btnVerProductos.IdleCornerRadius = 20;
+            this.btnVerProductos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
+            this.btnVerProductos.IdleForecolor = System.Drawing.Color.White;
+            this.btnVerProductos.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(127)))), ((int)(((byte)(68)))));
+            this.btnVerProductos.Location = new System.Drawing.Point(704, 132);
+            this.btnVerProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerProductos.Name = "btnVerProductos";
+            this.btnVerProductos.Size = new System.Drawing.Size(224, 48);
+            this.btnVerProductos.TabIndex = 10;
+            this.btnVerProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnVerProductos.Click += new System.EventHandler(this.btnVerProductos_Click);
             // 
             // btnPagar
             // 
@@ -549,7 +586,7 @@
             this.btnPagar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(41)))));
             this.btnPagar.IdleForecolor = System.Drawing.Color.White;
             this.btnPagar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(41)))));
-            this.btnPagar.Location = new System.Drawing.Point(825, 726);
+            this.btnPagar.Location = new System.Drawing.Point(781, 726);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(268, 73);
@@ -637,12 +674,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView TablaFactContado;
-        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
-        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnNuevoProducto;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnVerProductos;
         private Bunifu.Framework.UI.BunifuThinButton2 btnPagar;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAgregar;
         public System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
+        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
+        private System.Windows.Forms.DataGridViewImageColumn DESCUENTO_PRO;
     }
 }

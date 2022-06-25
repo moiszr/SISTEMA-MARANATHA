@@ -1,0 +1,153 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Entidades;
+using Negocio;
+
+namespace Presentacion
+{
+    public partial class FrmVistaProductos : Form
+    {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect, // x-coordinate of upper-left corner
+            int nTopRect, // y-coordinate of upper-left corner
+            int nRightRect, // x-coordinate of lower-right corner
+            int nBottomRect, // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+         );
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmIsCompositionEnabled(ref int pfEnabled);
+
+        private bool m_aeroEnabled;                     // variables for box shadow
+        private const int CS_DROPSHADOW = 0x00020000;
+        private const int WM_NCPAINT = 0x0085;
+        private const int WM_ACTIVATEAPP = 0x001C;
+
+        public struct MARGINS                           // struct for box shadow
+        {
+            public int leftWidth;
+            public int rightWidth;
+            public int topHeight;
+            public int bottomHeight;
+        }
+
+        private const int WM_NCHITTEST = 0x84;          // variables for dragging the form
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                m_aeroEnabled = CheckAeroEnabled();
+
+                CreateParams cp = base.CreateParams;
+                if (!m_aeroEnabled)
+                    cp.ClassStyle |= CS_DROPSHADOW;
+
+                return cp;
+            }
+        }
+        private bool CheckAeroEnabled()
+        {
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                int enabled = 0;
+                DwmIsCompositionEnabled(ref enabled);
+                return (enabled == 1) ? true : false;
+            }
+            return false;
+        }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case WM_NCPAINT:                        // box shadow
+                    if (m_aeroEnabled)
+                    {
+                        var v = 2;
+                        DwmSetWindowAttribute(this.Handle, 2, ref v, 4);
+                        MARGINS margins = new MARGINS()
+                        {
+                            bottomHeight = 1,
+                            leftWidth = 1,
+                            rightWidth = 1,
+                            topHeight = 1
+                        };
+                        DwmExtendFrameIntoClientArea(this.Handle, ref margins);
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+            base.WndProc(ref m);
+
+            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT)     // drag the form
+                m.Result = (IntPtr)HTCAPTION;
+
+        }
+
+        N_Productos negocio = new N_Productos();
+        E_Productos entidades = new E_Productos();
+
+        public FrmVistaProductos()
+        {
+            InitializeComponent();
+            MostrarTablaProductos();
+            OcultarMoverAncharColumnas();
+        }
+
+        public void MostrarTablaProductos()
+        {
+            TablaProductos.DataSource = negocio.ListandoProductos();
+        }
+
+        public void BuscarProductos(string buscar)
+        {
+            TablaProductos.DataSource = negocio.BuscandoProductos(buscar);
+        }
+
+        public void OcultarMoverAncharColumnas()
+        {
+            TablaProductos.Columns[0].Visible = false;
+            TablaProductos.Columns[3].Visible = false;
+            TablaProductos.Columns[4].Visible = false;
+            TablaProductos.Columns[5].Visible = false;
+            TablaProductos.Columns[6].Visible = false;
+            TablaProductos.Columns[7].Visible = false;
+            TablaProductos.Columns[8].Visible = false;
+            TablaProductos.Columns[9].Visible = false;
+
+            TablaProductos.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaProductos.Columns[1].Width = 182;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            BuscarProductos(txtSearch.Text);
+        }
+    }
+}
