@@ -1,4 +1,5 @@
 ﻿using System;
+using Presentacion.Data;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -195,6 +196,17 @@ namespace Presentacion
         private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrecioCompra_TextChanged(object sender, EventArgs e)
+        {
+   
+            N_Categoria categoria = new N_Categoria();
+            int id = Convert.ToInt32(cmbCategorias.SelectedValue);
+            DataProduct.ListCategoria = categoria.BuscarCategoriasXID(id);
+
+            int PrecioCompra = Convert.ToInt32(txtPrecioCompra.Text);
+            txtPrecioVenta.Text = (PrecioCompra * ((DataProduct.ListCategoria[0].Porciento_Venta / 100)+1)).ToString();
         }
     }
 }

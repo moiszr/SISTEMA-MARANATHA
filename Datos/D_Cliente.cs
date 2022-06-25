@@ -99,7 +99,7 @@ namespace Datos
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@IDCliente", 3);
+            cmd.Parameters.AddWithValue("@IDCliente", Cliente.IdCliente);
             cmd.Parameters.AddWithValue("@NOMBRE", Cliente.Nombre);
             cmd.Parameters.AddWithValue("@APELLIDO", Cliente.Apellido);
             cmd.Parameters.AddWithValue("@CEDULA", Cliente.Cedula);

@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DataCliente.cs" />
     <Compile Include="Data\DataProduct.cs" />
     <Compile Include="Data\DataUser.cs" />
     <Compile Include="Data\DataVentas.cs" />

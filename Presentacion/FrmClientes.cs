@@ -130,7 +130,8 @@ namespace Presentacion
                 FrmMantenimientoClientes2 frm2 = new FrmMantenimientoClientes2();
 
                 frm2.Update = true;
-                frm.txtIdCliente.Text = TablaClientes.Rows[e.RowIndex].Cells["IDCLIENTE"].Value.ToString();
+                frm2.Idcliente = Convert.ToInt32(TablaClientes.Rows[e.RowIndex].Cells["IDCLIENTE"].Value.ToString());
+                frm.txtIdCliente.Text = TablaClientes.Rows[e.RowIndex].Cells["CODIGO"].Value.ToString();
                 frm.txtNombreCliente.Text = TablaClientes.Rows[e.RowIndex].Cells["NOMBRE"].Value.ToString();
                 frm.txtApellidoCliente.Text = TablaClientes.Rows[e.RowIndex].Cells["APELLIDO"].Value.ToString();
                 frm.txtCedula.Text = TablaClientes.Rows[e.RowIndex].Cells["CEDULA"].Value.ToString();
