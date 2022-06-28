@@ -52,6 +52,7 @@
     <Compile Include="E_login.cs" />
     <Compile Include="E_Marca.cs" />
     <Compile Include="E_Pagos.cs" />
+    <Compile Include="E_PagosFactura.cs" />
     <Compile Include="E_Productos.cs" />
     <Compile Include="E_Rol.cs" />
     <Compile Include="E_Usuario.cs" />

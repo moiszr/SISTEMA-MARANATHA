@@ -148,5 +148,14 @@ namespace Presentacion
             AbrirFormEnWrapper(new FrmUsuarios());
             lblIdentificador.Text = "USUARIOS";
         }
+
+        private void bntPagoF_Click(object sender, EventArgs e)
+        {
+            SeleccionBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormEnWrapper(new FrmPagosFactura());
+            lblIdentificador.Text = "PAGO FACTURA";
+        }
+
+
     }
 }

@@ -164,6 +164,12 @@
     <Compile Include="FrmMantenimientoFactContado.Designer.cs">
       <DependentUpon>FrmMantenimientoFactContado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoPagoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoPagoFactura.Designer.cs">
+      <DependentUpon>FrmMantenimientoPagoFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMantenimientoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
     </Compile>
     <Compile Include="FrmPagos.Designer.cs">
       <DependentUpon>FrmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagosFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagosFactura.Designer.cs">
+      <DependentUpon>FrmPagosFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -286,6 +298,9 @@
     <EmbeddedResource Include="FrmMantenimientoFactContado.resx">
       <DependentUpon>FrmMantenimientoFactContado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoPagoFactura.resx">
+      <DependentUpon>FrmMantenimientoPagoFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoProductos.resx">
       <DependentUpon>FrmMantenimientoProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPagos.resx">
       <DependentUpon>FrmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagosFactura.resx">
+      <DependentUpon>FrmPagosFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -401,6 +419,7 @@
     <Content Include="Img\Iconos\save.png" />
     <Content Include="Img\Iconos\search.png" />
     <Content Include="Img\Iconos\totals.png" />
+    <None Include="Resources\Pagofactura.html" />
     <None Include="Resources\plantilla_factura.html" />
     <None Include="Resources\LogoTop-1.png" />
     <None Include="Img\Logo\LogoTop-1.png" />

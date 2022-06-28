@@ -45,5 +45,10 @@ namespace Negocio
             return objCliente.ListarClienteCB();
         }
 
+        public List<E_Cliente> BuscarClienteId(int id)
+        {
+            return objCliente.BuscarClienteId(id);
+        }
+
     }
 }

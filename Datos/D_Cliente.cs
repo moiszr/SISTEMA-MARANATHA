@@ -174,5 +174,34 @@ namespace Datos
 
             return Listar;
         }
+
+        public List<E_Cliente> BuscarClienteId(int id)
+        {
+            SqlDataReader reader = null;
+            SqlCommand cmd = new SqlCommand("SP_BUSCAR_CLIENTE_ID", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conn.Open();
+            cmd.Parameters.AddWithValue("@ID", id);
+
+
+            reader = cmd.ExecuteReader();
+
+            List<E_Cliente> Listar = new List<E_Cliente>();
+
+            while (reader.Read())
+            {
+                Listar.Add(new E_Cliente
+                {
+                    IdCliente = reader.GetInt32(0),
+                    Nombre = reader.GetString(1)
+                });
+            }
+
+            conn.Close();
+            reader.Close();
+
+            return Listar;
+        }
     }
 }

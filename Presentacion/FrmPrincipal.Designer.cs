@@ -31,11 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.Sidebar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnVentas = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPagar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProductos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnFacturacionRedito = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,8 +50,7 @@
             this.lblIdentificador = new System.Windows.Forms.Label();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.bntPagoF = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Navbar.SuspendLayout();
@@ -59,6 +60,7 @@
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(33)))), ((int)(((byte)(41)))));
+            this.Sidebar.Controls.Add(this.bntPagoF);
             this.Sidebar.Controls.Add(this.label1);
             this.Sidebar.Controls.Add(this.label5);
             this.Sidebar.Controls.Add(this.label4);
@@ -91,6 +93,17 @@
             this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Menu Facturación";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(47, 737);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Menu Settings";
             // 
             // label4
             // 
@@ -247,6 +260,42 @@
             this.btnVentas.Textcolor = System.Drawing.Color.DarkGray;
             this.btnVentas.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Activecolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUsuarios.BorderRadius = 7;
+            this.btnUsuarios.ButtonText = "     Usuarios";
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.ForeColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage")));
+            this.btnUsuarios.Iconimage_right = null;
+            this.btnUsuarios.Iconimage_right_Selected = null;
+            this.btnUsuarios.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage_Selected")));
+            this.btnUsuarios.IconMarginLeft = 25;
+            this.btnUsuarios.IconMarginRight = 0;
+            this.btnUsuarios.IconRightVisible = true;
+            this.btnUsuarios.IconRightZoom = 0D;
+            this.btnUsuarios.IconVisible = true;
+            this.btnUsuarios.IconZoom = 55D;
+            this.btnUsuarios.IsTab = true;
+            this.btnUsuarios.Location = new System.Drawing.Point(23, 773);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
+            this.btnUsuarios.OnHoverTextColor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.selected = false;
+            this.btnUsuarios.Size = new System.Drawing.Size(220, 40);
+            this.btnUsuarios.TabIndex = 0;
+            this.btnUsuarios.Text = "     Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Textcolor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnPagar
             // 
@@ -503,52 +552,41 @@
             this.Wrapper.Size = new System.Drawing.Size(1170, 870);
             this.Wrapper.TabIndex = 2;
             // 
-            // btnUsuarios
+            // bntPagoF
             // 
-            this.btnUsuarios.Activecolor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUsuarios.BorderRadius = 7;
-            this.btnUsuarios.ButtonText = "     Usuarios";
-            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.DisabledColor = System.Drawing.Color.Gray;
-            this.btnUsuarios.ForeColor = System.Drawing.Color.Gray;
-            this.btnUsuarios.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage")));
-            this.btnUsuarios.Iconimage_right = null;
-            this.btnUsuarios.Iconimage_right_Selected = null;
-            this.btnUsuarios.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage_Selected")));
-            this.btnUsuarios.IconMarginLeft = 25;
-            this.btnUsuarios.IconMarginRight = 0;
-            this.btnUsuarios.IconRightVisible = true;
-            this.btnUsuarios.IconRightZoom = 0D;
-            this.btnUsuarios.IconVisible = true;
-            this.btnUsuarios.IconZoom = 55D;
-            this.btnUsuarios.IsTab = true;
-            this.btnUsuarios.Location = new System.Drawing.Point(23, 678);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
-            this.btnUsuarios.OnHoverTextColor = System.Drawing.Color.DarkGray;
-            this.btnUsuarios.selected = false;
-            this.btnUsuarios.Size = new System.Drawing.Size(220, 40);
-            this.btnUsuarios.TabIndex = 0;
-            this.btnUsuarios.Text = "     Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Textcolor = System.Drawing.Color.DarkGray;
-            this.btnUsuarios.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(47, 642);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 17);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Menu Settings";
+            this.bntPagoF.Activecolor = System.Drawing.Color.Transparent;
+            this.bntPagoF.BackColor = System.Drawing.Color.Transparent;
+            this.bntPagoF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bntPagoF.BorderRadius = 7;
+            this.bntPagoF.ButtonText = "     Pagos Facturas";
+            this.bntPagoF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntPagoF.DisabledColor = System.Drawing.Color.Gray;
+            this.bntPagoF.ForeColor = System.Drawing.Color.Gray;
+            this.bntPagoF.Iconcolor = System.Drawing.Color.Transparent;
+            this.bntPagoF.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntPagoF.Iconimage")));
+            this.bntPagoF.Iconimage_right = null;
+            this.bntPagoF.Iconimage_right_Selected = null;
+            this.bntPagoF.Iconimage_Selected = ((System.Drawing.Image)(resources.GetObject("bntPagoF.Iconimage_Selected")));
+            this.bntPagoF.IconMarginLeft = 25;
+            this.bntPagoF.IconMarginRight = 0;
+            this.bntPagoF.IconRightVisible = true;
+            this.bntPagoF.IconRightZoom = 0D;
+            this.bntPagoF.IconVisible = true;
+            this.bntPagoF.IconZoom = 55D;
+            this.bntPagoF.IsTab = true;
+            this.bntPagoF.Location = new System.Drawing.Point(23, 589);
+            this.bntPagoF.Name = "bntPagoF";
+            this.bntPagoF.Normalcolor = System.Drawing.Color.Transparent;
+            this.bntPagoF.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(83)))));
+            this.bntPagoF.OnHoverTextColor = System.Drawing.Color.DarkGray;
+            this.bntPagoF.selected = false;
+            this.bntPagoF.Size = new System.Drawing.Size(220, 40);
+            this.bntPagoF.TabIndex = 3;
+            this.bntPagoF.Text = "     Pagos Facturas";
+            this.bntPagoF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntPagoF.Textcolor = System.Drawing.Color.DarkGray;
+            this.bntPagoF.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntPagoF.Click += new System.EventHandler(this.bntPagoF_Click);
             // 
             // FrmPrincipal
             // 
@@ -595,5 +633,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnFacturacionRedito;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btnUsuarios;
+        private Bunifu.Framework.UI.BunifuFlatButton bntPagoF;
     }
 }
