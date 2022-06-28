@@ -10,25 +10,26 @@ namespace Entidades
     {
 		private int _idpagos;
 		private string _codigo;
-		private DateTime _fecha; 
-		private string _nombre;
-		private Decimal _interes_mora;
-		private Decimal _cuota;
-		private Decimal _mora;
-		private Decimal _total;
-		private int _idcredito;
-		private int _idcliente;
+		private string _estado;
 
+        private string _codigoventa;
+        private string _cedula;
+        private string _cliente;
+        private string _garante;
+		
+		private int _idVenta;
+		private int _idCliente;
+		private int _idGarante;
 
-		public int IdPagos { get => _idpagos; set => _idpagos = value; }
-		public string Codigo { get => _codigo; set => _codigo = value; }
-		public DateTime Fecha { get => _fecha; set => _fecha = value; }
-		public string Nombre { get => _nombre; set => _nombre = value; }
-		public Decimal Interes_Mora { get => _interes_mora; set => _interes_mora = value;}
-		public Decimal Cuota { get => _cuota; set => _cuota = value; }
-		public Decimal Mora { get => _mora; set => _mora = value; }
-		public Decimal Total { get => _total; set => _total = value; }
-		public int Idcredito { get => _idcredito; set => _idcredito = value; }
-		public int Idcliente { get => _idcliente; set => _idcliente = value; }
-	}
+        public int Idpagos { get => _idpagos; set => _idpagos = value; }
+        public string Codigo { get => _codigo; set => _codigo = value; }
+        public string Estado { get => _estado; set => _estado = value; }
+        public string Codigoventa { get => _codigoventa; set => _codigoventa = value; }
+        public string Cedula { get => _cedula; set => _cedula = value; }
+        public string Cliente { get => _cliente; set => _cliente = value; }
+        public string Garante { get => _garante; set => _garante = value; }
+        public int IdVenta { get => _idVenta; set => _idVenta = value; }
+        public int IdCliente { get => _idCliente; set => _idCliente = value; }
+        public int IdGarante { get => _idGarante; set => _idGarante = value; }
+    }
 }

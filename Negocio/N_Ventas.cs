@@ -21,7 +21,11 @@ namespace Negocio
         public void InsertarVentas(E_Ventas ventas, List<E_Detalle_Ventas> e_Detalle_Ventas)
         {
             objDato.InsertarVentas(ventas, e_Detalle_Ventas);
+        }
 
+        public int ObtenerID()
+        {
+            return objDato.ObtenerID();
         }
 
         public List<E_Productos> Datafactura(int id)

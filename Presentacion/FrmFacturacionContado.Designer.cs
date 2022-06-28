@@ -50,11 +50,9 @@
             this.lblDevuelta = new System.Windows.Forms.Label();
             this.lblDescuento = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblItbis = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -172,11 +170,9 @@
             this.panel9.Controls.Add(this.lblDevuelta);
             this.panel9.Controls.Add(this.lblDescuento);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Controls.Add(this.lblItbis);
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.lblSubtotal);
-            this.panel9.Controls.Add(this.label2);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.label13);
@@ -331,18 +327,6 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "TOTAL :";
             // 
-            // lblItbis
-            // 
-            this.lblItbis.AutoSize = true;
-            this.lblItbis.BackColor = System.Drawing.Color.Transparent;
-            this.lblItbis.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblItbis.ForeColor = System.Drawing.Color.Gray;
-            this.lblItbis.Location = new System.Drawing.Point(1287, 652);
-            this.lblItbis.Name = "lblItbis";
-            this.lblItbis.Size = new System.Drawing.Size(49, 20);
-            this.lblItbis.TabIndex = 13;
-            this.lblItbis.Text = "$0.00";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -373,23 +357,11 @@
             this.lblSubtotal.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.Gray;
-            this.lblSubtotal.Location = new System.Drawing.Point(1287, 614);
+            this.lblSubtotal.Location = new System.Drawing.Point(1287, 652);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(49, 20);
             this.lblSubtotal.TabIndex = 13;
             this.lblSubtotal.Text = "$0.00";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(1117, 652);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "ITBIS :";
             // 
             // label1
             // 
@@ -397,7 +369,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(1117, 614);
+            this.label1.Location = new System.Drawing.Point(1117, 652);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 13;
@@ -662,11 +634,9 @@
         private System.Windows.Forms.Label lblDevuelta;
         private System.Windows.Forms.Label lblDescuento;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblItbis;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;

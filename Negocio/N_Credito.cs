@@ -13,24 +13,24 @@ namespace Negocio
     {
         D_Credito objCredito = new D_Credito();
 
-        public List<E_Credito> ListaCredito (string credito)
+        public List<E_Credito> ListarCredito(int id)
         {
-            return objCredito.ListaCredito(credito);
+            return objCredito.ListarCredito(id);
         }
 
-        public void InsertarCredito (E_Credito credito)
+        public void InsertarCredito(E_Credito credito)
         {
             objCredito.InsertarCredito(credito);
         }
 
-        public void EditarCredito (E_Credito credito)
-        {
-            objCredito.EditarCredito(credito);
-        }
-        public void EliminarCredito (E_Credito credito)
-        {
-            objCredito.EliminarCredito(credito);
-        }
+        //public void EditarCredito(E_Credito credito)
+        //{
+        //    objCredito.EditarCredito(credito);
+        //}
+        //public void EliminarCredito(E_Credito credito)
+        //{
+        //    objCredito.EliminarCredito(credito);
+        //}
 
     }
 }

@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Presentacion.Data;
+using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Entidades;
-using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
-    public partial class FrmLogin : Form
+    public partial class FrmCredito : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -105,101 +105,71 @@ namespace Presentacion
 
         }
 
-        public FrmLogin()
+        List<E_Credito> ListCredito = new List<E_Credito>();
+
+        public FrmCredito()
         {
             InitializeComponent();
         }
 
-        public void IniciarSeccion()
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            try
-            {
-                List<E_login> entidades = new List<E_login>();
-                N_Usuario negocio = new N_Usuario();
-
-
-                entidades = negocio.VerificarLogin(txtuser.Text, txtpass.Text);
-
-                if (entidades.Count != 0)
-                {
-                    DataUser.idusuario = entidades[0].Idusuario;
-                    DataUser.usuario = entidades[0].Usario;
-                    DataUser.nombre = entidades[0].Nombre;
-                    DataUser.apellido = entidades[0].Apellido;
-                    DataUser.rol = entidades[0].Idrol;
-
-                    FrmPrincipal frm = new FrmPrincipal();
-
-                    this.Hide();
-                    frm.Show();
-                }
-                else
-                {
-                    FrmWarning.AdvertenciaForm("USUARIO O CONTRASEÑA INCORRECTA");
-                    txtuser.Text = "USUARIO";
-                    txtuser.Focus();
-                    txtpass.Text = "CONTRASEÑA";
-                    txtpass.UseSystemPasswordChar = false;
-                }
-            }
-            catch
-            {
-                FrmWarning.AdvertenciaForm("NO SE PUDO ACCEDER AL SISTEMA");
-            }
+            Close();
         }
 
-        private void txtuser_enter(object sender, EventArgs e)
+        public void MostarTabla(int id)
         {
-            if (txtuser.Text == "USUARIO")
-            {
-                txtuser.Text = "";
-            }
+            N_Credito n_Credito = new N_Credito();
+            ListCredito = n_Credito.ListarCredito(id);
+            TablaCredito.DataSource = ListCredito;
         }
 
-        private void txtuser_leave(object sender, EventArgs e)
+        public void OcultarMoverAncharColumnas()
         {
-            if(txtuser.Text == "")
-            {
-                txtuser.Text = "USUARIO";
+            TablaCredito.Columns[1].Visible = false;
+            TablaCredito.Columns[2].Visible = false;
+            TablaCredito.Columns[9].Visible = false;
+            TablaCredito.Columns[10].Visible = false;
 
-            }
+            TablaCredito.Columns[0].DisplayIndex = 9;
+
+            TablaCredito.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaCredito.Columns[3].Width = 150;
+            TablaCredito.Columns[3].ReadOnly = true;
+
+            TablaCredito.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaCredito.Columns[4].Width = 190;
+            TablaCredito.Columns[4].ReadOnly = true;
+
+            TablaCredito.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaCredito.Columns[5].Width = 180;
+            TablaCredito.Columns[5].ReadOnly = true;
+
+            TablaCredito.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaCredito.Columns[6].Width = 180;
+            TablaCredito.Columns[6].ReadOnly = true;
+
+            TablaCredito.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaCredito.Columns[7].Width = 180;
+            TablaCredito.Columns[7].ReadOnly = true;
+
+            TablaCredito.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaCredito.Columns[8].Width = 150;
+            TablaCredito.Columns[8].ReadOnly = true;
+
+            //for(int i=0; i<TablaCredito.Rows.Count; i++)
+            //{
+            //    if(TablaCredito.Rows[i].Cells[10].Value.ToString() == "NO PAGO")
+            //    {
+            //        TablaCredito.Rows[i].Cells[0].ValueType = typeof(String);
+            //        TablaCredito.Rows[i].Cells[0].Value = "";
+            //    }
+            //}
         }
 
-        private void txtpass_enter(object sender, EventArgs e)
+        public void VerificarPago()
         {
-            if (txtpass.Text == "CONTRASEÑA")
-            {
-                txtpass.Text = "";
-                txtpass.UseSystemPasswordChar = true;
-            }
-        }
 
-        private void txtpass_leave(object sender, EventArgs e)
-        {
-            if (txtpass.Text == "")
-            {
-                txtpass.Text = "CONTRASEÑA";
-                txtpass.UseSystemPasswordChar = false;
-
-            }
-        }
-
-        private void btncerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-            IniciarSeccion();
-        }
-
-        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                IniciarSeccion();
-            }
         }
     }
 }

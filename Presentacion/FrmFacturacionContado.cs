@@ -163,7 +163,6 @@ namespace Presentacion
             totalpago = total;
 
             lblSubtotal.Text = subtotal.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
-            lblItbis.Text = itbis.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
             lblDescuento.Text = descuento.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
             lblTotal.Text = total.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
         }
@@ -215,7 +214,6 @@ namespace Presentacion
             {
                 FrmWarning.AdvertenciaForm("DEBE INGRESAR UNA CANTIDAD DE PAGO");
             }
-            
         }
 
         private void txtPagoEnEfectivo_TextChanged(object sender, EventArgs e)

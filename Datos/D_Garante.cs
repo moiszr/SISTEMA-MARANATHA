@@ -14,7 +14,7 @@ namespace Datos
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar"].ConnectionString);
 
-        public List<E_Garante> ListaGarante (string buscar)
+        public List<E_Garante> ListarGarante(int id)
         {
             SqlDataReader reader = null;
             SqlCommand cmd = new SqlCommand("SP_BUSCAR_GARANTE", conn);
@@ -23,7 +23,7 @@ namespace Datos
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@BUSCAR", buscar);
+            cmd.Parameters.AddWithValue("@ID", id);
 
             reader = cmd.ExecuteReader();
 
@@ -32,20 +32,17 @@ namespace Datos
             while (reader.Read())
             {
                 Listar.Add(new E_Garante
-
                 {
                     Idgarante = reader.GetInt32(0),
                     Codigo = reader.GetString(1),
-                    Fecha = reader.GetDateTime(2),
-                    Nombre = reader.GetString(3),
-                    Apellido = reader.GetString(4),
-                    Cedula = reader.GetString(5),
-                    Telefono = reader.GetString(6),
-                    Celular = reader.GetString(7),
-                    Direccion = reader.GetString(8),
-                    Trabajo = reader.GetString(9),
-                    Sueldo = reader.GetString(10),
-
+                    Nombre = reader.GetString(2),
+                    Apellido = reader.GetString(3),
+                    Cedula = reader.GetString(4),
+                    Telefono = reader.GetString(5),
+                    Celular = reader.GetString(6),
+                    Direccion = reader.GetString(7),
+                    Trabajo = reader.GetString(8),
+                    Sueldo = reader.GetDecimal(9),
                 });
             }
             conn.Close();
@@ -53,14 +50,26 @@ namespace Datos
 
             return Listar;
         }
+
+        public int ObtenerID()
+        {
+            var cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_OBTENER_ID_GARANTE";
+
+            conn.Open();
+            int ID = (int)cmd.ExecuteScalar();
+            conn.Close();
+            return ID;
+        }
+
         public void InsertarGarante(E_Garante garante)
         {
-            SqlCommand cmd = new SqlCommand("SP_INSERT_CREDITO", conn);
+            SqlCommand cmd = new SqlCommand("SP_INSERTAR_GARANTE", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@FECHA", garante.Fecha);
             cmd.Parameters.AddWithValue("@NOMBRE", garante.Nombre);
             cmd.Parameters.AddWithValue("@APELLIDO", garante.Apellido);
             cmd.Parameters.AddWithValue("@CEDULA", garante.Cedula);
@@ -69,43 +78,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@DIRECCION", garante.Direccion);
             cmd.Parameters.AddWithValue("@TRABAJO", garante.Trabajo);
             cmd.Parameters.AddWithValue("@SUELDO", garante.Sueldo);
-
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
-
-        public void EditarGarante(E_Garante garante)
-        {
-            SqlCommand cmd = new SqlCommand("SP_EDIT_CREDITO", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            conn.Open();
-
-            cmd.Parameters.AddWithValue("@IDGARANTE", garante.Idgarante);
-            cmd.Parameters.AddWithValue("@FECHA", garante.Fecha);
-            cmd.Parameters.AddWithValue("@NOMBRE", garante.Nombre);
-            cmd.Parameters.AddWithValue("@APELLIDO", garante.Apellido);
-            cmd.Parameters.AddWithValue("@CEDULA", garante.Cedula);
-            cmd.Parameters.AddWithValue("@TELEFONO1", garante.Telefono);
-            cmd.Parameters.AddWithValue("@CELULAR", garante.Celular);
-            cmd.Parameters.AddWithValue("@DIRECCION", garante.Direccion);
-            cmd.Parameters.AddWithValue("@TRABAJO", garante.Trabajo);
-            cmd.Parameters.AddWithValue("@SUELDO", garante.Sueldo);
-
-
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
-
-        public void EliminarGarante(E_Garante garante)
-        {
-            SqlCommand cmd = new SqlCommand("SP_ELIMINAR_GARANTE", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            conn.Open();
-
-            cmd.Parameters.AddWithValue("@IDGARANTE", garante.Idgarante);
-
+           
             cmd.ExecuteNonQuery();
             conn.Close();
         }

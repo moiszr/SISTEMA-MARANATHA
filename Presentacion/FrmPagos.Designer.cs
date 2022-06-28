@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -39,17 +38,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.TablaProductos = new System.Windows.Forms.DataGridView();
-            this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.TablaPagos = new System.Windows.Forms.DataGridView();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GARANTE = new System.Windows.Forms.DataGridViewImageColumn();
+            this.CREDITO = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaPagos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -61,23 +60,11 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(1385, 116);
+            this.label15.Location = new System.Drawing.Point(1321, 116);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 20);
+            this.label15.Size = new System.Drawing.Size(82, 20);
             this.label15.TabIndex = 13;
-            this.label15.Text = "CRUD";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(1218, 116);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 20);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "FECHA";
+            this.label15.Text = "OPCIONES";
             // 
             // label13
             // 
@@ -85,11 +72,11 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(993, 116);
+            this.label13.Location = new System.Drawing.Point(1008, 116);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 20);
+            this.label13.Size = new System.Drawing.Size(81, 20);
             this.label13.TabIndex = 13;
-            this.label13.Text = "PAGOS RESTANTE";
+            this.label13.Text = "GARANTE";
             // 
             // label12
             // 
@@ -97,11 +84,11 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(825, 116);
+            this.label12.Location = new System.Drawing.Point(740, 116);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 20);
+            this.label12.Size = new System.Drawing.Size(68, 20);
             this.label12.TabIndex = 13;
-            this.label12.Text = "TOTAL PAGO";
+            this.label12.Text = "CLIENTE";
             // 
             // label11
             // 
@@ -109,11 +96,11 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(617, 116);
+            this.label11.Location = new System.Drawing.Point(538, 116);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 20);
+            this.label11.Size = new System.Drawing.Size(67, 20);
             this.label11.TabIndex = 13;
-            this.label11.Text = "CUOTAS PAGO";
+            this.label11.Text = "CEDULA";
             // 
             // label16
             // 
@@ -121,11 +108,11 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(206, 116);
+            this.label16.Location = new System.Drawing.Point(215, 116);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 20);
+            this.label16.Size = new System.Drawing.Size(66, 20);
             this.label16.TabIndex = 13;
-            this.label16.Text = "CLIENTE";
+            this.label16.Text = "ESTADO";
             // 
             // label10
             // 
@@ -133,25 +120,24 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(405, 116);
+            this.label10.Location = new System.Drawing.Point(376, 116);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 20);
+            this.label10.Size = new System.Drawing.Size(66, 20);
             this.label10.TabIndex = 13;
-            this.label10.Text = "PRODCUTOS";
+            this.label10.Text = "VENTAS";
             // 
             // panel9
             // 
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel9.Controls.Add(this.label15);
-            this.panel9.Controls.Add(this.label14);
             this.panel9.Controls.Add(this.label13);
             this.panel9.Controls.Add(this.label12);
             this.panel9.Controls.Add(this.label11);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.TablaProductos);
+            this.panel9.Controls.Add(this.TablaPagos);
             this.panel9.Controls.Add(this.btnExcel);
             this.panel9.Controls.Add(this.txtSearch);
             this.panel9.Controls.Add(this.pictureBox5);
@@ -166,30 +152,30 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(60, 116);
+            this.label9.Location = new System.Drawing.Point(58, 116);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.Size = new System.Drawing.Size(67, 20);
             this.label9.TabIndex = 12;
-            this.label9.Text = "#";
+            this.label9.Text = "CÓDIGO";
             // 
-            // TablaProductos
+            // TablaPagos
             // 
-            this.TablaProductos.AllowUserToAddRows = false;
-            this.TablaProductos.AllowUserToDeleteRows = false;
-            this.TablaProductos.AllowUserToOrderColumns = true;
-            this.TablaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TablaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.TablaProductos.BackgroundColor = System.Drawing.Color.White;
-            this.TablaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TablaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.TablaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProductos.ColumnHeadersVisible = false;
-            this.TablaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EDITAR,
-            this.ELIMINAR});
+            this.TablaPagos.AllowUserToAddRows = false;
+            this.TablaPagos.AllowUserToDeleteRows = false;
+            this.TablaPagos.AllowUserToOrderColumns = true;
+            this.TablaPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TablaPagos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaPagos.BackgroundColor = System.Drawing.Color.White;
+            this.TablaPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TablaPagos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TablaPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaPagos.ColumnHeadersVisible = false;
+            this.TablaPagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GARANTE,
+            this.CREDITO});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,26 +184,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaProductos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TablaProductos.Location = new System.Drawing.Point(47, 149);
-            this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaProductos.RowHeadersVisible = false;
-            this.TablaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.TablaProductos.Size = new System.Drawing.Size(1487, 624);
-            this.TablaProductos.TabIndex = 11;
-            // 
-            // EDITAR
-            // 
-            this.EDITAR.HeaderText = "EDITAR";
-            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
-            this.EDITAR.Name = "EDITAR";
-            // 
-            // ELIMINAR
-            // 
-            this.ELIMINAR.HeaderText = "ELIMINAR";
-            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
-            this.ELIMINAR.Name = "ELIMINAR";
+            this.TablaPagos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.TablaPagos.Location = new System.Drawing.Point(47, 149);
+            this.TablaPagos.Name = "TablaPagos";
+            this.TablaPagos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaPagos.RowHeadersVisible = false;
+            this.TablaPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.TablaPagos.Size = new System.Drawing.Size(1487, 681);
+            this.TablaPagos.TabIndex = 11;
+            this.TablaPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaPagos_CellContentClick);
             // 
             // btnExcel
             // 
@@ -293,6 +268,18 @@
             this.panel1.Size = new System.Drawing.Size(405, 23);
             this.panel1.TabIndex = 0;
             // 
+            // GARANTE
+            // 
+            this.GARANTE.HeaderText = "GARANTE";
+            this.GARANTE.Image = ((System.Drawing.Image)(resources.GetObject("GARANTE.Image")));
+            this.GARANTE.Name = "GARANTE";
+            // 
+            // CREDITO
+            // 
+            this.CREDITO.HeaderText = "CREDITO";
+            this.CREDITO.Image = ((System.Drawing.Image)(resources.GetObject("CREDITO.Image")));
+            this.CREDITO.Name = "CREDITO";
+            // 
             // FrmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,7 +291,7 @@
             this.Text = "FrmPagos";
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaPagos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -315,7 +302,6 @@
         #endregion
 
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -323,14 +309,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView TablaProductos;
-        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
-        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
+        private System.Windows.Forms.DataGridView TablaPagos;
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewImageColumn GARANTE;
+        private System.Windows.Forms.DataGridViewImageColumn CREDITO;
     }
 }

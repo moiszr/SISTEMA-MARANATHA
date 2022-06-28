@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -11,156 +9,454 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Entidades;
-using System.Runtime.InteropServices;
+using Presentacion.Data;
 
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
-using System.IO;
 namespace Presentacion
 {
     public partial class FrmFacturacionRedito : Form
     {
+        N_Ventas n_Ventas = new N_Ventas();
+        E_Ventas e_Ventas = new E_Ventas();
 
-        decimal Subtotal = 0;
-        decimal Total;
-        decimal Descuento;
+        private decimal totalpago;
 
         public FrmFacturacionRedito()
         {
             InitializeComponent();
+            LimpiarListas();
             ListarProducto();
             ListarCliente();
+
+            txtInicialDePago.Enabled = false;
         }
 
         public void ListarProducto()
         {
-            //N_Productos nproductos = new N_Productos();
-            //cmbProductos.DataSource = nproductos.ListarProductos();
-            //cmbProductos.ValueMember = "IdProductos";
-            //cmbProductos.DisplayMember = "Producto";
+            N_Productos nproductos = new N_Productos();
+            cmbProductos.DataSource = nproductos.ListarProductos();
+            cmbProductos.ValueMember = "IdProductos";
+            cmbProductos.DisplayMember = "Producto";
         }
+        
         public void ListarCliente()
         {
-            //N_Cliente ncliente = new N_Cliente();
-            //cmbClientes.DataSource = ncliente.ListarClienteCB();
-            //cmbClientes.ValueMember = "IdCliente";
-            //cmbClientes.DisplayMember = "Nombre";
+            N_Cliente ncliente = new N_Cliente();
+            cmbClientes.DataSource = ncliente.ListarClienteCB();
+            cmbClientes.ValueMember = "IdCliente";
+            cmbClientes.DisplayMember = "Nombre";
         }
-        public void imprimir()
+
+        private void LimpiarListas()
         {
-
-           
-        //    SaveFileDialog guardar = new SaveFileDialog();
-        //    guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
-
-        //    string paginahtml_text = Properties.Resources.plantilla_factura.ToString();
-        //    paginahtml_text = paginahtml_text.Replace("@CLIENTE", cmbProductos.SelectedValue.ToString());
-        //    paginahtml_text = paginahtml_text.Replace("@USUARIO", DataUser.idusuario.ToString());
-        //    paginahtml_text = paginahtml_text.Replace("@FECHA", DateTime.Now.ToString());
-        //    paginahtml_text = paginahtml_text.Replace("@TOTAL", lblSubtotal.Text);
-        //    paginahtml_text = paginahtml_text.Replace("@TIPO", "CREDITO");
-
-
-        //    string filas = string.Empty;
-
-        //    foreach (E_Detalle_Compras DCompras in DataUser.eclientes)
-        //    {
-
-        //        filas += "<tr>";
-        //        filas += "<td>" + DCompras.Producto + "</td>";
-        //        filas += "<td>" + DCompras.Preciocompra + "</td>";
-        //        filas += "<td>" + DCompras.Cantidad + "</td>";
-        //        filas += "<td>" + DCompras.Subtotal + "</td>";
-        //        filas += "</tr>";
-        //    }
-        //    paginahtml_text = paginahtml_text.Replace("@FILAS", filas);
-
-
-        //    if (guardar.ShowDialog() == DialogResult.OK)
-        //    {
-        //        using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
-        //        {
-        //            Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
-
-        //            PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-
-        //            pdfDoc.Open();
-
-        //            pdfDoc.Add(new Phrase(""));
-
-        //            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.LogoTop_1, System.Drawing.Imaging.ImageFormat.Png);
-        //            img.ScaleToFit(150, 90);
-        //            img.Alignment = iTextSharp.text.Image.UNDERLYING;
-        //            img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 70);
-        //            pdfDoc.Add(img);
-
-        //            using (StringReader sr = new StringReader(paginahtml_text))
-        //            {
-        //                XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-        //            }
-        //            pdfDoc.Close();
-
-        //            stream.Close();
-        //        }
-        //    }
+            DataProduct.ListCategoria.Clear();
+            DataProduct.ListProductos.Clear();
+            DataVentas.ListDetalle_v.Clear();
+            DataCredito.ListGarante.Clear();
+            DataCredito.ListCredito.Clear();
         }
+
+        public void OcultarMoverAncharColumnas()
+        {
+            TablaFactCredito.Columns[3].Visible = false;
+            TablaFactCredito.Columns[4].Visible = false;
+            TablaFactCredito.Columns[9].Visible = false;
+            TablaFactCredito.Columns[10].Visible = false;
+            TablaFactCredito.Columns[13].Visible = false;
+
+            TablaFactCredito.Columns[12].DisplayIndex = 0;
+            TablaFactCredito.Columns[11].DisplayIndex = 1;
+            TablaFactCredito.Columns[5].DisplayIndex = 2;
+            TablaFactCredito.Columns[6].DisplayIndex = 3;
+            TablaFactCredito.Columns[7].DisplayIndex = 4;
+            TablaFactCredito.Columns[8].DisplayIndex = 5;
+            TablaFactCredito.Columns[1].DisplayIndex = 6;
+            TablaFactCredito.Columns[0].DisplayIndex = 6;
+            TablaFactCredito.Columns[2].DisplayIndex = 6;
+
+            TablaFactCredito.Columns[12].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaFactCredito.Columns[12].Width = 155;
+
+            TablaFactCredito.Columns[11].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaFactCredito.Columns[11].Width = 275;
+            TablaFactCredito.Columns[11].ReadOnly = true;
+
+            TablaFactCredito.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaFactCredito.Columns[5].Width = 207;
+            TablaFactCredito.Columns[5].ReadOnly = true;
+
+            TablaFactCredito.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaFactCredito.Columns[6].Width = 198;
+            TablaFactCredito.Columns[6].ReadOnly = true;
+
+            TablaFactCredito.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaFactCredito.Columns[7].Width = 210;
+            TablaFactCredito.Columns[7].ReadOnly = true;
+
+            TablaFactCredito.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TablaFactCredito.Columns[8].Width = 220;
+            TablaFactCredito.Columns[8].ReadOnly = true;
+        }
+
+        public void MostrarTablaCredito()
+        {
+            TablaFactCredito.DataSource = null;
+            TablaFactCredito.DataSource = DataVentas.ListDetalle_v;
+            OcultarMoverAncharColumnas();
+        }
+
+        private void CalculoLabels()
+        {
+            decimal subtotal = 0, descuento = 0, total = 0;
+
+            foreach (var item in DataVentas.ListDetalle_v)
+            {
+                subtotal += item.Subtotal;
+                descuento += (item.Descuento * item.Cantidad);
+            }
+            total = subtotal - descuento;
+            totalpago = total;
+
+            lblSubtotal.Text = subtotal.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+            lblDescuento.Text = descuento.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+            lblTotal.Text = total.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+            try
+            {
+                lblRestante.Text = PagoWithInteres().ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+                decimal cuotas = PagoWithInteres() / Convert.ToInt16(txtCuotasEnMeses.Text);
+                lblcuotas.Text = cuotas.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+            }catch{}
+            
+        }
+
+        private void LimpiarFacturacion()
+        {
+            //Limpiar los datos del garante
+            txtNombreGarante.Text = "";
+            txtApellidoGarante.Text = "";
+            txtCelularGarante.Text = "";
+            txtTelefonoGarante.Text = "";
+            txtCedulaGarante.Text = "";
+            txtDireccionGarante.Text = "";
+            txtTrabajoGarante.Text = "";
+            txtSueldoGarante.Text = "";
+
+            //Limpiar datos de factura;
+            cmbClientes.ResetText();
+            cmbProductos.ResetText();
+            txtCantidad.Text = "";
+            txtCuotasEnMeses.Text = "";
+            txtInicialDePago.Text = "";
+
+            //Limpiar datos del total de los labels
+            lblSubtotal.Text = "0.00";
+            lblDescuento.Text = "0.00";
+            lblTotal.Text = "0.00";
+            lblInicial.Text = "0.00";
+            lblRestante.Text = "0.00";
+
+            DataVentas.ListDetalle_v.Clear();
+            MostrarTablaCredito();
+            CalculoLabels();
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-        //    int Idproducto = Convert.ToInt32(cmbProductos.SelectedValue);
-        //    List<E_Productos> entidades = new List<E_Productos>();
-        //    N_Ventas nproductos = new N_Ventas();
-        //    entidades = nproductos.Datafactura(Idproducto);
-        //    string Producto = entidades[0].Producto;
-        //    decimal PrecioVenta = entidades[0].PrecioVenta;
-        //    int Cantidad = Convert.ToInt32(txtCantidad.Text);
-        //    decimal SubtotalP = Cantidad * PrecioVenta;
+            try
+            {
+                int id_producto = Convert.ToInt32(cmbProductos.SelectedValue);
+                DataProduct.ListProductos = n_Ventas.Datafactura(id_producto);
 
-        //    if (Cantidad <= entidades[0].Stock)
-        //    {
-        //        DataUser.eclientes.Add(new E_Detalle_Compras
-        //        {
-        //            Preciocompra = PrecioVenta,
-        //            Cantidad = Cantidad,
-        //            Subtotal = SubtotalP,
-        //            Idproducto = Idproducto,
-        //            Producto = Producto,
+                string producto = DataProduct.ListProductos[0].Producto;
+                string codigo = DataProduct.ListProductos[0].CodigoProducto;
+                int idcategoria = DataProduct.ListProductos[0].Idcategoria;
+                decimal precioVenta = DataProduct.ListProductos[0].PrecioVenta;
+                int cantidad = Convert.ToInt32(txtCantidad.Text);
+                decimal subtotalProduct = cantidad * precioVenta;
 
-        //        });
+                if (cantidad <= DataProduct.ListProductos[0].Stock)
+                {
+                    if (cantidad > 0)
+                    {
+                        bool validador = false;
+                        foreach (var item in DataVentas.ListDetalle_v)
+                        {
+                            if (item.Idproducto == id_producto)
+                            {
+                                validador = true;
+                            }
+                        }
+                        if (!validador)
+                        {
+                            DataVentas.ListDetalle_v.Add(new E_Detalle_Ventas
+                            {
+                                CodigoProd = codigo,
+                                Preciocompra = precioVenta,
+                                Cantidad = cantidad,
+                                Subtotal = subtotalProduct,
+                                Idproducto = id_producto,
+                                Producto = producto,
+                                IdCategoria = idcategoria
+                            });
+                            txtCantidad.Text = "";
 
-        //        txtCantidad.Text = "";
-        //        TablaFactCredito.DataSource = DataUser.eclientes;
-        //        Subtotal += SubtotalP;
-        //        Total = Subtotal - Descuento;
-        //        txtTotal.Text = Total.ToString();
-        //        lblSubtotal.Text = Subtotal.ToString();
-        //    }
-        //    else
-        //    {
-        //        FrmSuccess.ConfirmacionForm("No hay suficiente en stock");
-        //        txtCantidad.Text = "";
-        //    }
+                            MostrarTablaCredito();
+                            CalculoLabels();
+                        }
+                        else
+                        {
+                            FrmWarning.AdvertenciaForm("ESTE PRODUCTO YA FUE AGREGADO");
+                        }
+                    }
+                    else
+                    {
+                        FrmWarning.AdvertenciaForm("CANTIDAD DEBE SER MAYOR A 0");
+                    }
+                }
+                else
+                {
+                    FrmWarning.AdvertenciaForm("STOCK INSUFICIENTE");
+                    txtCantidad.Text = "";
+                }
+            }
+            catch (Exception)
+            {
+                FrmWarning.AdvertenciaForm("INGRESE LA CANTIDAD DEL PRODUCTO");
+            }
+        }
+
+        private decimal PagoWithInteres()
+        {
+            decimal totalneto = 0;
+            if (DataVentas.ListDetalle_v.Count > 0)
+            {
+                decimal interes = 5;
+                decimal total = totalpago - Convert.ToDecimal(txtInicialDePago.Text);
+                decimal totalinteres = total * (interes / 100);
+                totalneto = ((Convert.ToInt16(txtCuotasEnMeses.Text) * totalinteres) + total);
+            }
+            return totalneto;
         }
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            //E_Ventas eventa = new E_Ventas();
-            //N_Ventas nventa = new N_Ventas();
+            try
+            {
+                if (txtInicialDePago.Text != "" && txtCuotasEnMeses.Text != "")
+                {
+                    if(txtNombreGarante.Text != "" && txtApellidoGarante.Text != "" && txtCedulaGarante.Text != "")
+                    {
+                        e_Ventas.Fecha = DateTime.Now;
+                        e_Ventas.Total = Convert.ToDecimal(PagoWithInteres() + int.Parse(txtInicialDePago.Text));
+                        e_Ventas.Nombre_cliente = cmbClientes.GetItemText(this.cmbClientes.SelectedItem);
+                        e_Ventas.Idusuario = DataUser.idusuario;
+                        e_Ventas.Idgarante = null;
 
-            //eventa.Fecha = DateTime.Now;
-            //eventa.Total = Convert.ToDecimal(txtTotal.Text);
-            //eventa.Nombre_cliente = cmbClientes.SelectedText;
-            //eventa.Idusuario = DataUser.idusuario;
+                        n_Ventas.InsertarVentas(e_Ventas, DataVentas.ListDetalle_v);
 
-            //nventa.InsertarVentas(eventa, DataUser.eproductos);
+                        N_Garante n_Garante = new N_Garante();
+                        n_Garante.InsertarGarante(DatosGarante());
 
+                        int idVentas = n_Ventas.ObtenerID();
+                        int idGarante = n_Garante.ObtenerID();
+                        int idCliente = Convert.ToInt32(cmbClientes.SelectedValue);
 
-            ////decimal devuelta = Convert.ToDecimal(txtPagoEnEfectivo.Text) - Convert.ToDecimal(txtTotal.Text);
+                        E_Pagos e_Pagos = new E_Pagos();
+                        e_Pagos.Estado = "En Curso";
+                        e_Pagos.IdVenta = idVentas;
+                        e_Pagos.IdCliente = idCliente;
+                        e_Pagos.IdGarante = idGarante;
 
+                        N_Pagos n_Pagos = new N_Pagos();
+                        n_Pagos.InsertarPagos(e_Pagos);
+                        int idPago = n_Pagos.ObtenerID();
+
+                        Cuotas cuotas = new Cuotas(totalpago, Convert.ToDecimal(txtInicialDePago.Text), Convert.ToInt32(txtCuotasEnMeses.Text));
+                        
+                        E_Credito credito = new E_Credito();
+                        N_Credito n_Credito = new N_Credito();
+                        foreach(E_Credito c in DataCredito.ListCredito)
+                        {
+                            credito.No_Pago = c.No_Pago;
+                            credito.Fecha = c.Fecha;
+                            credito.Cuotas = c.Cuotas;
+                            credito.Capital = c.Capital;
+                            credito.Interes = c.Interes;
+                            credito.Mora = c.Mora;
+                            credito.IdPago = idPago;
+
+                            n_Credito.InsertarCredito(credito);
+                        }
+
+                        FrmSuccess.ConfirmacionForm("PAGO EXITOSO");
+                        Factura.Contado(e_Ventas, DataProduct.ListProductos);
+                        LimpiarFacturacion();
+                    }
+                    else
+                    {
+                        FrmWarning.AdvertenciaForm("LLENE LOS DATOS OBLIGATRORIOS DE GARANTE");
+                    }
+                }
+                else
+                {
+                    if (txtCuotasEnMeses.Text == "")
+                    {
+                        FrmWarning.AdvertenciaForm("DEBE INGRESAR LAS CUOTAS EN MESES");
+                    }
+                    else
+                    {
+                        FrmWarning.AdvertenciaForm("DEBE INGRESAR EL INICIAL DE PAGO");
+                    }
+                }
+            }
+            catch
+            {
+                FrmWarning.AdvertenciaForm("EL PAGO NO PUDO SER PROCESADO");
+            }
+        }
+
+        private void TablaFactCredito_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (TablaFactCredito.Rows[e.RowIndex].Cells["ELIMINAR"].Selected)
+                {
+                    Form message = new FrmInformation("¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO?");
+                    DialogResult result = message.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        int delete = Convert.ToInt32(TablaFactCredito.Rows[e.RowIndex].Cells[10].Value.ToString());
+                        foreach (var items in DataVentas.ListDetalle_v.ToArray())
+                        {
+                            if (items.Idproducto == delete)
+                            {
+                                TablaFactCredito.DataSource = null;
+                                DataVentas.ListDetalle_v.Remove(items);
+                            }
+                        }
+                        MostrarTablaCredito();
+                        CalculoLabels();
+                        FrmSuccess.ConfirmacionForm("ELIMINADO");
+                    }
+                }
+                else if (TablaFactCredito.Rows[e.RowIndex].Cells["EDITAR"].Selected)
+                {
+                    int id = Convert.ToInt32(TablaFactCredito.Rows[e.RowIndex].Cells["IDPRODUCTO"].Value.ToString());
+                    DataProduct.ListProductos = n_Ventas.Datafactura(id);
+
+                    FrmMantenimientoFactContado frm = new FrmMantenimientoFactContado();
+                    frm.txtCodigo.Text = TablaFactCredito.Rows[e.RowIndex].Cells["CODIGOPROD"].Value.ToString();
+                    frm.txtIdProductos.Text = TablaFactCredito.Rows[e.RowIndex].Cells["IDPRODUCTO"].Value.ToString();
+                    frm.txtNombreProducto.Text = TablaFactCredito.Rows[e.RowIndex].Cells["PRODUCTO"].Value.ToString();
+                    frm.txtCantidad.Text = TablaFactCredito.Rows[e.RowIndex].Cells["CANTIDAD"].Value.ToString();
+                    frm.Stock = DataProduct.ListProductos[0].Stock;
+
+                    DialogResult result = frm.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        MostrarTablaCredito();
+                        CalculoLabels();
+                        FrmSuccess.ConfirmacionForm("CANTIDAD MODIFICADA");
+                    }
+                }
+                else if (TablaFactCredito.Rows[e.RowIndex].Cells["DESCUENTO_PRO"].Selected)
+                {
+                    decimal precioventa;
+                    N_Categoria categoria = new N_Categoria();
+                    int id = Convert.ToInt32(TablaFactCredito.Rows[e.RowIndex].Cells[13].Value.ToString());
+                    DataProduct.ListCategoria = categoria.BuscarCategoriasXID(id);
+
+                    decimal tl = Convert.ToDecimal(TablaFactCredito.Rows[e.RowIndex].Cells["PRECIOCOMPRA"].Value.ToString());
+                    decimal descuentoentabla = (tl * (DataProduct.ListCategoria[0].Porciento_Descuento / 100));
+
+                    FrmDescuento frm = new FrmDescuento();
+                    frm.txtCodigo.Text = TablaFactCredito.Rows[e.RowIndex].Cells["CODIGOPROD"].Value.ToString();
+                    frm.txtIdProductos.Text = TablaFactCredito.Rows[e.RowIndex].Cells["IDPRODUCTO"].Value.ToString();
+                    frm.txtNombreProducto.Text = TablaFactCredito.Rows[e.RowIndex].Cells["PRODUCTO"].Value.ToString();
+                    frm.txtPrecioVenta.Text = (
+                        precioventa = Convert.ToDecimal(
+                            TablaFactCredito.Rows[e.RowIndex].Cells["PRECIOCOMPRA"].Value.ToString()
+                            )
+                        ).ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO"));
+                    frm.txtDescuento.Text = Math.Round(descuentoentabla, 2).ToString();
+                    frm.DescuentoMax = Math.Round(descuentoentabla, 2);
+
+                    DialogResult result = frm.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        MostrarTablaCredito();
+                        CalculoLabels();
+                        FrmSuccess.ConfirmacionForm("DESCUENTO APLICADO");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                FrmWarning.AdvertenciaForm("ALGO SALIÓ MAL");
+            }
+        }
+
+        private void txtCuotasEnMeses_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCuotasEnMeses.Text.Length > 0)
+                {
+                    txtInicialDePago.Enabled = true;
+                }
+                else if(Convert.ToInt16(txtCuotasEnMeses.Text) == 0)
+                {
+                    txtInicialDePago.Enabled = false;
+                }
+            }
+            catch
+            {
+                txtCuotasEnMeses.Text = "";
+            }
+        }
+
+        private void txtInicialDePago_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtInicialDePago.Text.Length > 0)
+                {
+                    txtCuotasEnMeses.Enabled = false;
+                } else if(Convert.ToDecimal(txtInicialDePago.Text) > 0)
+                {
+                    txtCuotasEnMeses.Enabled = false;
+                }
+                if(DataVentas.ListDetalle_v.Count > 0)
+                {
+                    lblRestante.Text = PagoWithInteres().ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+                    decimal cuotas = PagoWithInteres() / Convert.ToInt16(txtCuotasEnMeses.Text);
+                    lblcuotas.Text = cuotas.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+                    lblInicial.Text = Convert.ToDecimal(txtInicialDePago.Text).ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-DO")).PadRight(20);
+                }
+            }
+            catch
+            {
+                txtInicialDePago.Text = "";
+                lblRestante.Text = "0.00";
+                lblInicial.Text = "0.00";
+                lblcuotas.Text = "0.00";
+                txtCuotasEnMeses.Enabled = true;
+            }
+        }
+
+        private E_Garante DatosGarante()
+        {
+            E_Garante garante = new E_Garante();
+            garante.Nombre = txtNombreGarante.Text;
+            garante.Apellido = txtApellidoGarante.Text;
+            garante.Cedula = txtCedulaGarante.Text;
+            garante.Telefono = txtTelefonoGarante.Text;
+            garante.Celular = txtCelularGarante.Text;
+            garante.Direccion = txtDireccionGarante.Text;
+            garante.Trabajo = txtTrabajoGarante.Text;
+            garante.Sueldo = Convert.ToDecimal(txtSueldoGarante.Text);
             
-
-            //FrmSuccess.ConfirmacionForm("PROCESO COMPLETO");
-            //imprimir();
+            return garante;
         }
     }
 }

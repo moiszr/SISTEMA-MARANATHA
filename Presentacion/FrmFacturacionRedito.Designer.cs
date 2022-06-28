@@ -30,18 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturacionRedito));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnNuevoCliente = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TablaFactCredito = new System.Windows.Forms.DataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.DESCUENTO_PRO = new System.Windows.Forms.DataGridViewImageColumn();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -83,23 +86,23 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.txtRestante = new System.Windows.Forms.Label();
-            this.txtInicial = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.Label();
+            this.lblRestante = new System.Windows.Forms.Label();
+            this.lblcuotas = new System.Windows.Forms.Label();
+            this.lblInicial = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.lblDescuento = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblItbis = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TablaFactCredito = new System.Windows.Forms.DataGridView();
             this.btnPagar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaFactCredito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -113,81 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaFactCredito)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(1303, 439);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 20);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "SUBTOTAL";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(1032, 439);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 20);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "CANTIDAD";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(788, 439);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 20);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "PRECIO";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(266, 439);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 20);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "CODIGO";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(516, 439);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 20);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "PRODUCTO";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(60, 439);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "#";
             // 
             // btnExcel
             // 
@@ -267,22 +197,18 @@
             this.btnNuevoCliente.TabIndex = 7;
             this.btnNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EDITAR
-            // 
-            this.EDITAR.HeaderText = "EDITAR";
-            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
-            this.EDITAR.Name = "EDITAR";
-            // 
-            // ELIMINAR
-            // 
-            this.ELIMINAR.HeaderText = "ELIMINAR";
-            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
-            this.ELIMINAR.Name = "ELIMINAR";
-            // 
             // panel9
             // 
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.label6);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.label8);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.label10);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.TablaFactCredito);
             this.panel9.Controls.Add(this.label27);
             this.panel9.Controls.Add(this.label26);
             this.panel9.Controls.Add(this.label17);
@@ -324,25 +250,18 @@
             this.panel9.Controls.Add(this.pictureBox11);
             this.panel9.Controls.Add(this.label14);
             this.panel9.Controls.Add(this.pictureBox8);
-            this.panel9.Controls.Add(this.txtRestante);
-            this.panel9.Controls.Add(this.txtInicial);
-            this.panel9.Controls.Add(this.txtTotal);
+            this.panel9.Controls.Add(this.lblRestante);
+            this.panel9.Controls.Add(this.lblcuotas);
+            this.panel9.Controls.Add(this.lblInicial);
+            this.panel9.Controls.Add(this.lblTotal);
             this.panel9.Controls.Add(this.lblDescuento);
+            this.panel9.Controls.Add(this.label2);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Controls.Add(this.lblItbis);
             this.panel9.Controls.Add(this.label7);
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.lblSubtotal);
-            this.panel9.Controls.Add(this.label2);
             this.panel9.Controls.Add(this.label1);
-            this.panel9.Controls.Add(this.label13);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.label11);
-            this.panel9.Controls.Add(this.label16);
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.TablaFactCredito);
             this.panel9.Controls.Add(this.btnExcel);
             this.panel9.Controls.Add(this.btnPagar);
             this.panel9.Controls.Add(this.btnAgregar);
@@ -352,6 +271,143 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1598, 939);
             this.panel9.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(1334, 443);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 20);
+            this.label6.TabIndex = 129;
+            this.label6.Text = "OPCIONES";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(1108, 447);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 20);
+            this.label13.TabIndex = 130;
+            this.label13.Text = "SUBTOTAL";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(899, 443);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 20);
+            this.label8.TabIndex = 131;
+            this.label8.Text = "DESCUENTO";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(700, 447);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 20);
+            this.label12.TabIndex = 132;
+            this.label12.Text = "CANTIDAD";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(497, 447);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 20);
+            this.label11.TabIndex = 133;
+            this.label11.Text = "PRECIO";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(223, 447);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 20);
+            this.label10.TabIndex = 134;
+            this.label10.Text = "PRODUCTO";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(70, 447);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 20);
+            this.label9.TabIndex = 128;
+            this.label9.Text = "CÓDIGO";
+            // 
+            // TablaFactCredito
+            // 
+            this.TablaFactCredito.AllowUserToAddRows = false;
+            this.TablaFactCredito.AllowUserToDeleteRows = false;
+            this.TablaFactCredito.AllowUserToOrderColumns = true;
+            this.TablaFactCredito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TablaFactCredito.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaFactCredito.BackgroundColor = System.Drawing.Color.White;
+            this.TablaFactCredito.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TablaFactCredito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TablaFactCredito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaFactCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaFactCredito.ColumnHeadersVisible = false;
+            this.TablaFactCredito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EDITAR,
+            this.ELIMINAR,
+            this.DESCUENTO_PRO});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TablaFactCredito.DefaultCellStyle = dataGridViewCellStyle1;
+            this.TablaFactCredito.Location = new System.Drawing.Point(56, 476);
+            this.TablaFactCredito.Name = "TablaFactCredito";
+            this.TablaFactCredito.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaFactCredito.RowHeadersVisible = false;
+            this.TablaFactCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.TablaFactCredito.Size = new System.Drawing.Size(1487, 188);
+            this.TablaFactCredito.TabIndex = 127;
+            this.TablaFactCredito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaFactCredito_CellContentClick);
+            // 
+            // EDITAR
+            // 
+            this.EDITAR.HeaderText = "EDITAR";
+            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
+            this.EDITAR.Name = "EDITAR";
+            // 
+            // ELIMINAR
+            // 
+            this.ELIMINAR.HeaderText = "ELIMINAR";
+            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
+            this.ELIMINAR.Name = "ELIMINAR";
+            // 
+            // DESCUENTO_PRO
+            // 
+            this.DESCUENTO_PRO.HeaderText = "DESCUENTO";
+            this.DESCUENTO_PRO.Image = ((System.Drawing.Image)(resources.GetObject("DESCUENTO_PRO.Image")));
+            this.DESCUENTO_PRO.Name = "DESCUENTO_PRO";
             // 
             // label27
             // 
@@ -636,6 +692,7 @@
             this.txtCuotasEnMeses.Name = "txtCuotasEnMeses";
             this.txtCuotasEnMeses.Size = new System.Drawing.Size(244, 20);
             this.txtCuotasEnMeses.TabIndex = 47;
+            this.txtCuotasEnMeses.TextChanged += new System.EventHandler(this.txtCuotasEnMeses_TextChanged);
             // 
             // pictureBox13
             // 
@@ -656,6 +713,7 @@
             this.txtInicialDePago.Name = "txtInicialDePago";
             this.txtInicialDePago.Size = new System.Drawing.Size(244, 20);
             this.txtInicialDePago.TabIndex = 47;
+            this.txtInicialDePago.TextChanged += new System.EventHandler(this.txtInicialDePago_TextChanged);
             // 
             // pictureBox12
             // 
@@ -797,41 +855,53 @@
             this.pictureBox8.TabIndex = 45;
             this.pictureBox8.TabStop = false;
             // 
-            // txtRestante
+            // lblRestante
             // 
-            this.txtRestante.AutoSize = true;
-            this.txtRestante.BackColor = System.Drawing.Color.Transparent;
-            this.txtRestante.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtRestante.ForeColor = System.Drawing.Color.Gray;
-            this.txtRestante.Location = new System.Drawing.Point(1330, 863);
-            this.txtRestante.Name = "txtRestante";
-            this.txtRestante.Size = new System.Drawing.Size(71, 30);
-            this.txtRestante.TabIndex = 13;
-            this.txtRestante.Text = "$0.00";
+            this.lblRestante.AutoSize = true;
+            this.lblRestante.BackColor = System.Drawing.Color.Transparent;
+            this.lblRestante.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.lblRestante.ForeColor = System.Drawing.Color.Gray;
+            this.lblRestante.Location = new System.Drawing.Point(1325, 826);
+            this.lblRestante.Name = "lblRestante";
+            this.lblRestante.Size = new System.Drawing.Size(71, 30);
+            this.lblRestante.TabIndex = 13;
+            this.lblRestante.Text = "$0.00";
             // 
-            // txtInicial
+            // lblcuotas
             // 
-            this.txtInicial.AutoSize = true;
-            this.txtInicial.BackColor = System.Drawing.Color.Transparent;
-            this.txtInicial.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtInicial.ForeColor = System.Drawing.Color.Gray;
-            this.txtInicial.Location = new System.Drawing.Point(1331, 826);
-            this.txtInicial.Name = "txtInicial";
-            this.txtInicial.Size = new System.Drawing.Size(49, 20);
-            this.txtInicial.TabIndex = 13;
-            this.txtInicial.Text = "$0.00";
+            this.lblcuotas.AutoSize = true;
+            this.lblcuotas.BackColor = System.Drawing.Color.Transparent;
+            this.lblcuotas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblcuotas.ForeColor = System.Drawing.Color.Gray;
+            this.lblcuotas.Location = new System.Drawing.Point(1326, 873);
+            this.lblcuotas.Name = "lblcuotas";
+            this.lblcuotas.Size = new System.Drawing.Size(49, 20);
+            this.lblcuotas.TabIndex = 13;
+            this.lblcuotas.Text = "$0.00";
             // 
-            // txtTotal
+            // lblInicial
             // 
-            this.txtTotal.AutoSize = true;
-            this.txtTotal.BackColor = System.Drawing.Color.Transparent;
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotal.ForeColor = System.Drawing.Color.Gray;
-            this.txtTotal.Location = new System.Drawing.Point(1331, 789);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(49, 20);
-            this.txtTotal.TabIndex = 13;
-            this.txtTotal.Text = "$0.00";
+            this.lblInicial.AutoSize = true;
+            this.lblInicial.BackColor = System.Drawing.Color.Transparent;
+            this.lblInicial.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblInicial.ForeColor = System.Drawing.Color.Gray;
+            this.lblInicial.Location = new System.Drawing.Point(1326, 789);
+            this.lblInicial.Name = "lblInicial";
+            this.lblInicial.Size = new System.Drawing.Size(49, 20);
+            this.lblInicial.TabIndex = 13;
+            this.lblInicial.Text = "$0.00";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.ForeColor = System.Drawing.Color.Gray;
+            this.lblTotal.Location = new System.Drawing.Point(1326, 752);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(49, 20);
+            this.lblTotal.TabIndex = 13;
+            this.lblTotal.Text = "$0.00";
             // 
             // lblDescuento
             // 
@@ -839,11 +909,23 @@
             this.lblDescuento.BackColor = System.Drawing.Color.Transparent;
             this.lblDescuento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblDescuento.ForeColor = System.Drawing.Color.Gray;
-            this.lblDescuento.Location = new System.Drawing.Point(1331, 752);
+            this.lblDescuento.Location = new System.Drawing.Point(1326, 715);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(49, 20);
             this.lblDescuento.TabIndex = 13;
             this.lblDescuento.Text = "$0.00";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(1156, 873);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "CUOTAS :";
             // 
             // label4
             // 
@@ -851,23 +933,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(1160, 863);
+            this.label4.Location = new System.Drawing.Point(1155, 826);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 30);
             this.label4.TabIndex = 13;
             this.label4.Text = "RESTANTE :";
-            // 
-            // lblItbis
-            // 
-            this.lblItbis.AutoSize = true;
-            this.lblItbis.BackColor = System.Drawing.Color.Transparent;
-            this.lblItbis.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblItbis.ForeColor = System.Drawing.Color.Gray;
-            this.lblItbis.Location = new System.Drawing.Point(1331, 715);
-            this.lblItbis.Name = "lblItbis";
-            this.lblItbis.Size = new System.Drawing.Size(49, 20);
-            this.lblItbis.TabIndex = 13;
-            this.lblItbis.Text = "$0.00";
             // 
             // label7
             // 
@@ -875,7 +945,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(1161, 826);
+            this.label7.Location = new System.Drawing.Point(1156, 789);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 20);
             this.label7.TabIndex = 13;
@@ -887,7 +957,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(1161, 789);
+            this.label5.Location = new System.Drawing.Point(1156, 752);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 20);
             this.label5.TabIndex = 13;
@@ -899,7 +969,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(1161, 752);
+            this.label3.Location = new System.Drawing.Point(1156, 715);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 13;
@@ -911,23 +981,11 @@
             this.lblSubtotal.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.Gray;
-            this.lblSubtotal.Location = new System.Drawing.Point(1331, 678);
+            this.lblSubtotal.Location = new System.Drawing.Point(1326, 678);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(49, 20);
             this.lblSubtotal.TabIndex = 13;
             this.lblSubtotal.Text = "$0.00";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(1161, 715);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "ITBIS :";
             // 
             // label1
             // 
@@ -935,44 +993,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(1161, 678);
+            this.label1.Location = new System.Drawing.Point(1156, 678);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "SUBTOTAL :";
-            // 
-            // TablaFactCredito
-            // 
-            this.TablaFactCredito.AllowUserToAddRows = false;
-            this.TablaFactCredito.AllowUserToDeleteRows = false;
-            this.TablaFactCredito.AllowUserToOrderColumns = true;
-            this.TablaFactCredito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TablaFactCredito.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.TablaFactCredito.BackgroundColor = System.Drawing.Color.White;
-            this.TablaFactCredito.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TablaFactCredito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.TablaFactCredito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaFactCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaFactCredito.ColumnHeadersVisible = false;
-            this.TablaFactCredito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EDITAR,
-            this.ELIMINAR});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaFactCredito.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TablaFactCredito.Location = new System.Drawing.Point(47, 472);
-            this.TablaFactCredito.Name = "TablaFactCredito";
-            this.TablaFactCredito.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaFactCredito.RowHeadersVisible = false;
-            this.TablaFactCredito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.TablaFactCredito.Size = new System.Drawing.Size(1487, 188);
-            this.TablaFactCredito.TabIndex = 11;
             // 
             // btnPagar
             // 
@@ -1029,6 +1054,7 @@
             this.Text = "FrmFacturacionRedito";
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaFactCredito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -1042,39 +1068,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaFactCredito)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAgregar;
         private Bunifu.Framework.UI.BunifuThinButton2 btnNuevoCliente;
-        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
-        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.DataGridView TablaFactCredito;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label txtRestante;
-        private System.Windows.Forms.Label txtInicial;
-        private System.Windows.Forms.Label txtTotal;
+        private System.Windows.Forms.Label lblRestante;
+        private System.Windows.Forms.Label lblInicial;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblDescuento;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblItbis;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox cmbProductos;
         private System.Windows.Forms.Label label14;
@@ -1118,5 +1132,18 @@
         private System.Windows.Forms.Label label29;
         public System.Windows.Forms.TextBox txtCuotasEnMeses;
         private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView TablaFactCredito;
+        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
+        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
+        private System.Windows.Forms.DataGridViewImageColumn DESCUENTO_PRO;
+        private System.Windows.Forms.Label lblcuotas;
+        private System.Windows.Forms.Label label2;
     }
 }

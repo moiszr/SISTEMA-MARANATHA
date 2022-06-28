@@ -78,6 +78,18 @@ namespace Datos
             }
         }
 
+        public int ObtenerID()
+        {
+            var cmd2 = conn.CreateCommand();
+            cmd2.CommandType = CommandType.StoredProcedure;
+            cmd2.CommandText = "SP_OBTENER_ID_VENTA";
+
+            conn.Open();
+            int ID = (int)cmd2.ExecuteScalar();
+            conn.Close();
+            return ID;
+        }
+
         public List<E_Productos> Datafactura(int id)
         {
             SqlDataReader reader = null;

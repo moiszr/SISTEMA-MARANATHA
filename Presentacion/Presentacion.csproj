@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Cuotas.cs" />
+    <Compile Include="Data\DataCredito.cs" />
     <Compile Include="Data\DataProduct.cs" />
     <Compile Include="Data\DataUser.cs" />
     <Compile Include="Data\DataVentas.cs" />
@@ -81,6 +83,12 @@
     </Compile>
     <Compile Include="FrmCompras.Designer.cs">
       <DependentUpon>FrmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCredito.Designer.cs">
+      <DependentUpon>FrmCredito.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
@@ -105,6 +113,12 @@
     </Compile>
     <Compile Include="FrmFacturacionRedito.Designer.cs">
       <DependentUpon>FrmFacturacionRedito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGarante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGarante.Designer.cs">
+      <DependentUpon>FrmGarante.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInformation.cs">
       <SubType>Form</SubType>
@@ -219,6 +233,9 @@
     <EmbeddedResource Include="FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCredito.resx">
+      <DependentUpon>FrmCredito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFacturacionRedito.resx">
       <DependentUpon>FrmFacturacionRedito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGarante.resx">
+      <DependentUpon>FrmGarante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInformation.resx">
       <DependentUpon>FrmInformation.cs</DependentUpon>

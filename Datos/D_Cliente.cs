@@ -150,7 +150,7 @@ namespace Datos
         public List<E_Cliente> ListarClienteCB()
         {
             SqlDataReader reader = null;
-            SqlCommand cmd = new SqlCommand("SP_LISTARCLIENTE", conn);
+            SqlCommand cmd = new SqlCommand("SP_LISTARCLIENTECMB", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
@@ -165,14 +165,7 @@ namespace Datos
                 Listar.Add(new E_Cliente
                 {
                     IdCliente = reader.GetInt32(0),
-                    CodigoCliente = reader.GetString(1),
-                    Nombre = reader.GetString(2),
-                    Apellido = reader.GetString(3),
-                    Cedula = reader.GetString(4),
-                    Telefono1 = reader.GetString(6),
-                    Celular = reader.GetString(8),
-                    Direccion = reader.GetString(9),
-
+                    Nombre = reader.GetString(1)
                 });
             }
 

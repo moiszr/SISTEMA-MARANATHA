@@ -13,24 +13,19 @@ namespace Negocio
     {
         D_Garante objGarante = new D_Garante();
 
-        public List<E_Garante> ListaGarante (string garante)
+        public List<E_Garante> ListarGarante(int id)
         {
-            return objGarante.ListaGarante(garante);
+            return objGarante.ListarGarante(id);
+        }
+
+        public int ObtenerID()
+        {
+            return objGarante.ObtenerID();
         }
 
         public void InsertarGarante (E_Garante garante)
         {
             objGarante.InsertarGarante(garante);
-        }
-
-        public void EditarGarante (E_Garante garante)
-        {
-            objGarante.EditarGarante(garante);
-        }
-
-        public void EliminarGarante(E_Garante garante)
-        {
-            objGarante.EliminarGarante(garante);
         }
     }
 }
