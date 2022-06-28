@@ -13,9 +13,9 @@ namespace Negocio
     {
         D_Compras objDato = new D_Compras();
 
-        public List<E_Compras> ListarCompras(string buscar)
+        public List<E_Compras> ListarCompras()
         {
-            return objDato.ListaCompra(buscar);
+            return objDato.ListaCompra();
         }
 
         public void InsertarCompras(E_Compras Compras, List<E_Detalle_Compras> e_Detalle_Compras)

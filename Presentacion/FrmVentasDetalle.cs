@@ -167,5 +167,15 @@ namespace Presentacion
         {
             Close();
         }
+
+        private void TablaVentaDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

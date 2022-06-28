@@ -40,7 +40,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.TablaProductos = new System.Windows.Forms.DataGridView();
+            this.TablaCompra = new System.Windows.Forms.DataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -54,7 +54,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -170,7 +170,7 @@
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.TablaProductos);
+            this.panel9.Controls.Add(this.TablaCompra);
             this.panel9.Controls.Add(this.btnExcel);
             this.panel9.Controls.Add(this.btnFormMarcas);
             this.panel9.Controls.Add(this.txtSearch);
@@ -194,20 +194,20 @@
             this.label9.TabIndex = 12;
             this.label9.Text = "#";
             // 
-            // TablaProductos
+            // TablaCompra
             // 
-            this.TablaProductos.AllowUserToAddRows = false;
-            this.TablaProductos.AllowUserToDeleteRows = false;
-            this.TablaProductos.AllowUserToOrderColumns = true;
-            this.TablaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TablaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.TablaProductos.BackgroundColor = System.Drawing.Color.White;
-            this.TablaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TablaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.TablaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProductos.ColumnHeadersVisible = false;
-            this.TablaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TablaCompra.AllowUserToAddRows = false;
+            this.TablaCompra.AllowUserToDeleteRows = false;
+            this.TablaCompra.AllowUserToOrderColumns = true;
+            this.TablaCompra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TablaCompra.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TablaCompra.BackgroundColor = System.Drawing.Color.White;
+            this.TablaCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TablaCompra.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.TablaCompra.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaCompra.ColumnHeadersVisible = false;
+            this.TablaCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDITAR,
             this.ELIMINAR});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -218,14 +218,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TablaProductos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TablaProductos.Location = new System.Drawing.Point(47, 149);
-            this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TablaProductos.RowHeadersVisible = false;
-            this.TablaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.TablaProductos.Size = new System.Drawing.Size(1487, 624);
-            this.TablaProductos.TabIndex = 11;
+            this.TablaCompra.DefaultCellStyle = dataGridViewCellStyle1;
+            this.TablaCompra.Location = new System.Drawing.Point(47, 149);
+            this.TablaCompra.Name = "TablaCompra";
+            this.TablaCompra.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TablaCompra.RowHeadersVisible = false;
+            this.TablaCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.TablaCompra.Size = new System.Drawing.Size(1487, 624);
+            this.TablaCompra.TabIndex = 11;
+            this.TablaCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProductos_CellContentClick);
             // 
             // EDITAR
             // 
@@ -290,6 +291,7 @@
             this.btnFormMarcas.Size = new System.Drawing.Size(224, 48);
             this.btnFormMarcas.TabIndex = 9;
             this.btnFormMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnFormMarcas.Click += new System.EventHandler(this.btnFormMarcas_Click);
             // 
             // txtSearch
             // 
@@ -386,7 +388,7 @@
             this.Text = "FrmCompras";
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -410,7 +412,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView TablaProductos;
+        private System.Windows.Forms.DataGridView TablaCompra;
         private System.Windows.Forms.DataGridViewImageColumn EDITAR;
         private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;

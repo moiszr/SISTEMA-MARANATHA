@@ -62,6 +62,8 @@
   <ItemGroup>
     <Compile Include="Data\Cuotas.cs" />
     <Compile Include="Data\DataCredito.cs" />
+    <Compile Include="Data\DataCliente.cs" />
+    <Compile Include="Data\DataCompra.cs" />
     <Compile Include="Data\DataProduct.cs" />
     <Compile Include="Data\DataUser.cs" />
     <Compile Include="Data\DataVentas.cs" />
@@ -101,6 +103,18 @@
     </Compile>
     <Compile Include="FrmDescuento.Designer.cs">
       <DependentUpon>FrmDescuento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompraDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompraDetalle.Designer.cs">
+      <DependentUpon>FrmCompraDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFacturacionCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFacturacionCompra.Designer.cs">
+      <DependentUpon>FrmFacturacionCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFacturacionContado.cs">
       <SubType>Form</SubType>
@@ -241,6 +255,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDescuento.resx">
       <DependentUpon>FrmDescuento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompraDetalle.resx">
+      <DependentUpon>FrmCompraDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFacturacionCompra.resx">
+      <DependentUpon>FrmFacturacionCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFacturacionContado.resx">
       <DependentUpon>FrmFacturacionContado.cs</DependentUpon>

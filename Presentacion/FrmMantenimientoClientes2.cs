@@ -110,10 +110,11 @@ namespace Presentacion
         E_Cliente entidades = new E_Cliente();
         N_Cliente negocio = new N_Cliente();
 
-        public bool Update = false;
+        public bool Update;
 
 
         //Variables data
+        public int Idcliente;
         public string CodigoCliente;
         public string Nombre;
         public string Apellido;
@@ -148,9 +149,39 @@ namespace Presentacion
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
-        {
+        {   
+            
+            
             this.Hide();
             FrmMantenimientoClientes1 frm = new FrmMantenimientoClientes1();
+
+            frm.txtIdCliente.Text = CodigoCliente;
+            frm.txtNombreCliente.Text = Nombre;
+            frm.txtApellidoCliente.Text = Apellido;
+            frm.txtCedula.Text = Cedula;
+            frm.txtApodoCliente.Text = Apodo;
+            frm.txtTelefonoResidencial.Text = Telefono1;
+            frm.txtOtroTelefono.Text = Telefono2;
+            frm.txtTelefonoCelularCliente.Text = Celular;
+            frm.txtDireccion.Text = Direccion;
+
+            frm.txtLugarDeTrabajo.Text = LugarDeTrabajo;
+            frm.txtTelefonoTrabajo.Text = TelefonoTrabajo;
+            frm.txtNombredelSuperiorInmediato.Text = NombreSuperior;
+            frm.txtTelefonoDelSuperiorInmediato.Text = TelefonoSuperior;
+            frm.txtTiempoLaborando.Text = TiempoLaborando;
+            frm.txtSalarioMensual.Text = SalarioMensual.ToString();
+            frm.txtNombreDelConyugue.Text = NombreConyugue;
+            frm.txtTelefonoDelConyugue.Text = TelefonoConyuge;
+            frm.txtLugarDeTrabajoDelConyugue.Text = LugarDeTrabajoDelConyugue;
+            frm.txtTelefonoDeTrabajoDelConyugue.Text = TelefonoTrabajoConyugue;
+            frm.txtNombreDelSuperiorConyugue.Text = NombreSuperiorConyugue;
+            frm.txtTelefonoSuperiorConyugue.Text = TelefonoSuperiorConyugue;
+            frm.txtTiempoLaborandoConyugue.Text = TiempoLaborandoConyugue;
+            frm.txtSalarioMensualConyugue.Text = SalarioMensualConyugue.ToString();
+
+
+      
             frm.ShowDialog();
         }
 
@@ -161,7 +192,7 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (Update == false)
+            if (Idcliente < 0)
             {
                 try
                 {
@@ -210,11 +241,11 @@ namespace Presentacion
                     MessageBox.Show("No se pudo guardar el cliente" + ex);
                 }
             }
-            if (Update == true)
+            if (Idcliente >= 0)
             {
                 try
                 {
-                    entidades.IdCliente = 3;
+                    entidades.IdCliente = Idcliente;
                     entidades.Nombre = Nombre;
                     entidades.Apellido = Apellido;
                     entidades.Cedula = Cedula;
@@ -244,6 +275,12 @@ namespace Presentacion
                     entidades.Nombre_Apellido_Telefono_Familiar1 = txtNombreFamilaresCerc1.Text.ToUpper() + "  " + txtApellidosFamilaresCerc1.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc1.Text.ToUpper();
                     entidades.Nombre_Apellido_Telefono_Familiar2 = txtNombreFamilaresCerc2.Text.ToUpper() + "  " + txtApellidosFamilaresCerc2.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc2.Text.ToUpper();
                     entidades.Nombre_Apellido_Telefono_Familiar3 = txtNombreFamilaresCerc3.Text.ToUpper() + "  " + txtApellidosFamilaresCerc3.Text.ToUpper() + "  " + txtTelefonoFamilaresCerc3.Text.ToUpper();
+
+                    negocio.EditarCliente(entidades);
+
+                    FrmSuccess.ConfirmacionForm("CLIENTE EDITADO");
+
+                    Close();
 
                 }
                 catch (Exception ex)

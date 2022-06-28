@@ -13,15 +13,9 @@ namespace Negocio
     {
         D_Detalle_Compras objDato = new D_Detalle_Compras();
 
-        public List<E_Detalle_Compras> ListarDetalle_Compras(string buscar)
+        public List<E_Detalle_Compras> ListarDetalle_Compras(int id)
         {
-            return objDato.ListaDetalle_Compras(buscar);
-        }
-
-        public void InsertarDetalle_Compras(E_Detalle_Compras Detalle_Compras)
-        {
-            objDato.InsertarDetalle_Compras(Detalle_Compras);
-
+            return objDato.ListaDetalle_Compras(id);
         }
     }
 }

@@ -15,19 +15,15 @@ namespace Datos
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar"].ConnectionString);
 
-
-        public List<E_Compras> ListaCompra(string buscar)
+        public List<E_Compras> ListaCompra()
         {
             SqlDataReader reader = null;
-            SqlCommand cmd = new SqlCommand("SP_BUSCAR_COMPRA", conn);
+            SqlCommand cmd = new SqlCommand("SP_MOSTRAR_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@BUSCAR", buscar);
-
             reader = cmd.ExecuteReader();
-
             List<E_Compras> Listar = new List<E_Compras>();
 
             while (reader.Read())
@@ -35,63 +31,48 @@ namespace Datos
                 Listar.Add(new E_Compras
                 {
                     Idcompra = reader.GetInt32(0),
-                    Fecha = reader.GetDateTime(1),
-                    Total = reader.GetInt32(2),
-                    Idusuario = reader.GetInt32(3),
-                   
-
+                    Codigo = reader.GetString(1),
+                    Proveedor = reader.GetString(2),
+                    Usuario = reader.GetString(3),
+                    Fecha = reader.GetDateTime(4),
+                    Total = reader.GetDecimal(5)
+                    
                 });
             }
-
             conn.Close();
             reader.Close();
 
             return Listar;
         }
 
-        public void InsertarCompra(E_Compras Compras, List<E_Detalle_Compras> e_Detalle_Compras)
+        public void InsertarCompra(E_Compras Compra, List<E_Detalle_Compras> e_Detalle_Compras)
         {
-            SqlCommand cmd = new SqlCommand("SP_COMPRA", conn);
+            SqlCommand cmd = new SqlCommand("SP_INSERTAR_COMPRA", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
 
-            cmd.Parameters.AddWithValue("@FECHA", Compras.Fecha);
-            cmd.Parameters.AddWithValue("@TOTAL", Compras.Total);
-            cmd.Parameters.AddWithValue("@IDUSUARIO", Compras.Idusuario);
+            cmd.Parameters.AddWithValue("@FECHA", Compra.Fecha);
+            cmd.Parameters.AddWithValue("@TOTAL", Compra.Total);
+            cmd.Parameters.AddWithValue("@PROVEEDOR", Compra.Proveedor);
+            cmd.Parameters.AddWithValue("@IDUSUARIO", Compra.Idusuario);
+           
 
             cmd.ExecuteNonQuery();
+
             var cmd2 = conn.CreateCommand();
-
             cmd2.CommandType = CommandType.StoredProcedure;
-
-            cmd2.CommandText = "SP_OBTENER_ID_COMPRAR";
+            cmd2.CommandText = "SP_OBTENER_ID_COMPRA";
 
             int ID = (int)cmd2.ExecuteScalar();
             conn.Close();
 
-
-            foreach (E_Detalle_Compras DComprar in e_Detalle_Compras)
+            D_Detalle_Compras d_Detalle = new D_Detalle_Compras();
+            foreach (E_Detalle_Compras DCompra in e_Detalle_Compras)
             {
-                InsertarDetalle_Ventas(DComprar, ID);
+                d_Detalle.InsertarDetalle_Compras(DCompra, ID);
+                
             }
-
-        }
-        public void InsertarDetalle_Ventas(E_Detalle_Compras DetalleCompra, int id)
-        {
-            SqlCommand cmd = new SqlCommand("SP_DETALLE_COMPRA", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            conn.Open();
-
-            cmd.Parameters.AddWithValue("@PRECIOCOMPRA", DetalleCompra.Preciocompra);
-            cmd.Parameters.AddWithValue("@CANTIDAD", DetalleCompra.Cantidad);
-            cmd.Parameters.AddWithValue("@SUBTOTAL", DetalleCompra.Subtotal);
-            cmd.Parameters.AddWithValue("@IDCOMPRA", id);
-            cmd.Parameters.AddWithValue("@IDPRODUCTO", DetalleCompra.Idproducto);
-
-            cmd.ExecuteNonQuery();
-            conn.Close();
         }
     }
 }
