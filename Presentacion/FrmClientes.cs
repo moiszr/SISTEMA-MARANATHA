@@ -104,7 +104,7 @@ namespace Presentacion
             FrmMantenimientoClientes1 frm = new FrmMantenimientoClientes1();
 
             frm.ShowDialog();
-            //frm.Update = false;
+            frm.Update = false;
             MostrarTablaClientes();
         }
 
@@ -130,6 +130,7 @@ namespace Presentacion
                 FrmMantenimientoClientes2 frm2 = new FrmMantenimientoClientes2();
 
                 frm2.Update = true;
+                frm.Update = true;
                 frm2.Idcliente = Convert.ToInt32(TablaClientes.Rows[e.RowIndex].Cells["IDCLIENTE"].Value.ToString());
                 frm.txtIdCliente.Text = TablaClientes.Rows[e.RowIndex].Cells["CODIGO"].Value.ToString();
                 frm.txtNombreCliente.Text = TablaClientes.Rows[e.RowIndex].Cells["NOMBRE"].Value.ToString();
@@ -160,6 +161,8 @@ namespace Presentacion
                 frm2.txtNombreFamilaresCerc1.Text = TablaClientes.Rows[e.RowIndex].Cells["Nombre_Apellido_Telefono_Familiar1"].Value.ToString();
                 frm2.txtNombreFamilaresCerc2.Text = TablaClientes.Rows[e.RowIndex].Cells["Nombre_Apellido_Telefono_Familiar2"].Value.ToString();
                 frm2.txtNombreFamilaresCerc3.Text = TablaClientes.Rows[e.RowIndex].Cells["Nombre_Apellido_Telefono_Familiar3"].Value.ToString();
+                frm.lblNombre.Text = "EDITAR PRODUCTO";
+
                 frm.ShowDialog();
                 MostrarTablaClientes();
             }

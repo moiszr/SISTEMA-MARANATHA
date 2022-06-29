@@ -105,6 +105,8 @@ namespace Presentacion
 
         }
 
+        public bool Update;
+
         public FrmMantenimientoClientes1()
         {
             m_aeroEnabled = false;
@@ -156,8 +158,12 @@ namespace Presentacion
             frm.TelefonoSuperiorConyugue = txtTelefonoSuperiorConyugue.Text.ToUpper();
             frm.TiempoLaborandoConyugue = txtTiempoLaborandoConyugue.Text.ToUpper();
             frm.SalarioMensualConyugue = SalarioMensualConyugue;
+            frm.Update = Update;
 
-           
+            if (Update)
+            {
+                frm.lblNombre.Text = "EDITAR PRODUCTO";
+            }
 
             if (rdbPropia.Checked)
             {
@@ -172,28 +178,11 @@ namespace Presentacion
             frm.ShowDialog();
         }
 
-        private void txtDireccion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSalarioMensual_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar > 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
+                FrmWarning.AdvertenciaForm("SOLO SE ACEPTAN NÚMEROS");
             }
         }
 
@@ -201,9 +190,7 @@ namespace Presentacion
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar > 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
+                FrmWarning.AdvertenciaForm("SOLO SE ACEPTAN NÚMEROS");
             }
         }
     }

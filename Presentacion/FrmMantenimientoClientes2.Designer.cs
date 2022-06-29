@@ -138,14 +138,14 @@
             this.btnAnterior.IconVisible = true;
             this.btnAnterior.IconZoom = 55D;
             this.btnAnterior.IsTab = false;
-            this.btnAnterior.Location = new System.Drawing.Point(559, 791);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAnterior.Location = new System.Drawing.Point(419, 643);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(93)))), ((int)(((byte)(181)))));
             this.btnAnterior.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(93)))), ((int)(((byte)(181)))));
             this.btnAnterior.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAnterior.selected = false;
-            this.btnAnterior.Size = new System.Drawing.Size(276, 52);
+            this.btnAnterior.Size = new System.Drawing.Size(207, 42);
             this.btnAnterior.TabIndex = 19;
             this.btnAnterior.Text = "ANTERIOR";
             this.btnAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,20 +159,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(140, 133);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(105, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 23);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 124;
             this.label2.Text = "NOMBRE";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 69);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -182,20 +180,18 @@
             this.txtNombreReferenciaPer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreReferenciaPer1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreReferenciaPer1.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreReferenciaPer1.Location = new System.Drawing.Point(155, 176);
-            this.txtNombreReferenciaPer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreReferenciaPer1.Location = new System.Drawing.Point(116, 143);
             this.txtNombreReferenciaPer1.Name = "txtNombreReferenciaPer1";
-            this.txtNombreReferenciaPer1.Size = new System.Drawing.Size(379, 25);
+            this.txtNombreReferenciaPer1.Size = new System.Drawing.Size(284, 20);
             this.txtNombreReferenciaPer1.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1651, 9);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(1238, 7);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 37);
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 1;
             this.btnClose.TabStop = false;
@@ -209,9 +205,8 @@
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1707, 55);
+            this.TopPanel.Size = new System.Drawing.Size(1280, 45);
             this.TopPanel.TabIndex = 102;
             // 
             // lblNombre
@@ -219,19 +214,19 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(76, 16);
+            this.lblNombre.Location = new System.Drawing.Point(57, 13);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(139, 23);
+            this.lblNombre.Size = new System.Drawing.Size(114, 19);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "NUEVO CLIENTE";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(141, 167);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(106, 136);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(305, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 103;
             this.pictureBox2.TabStop = false;
@@ -257,14 +252,14 @@
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 55D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(875, 791);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(656, 643);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(93)))), ((int)(((byte)(181)))));
             this.btnGuardar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(93)))), ((int)(((byte)(181)))));
             this.btnGuardar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(276, 52);
+            this.btnGuardar.Size = new System.Drawing.Size(207, 42);
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,10 +270,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(653, 167);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(490, 136);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(305, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 103;
             this.pictureBox3.TabStop = false;
@@ -288,10 +282,9 @@
             this.txtApellidosReferenciaPer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidosReferenciaPer1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosReferenciaPer1.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidosReferenciaPer1.Location = new System.Drawing.Point(667, 176);
-            this.txtApellidosReferenciaPer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidosReferenciaPer1.Location = new System.Drawing.Point(500, 143);
             this.txtApellidosReferenciaPer1.Name = "txtApellidosReferenciaPer1";
-            this.txtApellidosReferenciaPer1.Size = new System.Drawing.Size(379, 25);
+            this.txtApellidosReferenciaPer1.Size = new System.Drawing.Size(284, 20);
             this.txtApellidosReferenciaPer1.TabIndex = 2;
             // 
             // label1
@@ -300,20 +293,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(652, 133);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(489, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 23);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 124;
             this.label1.Text = "APELLIDOS";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1180, 167);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(885, 136);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox4.Size = new System.Drawing.Size(305, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 103;
             this.pictureBox4.TabStop = false;
@@ -323,12 +314,10 @@
             this.txtTelefonoReferenciaPer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoReferenciaPer1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoReferenciaPer1.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoReferenciaPer1.Location = new System.Drawing.Point(1193, 176);
-            this.txtTelefonoReferenciaPer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoReferenciaPer1.Location = new System.Drawing.Point(895, 143);
             this.txtTelefonoReferenciaPer1.Name = "txtTelefonoReferenciaPer1";
-            this.txtTelefonoReferenciaPer1.Size = new System.Drawing.Size(379, 25);
+            this.txtTelefonoReferenciaPer1.Size = new System.Drawing.Size(284, 20);
             this.txtTelefonoReferenciaPer1.TabIndex = 3;
-            this.txtTelefonoReferenciaPer1.TextChanged += new System.EventHandler(this.txtTelefonoReferenciaPer1_TextChanged);
             // 
             // label3
             // 
@@ -336,20 +325,18 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(1179, 133);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(884, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 23);
+            this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 124;
             this.label3.Text = "TELÉFONO";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(141, 256);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(106, 208);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox5.Size = new System.Drawing.Size(305, 36);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 103;
             this.pictureBox5.TabStop = false;
@@ -359,19 +346,17 @@
             this.txtNombreReferenciaPer2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreReferenciaPer2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreReferenciaPer2.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreReferenciaPer2.Location = new System.Drawing.Point(155, 265);
-            this.txtNombreReferenciaPer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreReferenciaPer2.Location = new System.Drawing.Point(116, 215);
             this.txtNombreReferenciaPer2.Name = "txtNombreReferenciaPer2";
-            this.txtNombreReferenciaPer2.Size = new System.Drawing.Size(379, 25);
+            this.txtNombreReferenciaPer2.Size = new System.Drawing.Size(284, 20);
             this.txtNombreReferenciaPer2.TabIndex = 4;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(653, 256);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(490, 208);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox6.Size = new System.Drawing.Size(305, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 103;
             this.pictureBox6.TabStop = false;
@@ -381,19 +366,17 @@
             this.txtApellidosReferenciaPer2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidosReferenciaPer2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosReferenciaPer2.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidosReferenciaPer2.Location = new System.Drawing.Point(667, 265);
-            this.txtApellidosReferenciaPer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidosReferenciaPer2.Location = new System.Drawing.Point(500, 215);
             this.txtApellidosReferenciaPer2.Name = "txtApellidosReferenciaPer2";
-            this.txtApellidosReferenciaPer2.Size = new System.Drawing.Size(379, 25);
+            this.txtApellidosReferenciaPer2.Size = new System.Drawing.Size(284, 20);
             this.txtApellidosReferenciaPer2.TabIndex = 5;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1180, 256);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(885, 208);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox7.Size = new System.Drawing.Size(305, 36);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 103;
             this.pictureBox7.TabStop = false;
@@ -403,10 +386,9 @@
             this.txtTelefonoReferenciaPer2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoReferenciaPer2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoReferenciaPer2.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoReferenciaPer2.Location = new System.Drawing.Point(1193, 265);
-            this.txtTelefonoReferenciaPer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoReferenciaPer2.Location = new System.Drawing.Point(895, 215);
             this.txtTelefonoReferenciaPer2.Name = "txtTelefonoReferenciaPer2";
-            this.txtTelefonoReferenciaPer2.Size = new System.Drawing.Size(379, 25);
+            this.txtTelefonoReferenciaPer2.Size = new System.Drawing.Size(284, 20);
             this.txtTelefonoReferenciaPer2.TabIndex = 6;
             // 
             // label4
@@ -415,10 +397,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(140, 222);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(105, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 23);
+            this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 124;
             this.label4.Text = "NOMBRE";
             // 
@@ -428,10 +409,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(652, 222);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(489, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 23);
+            this.label5.Size = new System.Drawing.Size(74, 17);
             this.label5.TabIndex = 124;
             this.label5.Text = "APELLIDOS";
             // 
@@ -441,20 +421,18 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(1179, 222);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(884, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 23);
+            this.label6.Size = new System.Drawing.Size(72, 17);
             this.label6.TabIndex = 124;
             this.label6.Text = "TELÉFONO";
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(141, 348);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(106, 283);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox8.Size = new System.Drawing.Size(305, 36);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 103;
             this.pictureBox8.TabStop = false;
@@ -464,19 +442,17 @@
             this.txtNombreReferenciaPer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreReferenciaPer3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreReferenciaPer3.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreReferenciaPer3.Location = new System.Drawing.Point(155, 357);
-            this.txtNombreReferenciaPer3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreReferenciaPer3.Location = new System.Drawing.Point(116, 290);
             this.txtNombreReferenciaPer3.Name = "txtNombreReferenciaPer3";
-            this.txtNombreReferenciaPer3.Size = new System.Drawing.Size(379, 25);
+            this.txtNombreReferenciaPer3.Size = new System.Drawing.Size(284, 20);
             this.txtNombreReferenciaPer3.TabIndex = 7;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(653, 348);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(490, 283);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox9.Size = new System.Drawing.Size(305, 36);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 103;
             this.pictureBox9.TabStop = false;
@@ -486,19 +462,17 @@
             this.txtApellidosReferenciaPer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidosReferenciaPer3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosReferenciaPer3.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidosReferenciaPer3.Location = new System.Drawing.Point(667, 357);
-            this.txtApellidosReferenciaPer3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidosReferenciaPer3.Location = new System.Drawing.Point(500, 290);
             this.txtApellidosReferenciaPer3.Name = "txtApellidosReferenciaPer3";
-            this.txtApellidosReferenciaPer3.Size = new System.Drawing.Size(379, 25);
+            this.txtApellidosReferenciaPer3.Size = new System.Drawing.Size(284, 20);
             this.txtApellidosReferenciaPer3.TabIndex = 8;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(1180, 348);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Location = new System.Drawing.Point(885, 283);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox10.Size = new System.Drawing.Size(305, 36);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 103;
             this.pictureBox10.TabStop = false;
@@ -508,10 +482,9 @@
             this.txtTelefonoReferenciaPer3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoReferenciaPer3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoReferenciaPer3.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoReferenciaPer3.Location = new System.Drawing.Point(1193, 357);
-            this.txtTelefonoReferenciaPer3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoReferenciaPer3.Location = new System.Drawing.Point(895, 290);
             this.txtTelefonoReferenciaPer3.Name = "txtTelefonoReferenciaPer3";
-            this.txtTelefonoReferenciaPer3.Size = new System.Drawing.Size(379, 25);
+            this.txtTelefonoReferenciaPer3.Size = new System.Drawing.Size(284, 20);
             this.txtTelefonoReferenciaPer3.TabIndex = 9;
             // 
             // label7
@@ -520,10 +493,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(140, 314);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(105, 255);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 23);
+            this.label7.Size = new System.Drawing.Size(63, 17);
             this.label7.TabIndex = 124;
             this.label7.Text = "NOMBRE";
             // 
@@ -533,10 +505,9 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(652, 314);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(489, 255);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 23);
+            this.label8.Size = new System.Drawing.Size(74, 17);
             this.label8.TabIndex = 124;
             this.label8.Text = "APELLIDOS";
             // 
@@ -546,20 +517,18 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(1179, 314);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(884, 255);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 23);
+            this.label9.Size = new System.Drawing.Size(72, 17);
             this.label9.TabIndex = 124;
             this.label9.Text = "TELÉFONO";
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(141, 489);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Location = new System.Drawing.Point(106, 397);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox11.Size = new System.Drawing.Size(305, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 103;
             this.pictureBox11.TabStop = false;
@@ -569,19 +538,17 @@
             this.txtNombreFamilaresCerc1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreFamilaresCerc1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreFamilaresCerc1.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreFamilaresCerc1.Location = new System.Drawing.Point(155, 497);
-            this.txtNombreFamilaresCerc1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreFamilaresCerc1.Location = new System.Drawing.Point(116, 404);
             this.txtNombreFamilaresCerc1.Name = "txtNombreFamilaresCerc1";
-            this.txtNombreFamilaresCerc1.Size = new System.Drawing.Size(379, 25);
+            this.txtNombreFamilaresCerc1.Size = new System.Drawing.Size(284, 20);
             this.txtNombreFamilaresCerc1.TabIndex = 10;
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(653, 489);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Location = new System.Drawing.Point(490, 397);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox12.Size = new System.Drawing.Size(305, 36);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 103;
             this.pictureBox12.TabStop = false;
@@ -591,19 +558,17 @@
             this.txtApellidosFamilaresCerc1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidosFamilaresCerc1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosFamilaresCerc1.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidosFamilaresCerc1.Location = new System.Drawing.Point(667, 497);
-            this.txtApellidosFamilaresCerc1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidosFamilaresCerc1.Location = new System.Drawing.Point(500, 404);
             this.txtApellidosFamilaresCerc1.Name = "txtApellidosFamilaresCerc1";
-            this.txtApellidosFamilaresCerc1.Size = new System.Drawing.Size(379, 25);
+            this.txtApellidosFamilaresCerc1.Size = new System.Drawing.Size(284, 20);
             this.txtApellidosFamilaresCerc1.TabIndex = 11;
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(1180, 489);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Location = new System.Drawing.Point(885, 397);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox13.Size = new System.Drawing.Size(305, 36);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 103;
             this.pictureBox13.TabStop = false;
@@ -613,10 +578,9 @@
             this.txtTelefonoFamilaresCerc1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoFamilaresCerc1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoFamilaresCerc1.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoFamilaresCerc1.Location = new System.Drawing.Point(1193, 497);
-            this.txtTelefonoFamilaresCerc1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoFamilaresCerc1.Location = new System.Drawing.Point(895, 404);
             this.txtTelefonoFamilaresCerc1.Name = "txtTelefonoFamilaresCerc1";
-            this.txtTelefonoFamilaresCerc1.Size = new System.Drawing.Size(379, 25);
+            this.txtTelefonoFamilaresCerc1.Size = new System.Drawing.Size(284, 20);
             this.txtTelefonoFamilaresCerc1.TabIndex = 12;
             // 
             // label10
@@ -625,10 +589,9 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(140, 454);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(105, 369);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 23);
+            this.label10.Size = new System.Drawing.Size(63, 17);
             this.label10.TabIndex = 124;
             this.label10.Text = "NOMBRE";
             // 
@@ -638,10 +601,9 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(652, 454);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(489, 369);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 23);
+            this.label11.Size = new System.Drawing.Size(74, 17);
             this.label11.TabIndex = 124;
             this.label11.Text = "APELLIDOS";
             // 
@@ -651,20 +613,18 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(1179, 454);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(884, 369);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 23);
+            this.label12.Size = new System.Drawing.Size(72, 17);
             this.label12.TabIndex = 124;
             this.label12.Text = "TELÉFONO";
             // 
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(141, 578);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Location = new System.Drawing.Point(106, 470);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox14.Size = new System.Drawing.Size(305, 36);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 103;
             this.pictureBox14.TabStop = false;
@@ -674,19 +634,17 @@
             this.txtNombreFamilaresCerc2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreFamilaresCerc2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreFamilaresCerc2.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreFamilaresCerc2.Location = new System.Drawing.Point(155, 587);
-            this.txtNombreFamilaresCerc2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreFamilaresCerc2.Location = new System.Drawing.Point(116, 477);
             this.txtNombreFamilaresCerc2.Name = "txtNombreFamilaresCerc2";
-            this.txtNombreFamilaresCerc2.Size = new System.Drawing.Size(379, 25);
+            this.txtNombreFamilaresCerc2.Size = new System.Drawing.Size(284, 20);
             this.txtNombreFamilaresCerc2.TabIndex = 13;
             // 
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(653, 578);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Location = new System.Drawing.Point(490, 470);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox15.Size = new System.Drawing.Size(305, 36);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 103;
             this.pictureBox15.TabStop = false;
@@ -696,19 +654,17 @@
             this.txtApellidosFamilaresCerc2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidosFamilaresCerc2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosFamilaresCerc2.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidosFamilaresCerc2.Location = new System.Drawing.Point(667, 587);
-            this.txtApellidosFamilaresCerc2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidosFamilaresCerc2.Location = new System.Drawing.Point(500, 477);
             this.txtApellidosFamilaresCerc2.Name = "txtApellidosFamilaresCerc2";
-            this.txtApellidosFamilaresCerc2.Size = new System.Drawing.Size(379, 25);
+            this.txtApellidosFamilaresCerc2.Size = new System.Drawing.Size(284, 20);
             this.txtApellidosFamilaresCerc2.TabIndex = 14;
             // 
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(1180, 578);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox16.Location = new System.Drawing.Point(885, 470);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox16.Size = new System.Drawing.Size(305, 36);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 103;
             this.pictureBox16.TabStop = false;
@@ -718,10 +674,9 @@
             this.txtTelefonoFamilaresCerc2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoFamilaresCerc2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoFamilaresCerc2.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoFamilaresCerc2.Location = new System.Drawing.Point(1193, 587);
-            this.txtTelefonoFamilaresCerc2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoFamilaresCerc2.Location = new System.Drawing.Point(895, 477);
             this.txtTelefonoFamilaresCerc2.Name = "txtTelefonoFamilaresCerc2";
-            this.txtTelefonoFamilaresCerc2.Size = new System.Drawing.Size(379, 25);
+            this.txtTelefonoFamilaresCerc2.Size = new System.Drawing.Size(284, 20);
             this.txtTelefonoFamilaresCerc2.TabIndex = 15;
             // 
             // label13
@@ -730,10 +685,9 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(140, 544);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(105, 442);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 23);
+            this.label13.Size = new System.Drawing.Size(63, 17);
             this.label13.TabIndex = 124;
             this.label13.Text = "NOMBRE";
             // 
@@ -743,10 +697,9 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(652, 544);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(489, 442);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(95, 23);
+            this.label14.Size = new System.Drawing.Size(74, 17);
             this.label14.TabIndex = 124;
             this.label14.Text = "APELLIDOS";
             // 
@@ -756,20 +709,18 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(1179, 544);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(884, 442);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 23);
+            this.label15.Size = new System.Drawing.Size(72, 17);
             this.label15.TabIndex = 124;
             this.label15.Text = "TELÉFONO";
             // 
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(141, 668);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox17.Location = new System.Drawing.Point(106, 543);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox17.Size = new System.Drawing.Size(305, 36);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 103;
             this.pictureBox17.TabStop = false;
@@ -779,19 +730,17 @@
             this.txtNombreFamilaresCerc3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreFamilaresCerc3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreFamilaresCerc3.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreFamilaresCerc3.Location = new System.Drawing.Point(155, 677);
-            this.txtNombreFamilaresCerc3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreFamilaresCerc3.Location = new System.Drawing.Point(116, 550);
             this.txtNombreFamilaresCerc3.Name = "txtNombreFamilaresCerc3";
-            this.txtNombreFamilaresCerc3.Size = new System.Drawing.Size(379, 25);
+            this.txtNombreFamilaresCerc3.Size = new System.Drawing.Size(284, 20);
             this.txtNombreFamilaresCerc3.TabIndex = 16;
             // 
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(653, 668);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox18.Location = new System.Drawing.Point(490, 543);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox18.Size = new System.Drawing.Size(305, 36);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 103;
             this.pictureBox18.TabStop = false;
@@ -801,19 +750,17 @@
             this.txtApellidosFamilaresCerc3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidosFamilaresCerc3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosFamilaresCerc3.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidosFamilaresCerc3.Location = new System.Drawing.Point(667, 677);
-            this.txtApellidosFamilaresCerc3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidosFamilaresCerc3.Location = new System.Drawing.Point(500, 550);
             this.txtApellidosFamilaresCerc3.Name = "txtApellidosFamilaresCerc3";
-            this.txtApellidosFamilaresCerc3.Size = new System.Drawing.Size(379, 25);
+            this.txtApellidosFamilaresCerc3.Size = new System.Drawing.Size(284, 20);
             this.txtApellidosFamilaresCerc3.TabIndex = 17;
             // 
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(1180, 668);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox19.Location = new System.Drawing.Point(885, 543);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(407, 44);
+            this.pictureBox19.Size = new System.Drawing.Size(305, 36);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 103;
             this.pictureBox19.TabStop = false;
@@ -823,10 +770,9 @@
             this.txtTelefonoFamilaresCerc3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoFamilaresCerc3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoFamilaresCerc3.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoFamilaresCerc3.Location = new System.Drawing.Point(1193, 677);
-            this.txtTelefonoFamilaresCerc3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoFamilaresCerc3.Location = new System.Drawing.Point(895, 550);
             this.txtTelefonoFamilaresCerc3.Name = "txtTelefonoFamilaresCerc3";
-            this.txtTelefonoFamilaresCerc3.Size = new System.Drawing.Size(379, 25);
+            this.txtTelefonoFamilaresCerc3.Size = new System.Drawing.Size(284, 20);
             this.txtTelefonoFamilaresCerc3.TabIndex = 18;
             // 
             // label16
@@ -835,10 +781,9 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(140, 634);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(105, 515);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(82, 23);
+            this.label16.Size = new System.Drawing.Size(63, 17);
             this.label16.TabIndex = 124;
             this.label16.Text = "NOMBRE";
             // 
@@ -848,10 +793,9 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(652, 634);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(489, 515);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 23);
+            this.label17.Size = new System.Drawing.Size(74, 17);
             this.label17.TabIndex = 124;
             this.label17.Text = "APELLIDOS";
             // 
@@ -861,10 +805,9 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Gray;
-            this.label18.Location = new System.Drawing.Point(1179, 634);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(884, 515);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(93, 23);
+            this.label18.Size = new System.Drawing.Size(72, 17);
             this.label18.TabIndex = 124;
             this.label18.Text = "TELÉFONO";
             // 
@@ -872,10 +815,9 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(139, 414);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(104, 336);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(235, 28);
+            this.label19.Size = new System.Drawing.Size(188, 21);
             this.label19.TabIndex = 125;
             this.label19.Text = "FAMILIARES CERCANOS";
             // 
@@ -883,10 +825,9 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(139, 89);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(104, 72);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(259, 28);
+            this.label20.Size = new System.Drawing.Size(208, 21);
             this.label20.TabIndex = 125;
             this.label20.Text = "REFERENCIA PERSONALES";
             // 
@@ -904,11 +845,11 @@
             // 
             // FrmMantenimientoClientes2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1707, 886);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.btnGuardar);
@@ -969,7 +910,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMantenimientoClientes2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMantenimientoClientes2";

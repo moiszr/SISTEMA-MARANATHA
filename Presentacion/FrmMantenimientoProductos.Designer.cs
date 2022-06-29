@@ -385,7 +385,6 @@
             this.cmbCategorias.Name = "cmbCategorias";
             this.cmbCategorias.Size = new System.Drawing.Size(249, 28);
             this.cmbCategorias.TabIndex = 6;
-            this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
             // 
             // cmbMarcas
             // 

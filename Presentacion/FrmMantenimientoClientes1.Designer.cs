@@ -145,10 +145,9 @@
             // 
             this.txtIdProductos.AutoSize = true;
             this.txtIdProductos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtIdProductos.Location = new System.Drawing.Point(459, 137);
-            this.txtIdProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtIdProductos.Location = new System.Drawing.Point(344, 111);
             this.txtIdProductos.Name = "txtIdProductos";
-            this.txtIdProductos.Size = new System.Drawing.Size(0, 25);
+            this.txtIdProductos.Size = new System.Drawing.Size(0, 20);
             this.txtIdProductos.TabIndex = 70;
             // 
             // bunifuDragControl1
@@ -166,9 +165,8 @@
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1707, 55);
+            this.TopPanel.Size = new System.Drawing.Size(1280, 45);
             this.TopPanel.TabIndex = 45;
             // 
             // lblNombre
@@ -176,9 +174,10 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(76, 16);
+            this.lblNombre.Location = new System.Drawing.Point(57, 13);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(139, 23);
+            this.lblNombre.Size = new System.Drawing.Size(114, 19);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "NUEVO CLIENTE";
             // 
@@ -186,10 +185,9 @@
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1651, 9);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(1238, 7);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 37);
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 1;
             this.btnClose.TabStop = false;
@@ -198,10 +196,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 69);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -215,10 +212,9 @@
             // 
             this.txtCodigo.AutoSize = true;
             this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtCodigo.Location = new System.Drawing.Point(43, 137);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtCodigo.Location = new System.Drawing.Point(32, 111);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(0, 25);
+            this.txtCodigo.Size = new System.Drawing.Size(0, 20);
             this.txtCodigo.TabIndex = 69;
             // 
             // btnSiguiente
@@ -242,14 +238,14 @@
             this.btnSiguiente.IconVisible = true;
             this.btnSiguiente.IconZoom = 55D;
             this.btnSiguiente.IsTab = false;
-            this.btnSiguiente.Location = new System.Drawing.Point(716, 791);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSiguiente.Location = new System.Drawing.Point(537, 643);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(93)))), ((int)(((byte)(181)))));
             this.btnSiguiente.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(93)))), ((int)(((byte)(181)))));
             this.btnSiguiente.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSiguiente.selected = false;
-            this.btnSiguiente.Size = new System.Drawing.Size(276, 52);
+            this.btnSiguiente.Size = new System.Drawing.Size(207, 42);
             this.btnSiguiente.TabIndex = 25;
             this.btnSiguiente.Text = "SIGUIENTE";
             this.btnSiguiente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,10 +259,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(451, 194);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(338, 158);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 23);
+            this.label7.Size = new System.Drawing.Size(67, 17);
             this.label7.TabIndex = 65;
             this.label7.Text = "APELLIDO";
             // 
@@ -276,10 +271,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(32, 405);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(24, 329);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 23);
+            this.label4.Size = new System.Drawing.Size(129, 17);
             this.label4.TabIndex = 63;
             this.label4.Text = "TELÉFONO CELULAR";
             // 
@@ -289,10 +283,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(32, 299);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(24, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 23);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 62;
             this.label3.Text = "APODO *";
             // 
@@ -302,10 +295,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(32, 194);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(24, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 23);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 61;
             this.label2.Text = "NOMBRE";
             // 
@@ -315,10 +307,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(32, 94);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(24, 76);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 23);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 68;
             this.label6.Text = "CODIGO";
             // 
@@ -327,10 +318,9 @@
             this.txtApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidoCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoCliente.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellidoCliente.Location = new System.Drawing.Point(464, 238);
-            this.txtApellidoCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidoCliente.Location = new System.Drawing.Point(348, 193);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(325, 25);
+            this.txtApellidoCliente.Size = new System.Drawing.Size(244, 20);
             this.txtApellidoCliente.TabIndex = 3;
             // 
             // txtTelefonoCelularCliente
@@ -338,10 +328,9 @@
             this.txtTelefonoCelularCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoCelularCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoCelularCliente.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoCelularCliente.Location = new System.Drawing.Point(47, 448);
-            this.txtTelefonoCelularCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoCelularCliente.Location = new System.Drawing.Point(35, 364);
             this.txtTelefonoCelularCliente.Name = "txtTelefonoCelularCliente";
-            this.txtTelefonoCelularCliente.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoCelularCliente.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoCelularCliente.TabIndex = 6;
             // 
             // txtApodoCliente
@@ -349,10 +338,9 @@
             this.txtApodoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApodoCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApodoCliente.ForeColor = System.Drawing.Color.Gray;
-            this.txtApodoCliente.Location = new System.Drawing.Point(47, 342);
-            this.txtApodoCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApodoCliente.Location = new System.Drawing.Point(35, 278);
             this.txtApodoCliente.Name = "txtApodoCliente";
-            this.txtApodoCliente.Size = new System.Drawing.Size(325, 25);
+            this.txtApodoCliente.Size = new System.Drawing.Size(244, 20);
             this.txtApodoCliente.TabIndex = 4;
             // 
             // txtNombreCliente
@@ -360,19 +348,17 @@
             this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCliente.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreCliente.Location = new System.Drawing.Point(47, 238);
-            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreCliente.Location = new System.Drawing.Point(35, 193);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(325, 25);
+            this.txtNombreCliente.Size = new System.Drawing.Size(244, 20);
             this.txtNombreCliente.TabIndex = 2;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(451, 229);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Location = new System.Drawing.Point(338, 186);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox7.Size = new System.Drawing.Size(265, 36);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 55;
             this.pictureBox7.TabStop = false;
@@ -380,10 +366,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 334);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(25, 271);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(265, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
@@ -391,10 +376,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 229);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(25, 186);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(265, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 53;
             this.pictureBox2.TabStop = false;
@@ -402,22 +386,19 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(33, 128);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(25, 104);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox5.Size = new System.Drawing.Size(265, 36);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 59;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(33, 439);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(25, 357);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox4.Size = new System.Drawing.Size(265, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 57;
             this.pictureBox4.TabStop = false;
@@ -428,10 +409,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(449, 94);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(337, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 23);
+            this.label1.Size = new System.Drawing.Size(136, 17);
             this.label1.TabIndex = 73;
             this.label1.Text = "NÚMERO DE CÉDULA";
             // 
@@ -440,19 +420,17 @@
             this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.ForeColor = System.Drawing.Color.Gray;
-            this.txtCedula.Location = new System.Drawing.Point(464, 137);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCedula.Location = new System.Drawing.Point(348, 111);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(325, 25);
+            this.txtCedula.Size = new System.Drawing.Size(244, 20);
             this.txtCedula.TabIndex = 1;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(451, 128);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(338, 104);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox8.Size = new System.Drawing.Size(265, 36);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 72;
             this.pictureBox8.TabStop = false;
@@ -463,10 +441,9 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(33, 623);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(25, 506);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 23);
+            this.label8.Size = new System.Drawing.Size(130, 17);
             this.label8.TabIndex = 76;
             this.label8.Text = "LUGAR DE TRABAJO";
             // 
@@ -475,19 +452,17 @@
             this.txtLugarDeTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLugarDeTrabajo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarDeTrabajo.ForeColor = System.Drawing.Color.Gray;
-            this.txtLugarDeTrabajo.Location = new System.Drawing.Point(48, 666);
-            this.txtLugarDeTrabajo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLugarDeTrabajo.Location = new System.Drawing.Point(36, 541);
             this.txtLugarDeTrabajo.Name = "txtLugarDeTrabajo";
-            this.txtLugarDeTrabajo.Size = new System.Drawing.Size(325, 25);
+            this.txtLugarDeTrabajo.Size = new System.Drawing.Size(244, 20);
             this.txtLugarDeTrabajo.TabIndex = 11;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(35, 657);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Location = new System.Drawing.Point(26, 534);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox9.Size = new System.Drawing.Size(265, 36);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 75;
             this.pictureBox9.TabStop = false;
@@ -495,10 +470,9 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(35, 545);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(26, 443);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(352, 44);
+            this.pictureBox10.Size = new System.Drawing.Size(264, 36);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 57;
             this.pictureBox10.TabStop = false;
@@ -508,12 +482,10 @@
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.Color.Gray;
-            this.txtDireccion.Location = new System.Drawing.Point(48, 554);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Location = new System.Drawing.Point(36, 450);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(324, 25);
+            this.txtDireccion.Size = new System.Drawing.Size(243, 20);
             this.txtDireccion.TabIndex = 8;
-            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // label9
             // 
@@ -521,20 +493,18 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(33, 511);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(25, 415);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.Size = new System.Drawing.Size(76, 17);
             this.label9.TabIndex = 63;
             this.label9.Text = "DIRECCIÓN";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(451, 334);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(338, 271);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox6.Size = new System.Drawing.Size(265, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 55;
             this.pictureBox6.TabStop = false;
@@ -544,10 +514,9 @@
             this.txtTelefonoResidencial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoResidencial.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoResidencial.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoResidencial.Location = new System.Drawing.Point(464, 342);
-            this.txtTelefonoResidencial.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoResidencial.Location = new System.Drawing.Point(348, 278);
             this.txtTelefonoResidencial.Name = "txtTelefonoResidencial";
-            this.txtTelefonoResidencial.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoResidencial.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoResidencial.TabIndex = 5;
             // 
             // label5
@@ -556,20 +525,18 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(451, 299);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(338, 243);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 23);
+            this.label5.Size = new System.Drawing.Size(155, 17);
             this.label5.TabIndex = 65;
             this.label5.Text = "TELÉFONO RESIDENCIAL";
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(451, 439);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(338, 357);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox11.Size = new System.Drawing.Size(265, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 55;
             this.pictureBox11.TabStop = false;
@@ -579,10 +546,9 @@
             this.txtOtroTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOtroTelefono.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOtroTelefono.ForeColor = System.Drawing.Color.Gray;
-            this.txtOtroTelefono.Location = new System.Drawing.Point(464, 448);
-            this.txtOtroTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOtroTelefono.Location = new System.Drawing.Point(348, 364);
             this.txtOtroTelefono.Name = "txtOtroTelefono";
-            this.txtOtroTelefono.Size = new System.Drawing.Size(325, 25);
+            this.txtOtroTelefono.Size = new System.Drawing.Size(244, 20);
             this.txtOtroTelefono.TabIndex = 7;
             // 
             // label11
@@ -591,20 +557,18 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(451, 405);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(338, 329);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 23);
+            this.label11.Size = new System.Drawing.Size(110, 17);
             this.label11.TabIndex = 65;
             this.label11.Text = "OTRO TELÉFONO";
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(452, 657);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Location = new System.Drawing.Point(339, 534);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox12.Size = new System.Drawing.Size(265, 36);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 55;
             this.pictureBox12.TabStop = false;
@@ -614,10 +578,9 @@
             this.txtTelefonoTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoTrabajo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoTrabajo.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoTrabajo.Location = new System.Drawing.Point(465, 666);
-            this.txtTelefonoTrabajo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoTrabajo.Location = new System.Drawing.Point(349, 541);
             this.txtTelefonoTrabajo.Name = "txtTelefonoTrabajo";
-            this.txtTelefonoTrabajo.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoTrabajo.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoTrabajo.TabIndex = 12;
             // 
             // label12
@@ -626,20 +589,18 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(452, 623);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(339, 506);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(197, 23);
+            this.label12.Size = new System.Drawing.Size(153, 17);
             this.label12.TabIndex = 65;
             this.label12.Text = "TELÉFONO DE TRABAJO";
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(887, 128);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Location = new System.Drawing.Point(665, 104);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox13.Size = new System.Drawing.Size(265, 36);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 55;
             this.pictureBox13.TabStop = false;
@@ -649,10 +610,9 @@
             this.txtNombredelSuperiorInmediato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombredelSuperiorInmediato.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombredelSuperiorInmediato.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombredelSuperiorInmediato.Location = new System.Drawing.Point(900, 137);
-            this.txtNombredelSuperiorInmediato.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombredelSuperiorInmediato.Location = new System.Drawing.Point(675, 111);
             this.txtNombredelSuperiorInmediato.Name = "txtNombredelSuperiorInmediato";
-            this.txtNombredelSuperiorInmediato.Size = new System.Drawing.Size(325, 25);
+            this.txtNombredelSuperiorInmediato.Size = new System.Drawing.Size(244, 20);
             this.txtNombredelSuperiorInmediato.TabIndex = 13;
             // 
             // label13
@@ -661,20 +621,18 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(887, 94);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(665, 76);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(297, 23);
+            this.label13.Size = new System.Drawing.Size(228, 17);
             this.label13.TabIndex = 65;
             this.label13.Text = "NOMBRE DEL SUPERIOR INMEDIATO";
             // 
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(1300, 128);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox14.Location = new System.Drawing.Point(975, 104);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox14.Size = new System.Drawing.Size(265, 36);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 55;
             this.pictureBox14.TabStop = false;
@@ -684,10 +642,9 @@
             this.txtTelefonoDelSuperiorInmediato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoDelSuperiorInmediato.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDelSuperiorInmediato.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoDelSuperiorInmediato.Location = new System.Drawing.Point(1313, 137);
-            this.txtTelefonoDelSuperiorInmediato.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoDelSuperiorInmediato.Location = new System.Drawing.Point(985, 111);
             this.txtTelefonoDelSuperiorInmediato.Name = "txtTelefonoDelSuperiorInmediato";
-            this.txtTelefonoDelSuperiorInmediato.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoDelSuperiorInmediato.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoDelSuperiorInmediato.TabIndex = 14;
             // 
             // label14
@@ -696,20 +653,18 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(1300, 94);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(975, 76);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(308, 23);
+            this.label14.Size = new System.Drawing.Size(237, 17);
             this.label14.TabIndex = 65;
             this.label14.Text = "TELÉFONO DEL SUPERIOR INMEDIATO";
             // 
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(887, 229);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox15.Location = new System.Drawing.Point(665, 186);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox15.Size = new System.Drawing.Size(265, 36);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 55;
             this.pictureBox15.TabStop = false;
@@ -719,10 +674,9 @@
             this.txtTiempoLaborando.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTiempoLaborando.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiempoLaborando.ForeColor = System.Drawing.Color.Gray;
-            this.txtTiempoLaborando.Location = new System.Drawing.Point(900, 238);
-            this.txtTiempoLaborando.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTiempoLaborando.Location = new System.Drawing.Point(675, 193);
             this.txtTiempoLaborando.Name = "txtTiempoLaborando";
-            this.txtTiempoLaborando.Size = new System.Drawing.Size(325, 25);
+            this.txtTiempoLaborando.Size = new System.Drawing.Size(244, 20);
             this.txtTiempoLaborando.TabIndex = 15;
             // 
             // label15
@@ -731,20 +685,18 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(887, 194);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(665, 158);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(179, 23);
+            this.label15.Size = new System.Drawing.Size(139, 17);
             this.label15.TabIndex = 65;
             this.label15.Text = "TIEMPO LABORANDO";
             // 
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(1300, 229);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox16.Location = new System.Drawing.Point(975, 186);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox16.Size = new System.Drawing.Size(265, 36);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 55;
             this.pictureBox16.TabStop = false;
@@ -754,10 +706,9 @@
             this.txtSalarioMensual.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSalarioMensual.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalarioMensual.ForeColor = System.Drawing.Color.Gray;
-            this.txtSalarioMensual.Location = new System.Drawing.Point(1313, 238);
-            this.txtSalarioMensual.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalarioMensual.Location = new System.Drawing.Point(985, 193);
             this.txtSalarioMensual.Name = "txtSalarioMensual";
-            this.txtSalarioMensual.Size = new System.Drawing.Size(325, 25);
+            this.txtSalarioMensual.Size = new System.Drawing.Size(244, 20);
             this.txtSalarioMensual.TabIndex = 16;
             this.txtSalarioMensual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioMensual_KeyPress);
             // 
@@ -767,20 +718,18 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(1300, 194);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(975, 158);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(161, 23);
+            this.label16.Size = new System.Drawing.Size(125, 17);
             this.label16.TabIndex = 65;
             this.label16.Text = "SALARIO MENSUAL";
             // 
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(887, 334);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox17.Location = new System.Drawing.Point(665, 271);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox17.Size = new System.Drawing.Size(265, 36);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 55;
             this.pictureBox17.TabStop = false;
@@ -790,10 +739,9 @@
             this.txtNombreDelConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreDelConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDelConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreDelConyugue.Location = new System.Drawing.Point(900, 342);
-            this.txtNombreDelConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreDelConyugue.Location = new System.Drawing.Point(675, 278);
             this.txtNombreDelConyugue.Name = "txtNombreDelConyugue";
-            this.txtNombreDelConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtNombreDelConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtNombreDelConyugue.TabIndex = 17;
             // 
             // label17
@@ -802,20 +750,18 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(887, 299);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(665, 243);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(213, 23);
+            this.label17.Size = new System.Drawing.Size(163, 17);
             this.label17.TabIndex = 65;
             this.label17.Text = "NOMBRE DEL CONYUGUE";
             // 
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(1300, 334);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox18.Location = new System.Drawing.Point(975, 271);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox18.Size = new System.Drawing.Size(265, 36);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 55;
             this.pictureBox18.TabStop = false;
@@ -825,10 +771,9 @@
             this.txtTelefonoDelConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoDelConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDelConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoDelConyugue.Location = new System.Drawing.Point(1313, 342);
-            this.txtTelefonoDelConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoDelConyugue.Location = new System.Drawing.Point(985, 278);
             this.txtTelefonoDelConyugue.Name = "txtTelefonoDelConyugue";
-            this.txtTelefonoDelConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoDelConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoDelConyugue.TabIndex = 18;
             // 
             // label18
@@ -837,20 +782,18 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Gray;
-            this.label18.Location = new System.Drawing.Point(1300, 299);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(975, 243);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(224, 23);
+            this.label18.Size = new System.Drawing.Size(172, 17);
             this.label18.TabIndex = 65;
             this.label18.Text = "TELÉFONO DEL CONYUGUE";
             // 
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(887, 439);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox19.Location = new System.Drawing.Point(665, 357);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox19.Size = new System.Drawing.Size(265, 36);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 55;
             this.pictureBox19.TabStop = false;
@@ -860,10 +803,9 @@
             this.txtLugarDeTrabajoDelConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLugarDeTrabajoDelConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarDeTrabajoDelConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtLugarDeTrabajoDelConyugue.Location = new System.Drawing.Point(900, 448);
-            this.txtLugarDeTrabajoDelConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLugarDeTrabajoDelConyugue.Location = new System.Drawing.Point(675, 364);
             this.txtLugarDeTrabajoDelConyugue.Name = "txtLugarDeTrabajoDelConyugue";
-            this.txtLugarDeTrabajoDelConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtLugarDeTrabajoDelConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtLugarDeTrabajoDelConyugue.TabIndex = 19;
             // 
             // label19
@@ -872,20 +814,18 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Gray;
-            this.label19.Location = new System.Drawing.Point(887, 405);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(665, 329);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(299, 23);
+            this.label19.Size = new System.Drawing.Size(230, 17);
             this.label19.TabIndex = 65;
             this.label19.Text = "LUGAR DE TRABAJO DEL CONYUGUE";
             // 
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(1300, 439);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox20.Location = new System.Drawing.Point(975, 357);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox20.Size = new System.Drawing.Size(265, 36);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 55;
             this.pictureBox20.TabStop = false;
@@ -895,10 +835,9 @@
             this.txtTelefonoDeTrabajoDelConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoDeTrabajoDelConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDeTrabajoDelConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoDeTrabajoDelConyugue.Location = new System.Drawing.Point(1313, 448);
-            this.txtTelefonoDeTrabajoDelConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoDeTrabajoDelConyugue.Location = new System.Drawing.Point(985, 364);
             this.txtTelefonoDeTrabajoDelConyugue.Name = "txtTelefonoDeTrabajoDelConyugue";
-            this.txtTelefonoDeTrabajoDelConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoDeTrabajoDelConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoDeTrabajoDelConyugue.TabIndex = 20;
             // 
             // label20
@@ -907,20 +846,18 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Gray;
-            this.label20.Location = new System.Drawing.Point(1300, 405);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(975, 329);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(328, 23);
+            this.label20.Size = new System.Drawing.Size(253, 17);
             this.label20.TabIndex = 65;
             this.label20.Text = "TELÉFONO DE TRABAJO DEL CONYUGUE";
             // 
             // pictureBox21
             // 
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(887, 545);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox21.Location = new System.Drawing.Point(665, 443);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox21.Size = new System.Drawing.Size(265, 36);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 55;
             this.pictureBox21.TabStop = false;
@@ -930,10 +867,9 @@
             this.txtNombreDelSuperiorConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreDelSuperiorConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDelSuperiorConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombreDelSuperiorConyugue.Location = new System.Drawing.Point(900, 554);
-            this.txtNombreDelSuperiorConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreDelSuperiorConyugue.Location = new System.Drawing.Point(675, 450);
             this.txtNombreDelSuperiorConyugue.Name = "txtNombreDelSuperiorConyugue";
-            this.txtNombreDelSuperiorConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtNombreDelSuperiorConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtNombreDelSuperiorConyugue.TabIndex = 21;
             // 
             // label21
@@ -942,20 +878,18 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Gray;
-            this.label21.Location = new System.Drawing.Point(887, 511);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(665, 415);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(298, 23);
+            this.label21.Size = new System.Drawing.Size(228, 17);
             this.label21.TabIndex = 65;
             this.label21.Text = "NOMBRE DEL SUPERIOR CONYUGUE";
             // 
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(1300, 545);
-            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox22.Location = new System.Drawing.Point(975, 443);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox22.Size = new System.Drawing.Size(265, 36);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 55;
             this.pictureBox22.TabStop = false;
@@ -965,10 +899,9 @@
             this.txtTelefonoSuperiorConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoSuperiorConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoSuperiorConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefonoSuperiorConyugue.Location = new System.Drawing.Point(1313, 554);
-            this.txtTelefonoSuperiorConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefonoSuperiorConyugue.Location = new System.Drawing.Point(985, 450);
             this.txtTelefonoSuperiorConyugue.Name = "txtTelefonoSuperiorConyugue";
-            this.txtTelefonoSuperiorConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtTelefonoSuperiorConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtTelefonoSuperiorConyugue.TabIndex = 22;
             // 
             // label22
@@ -977,20 +910,18 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Gray;
-            this.label22.Location = new System.Drawing.Point(1300, 511);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(975, 415);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(275, 23);
+            this.label22.Size = new System.Drawing.Size(211, 17);
             this.label22.TabIndex = 65;
             this.label22.Text = "TELÉFONO SUPERIOR CONYUGUE";
             // 
             // pictureBox23
             // 
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(887, 657);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox23.Location = new System.Drawing.Point(665, 534);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox23.Size = new System.Drawing.Size(265, 36);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 55;
             this.pictureBox23.TabStop = false;
@@ -1000,10 +931,9 @@
             this.txtTiempoLaborandoConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTiempoLaborandoConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiempoLaborandoConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtTiempoLaborandoConyugue.Location = new System.Drawing.Point(900, 666);
-            this.txtTiempoLaborandoConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTiempoLaborandoConyugue.Location = new System.Drawing.Point(675, 541);
             this.txtTiempoLaborandoConyugue.Name = "txtTiempoLaborandoConyugue";
-            this.txtTiempoLaborandoConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtTiempoLaborandoConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtTiempoLaborandoConyugue.TabIndex = 23;
             // 
             // label23
@@ -1012,20 +942,18 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Gray;
-            this.label23.Location = new System.Drawing.Point(887, 623);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(665, 506);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(276, 23);
+            this.label23.Size = new System.Drawing.Size(213, 17);
             this.label23.TabIndex = 65;
             this.label23.Text = "TIEMPO LABORANDO CONYUGUE";
             // 
             // pictureBox24
             // 
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(1300, 657);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox24.Location = new System.Drawing.Point(975, 534);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(353, 44);
+            this.pictureBox24.Size = new System.Drawing.Size(265, 36);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 55;
             this.pictureBox24.TabStop = false;
@@ -1035,10 +963,9 @@
             this.txtSalarioMensualConyugue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSalarioMensualConyugue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalarioMensualConyugue.ForeColor = System.Drawing.Color.Gray;
-            this.txtSalarioMensualConyugue.Location = new System.Drawing.Point(1313, 666);
-            this.txtSalarioMensualConyugue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalarioMensualConyugue.Location = new System.Drawing.Point(985, 541);
             this.txtSalarioMensualConyugue.Name = "txtSalarioMensualConyugue";
-            this.txtSalarioMensualConyugue.Size = new System.Drawing.Size(325, 25);
+            this.txtSalarioMensualConyugue.Size = new System.Drawing.Size(244, 20);
             this.txtSalarioMensualConyugue.TabIndex = 24;
             this.txtSalarioMensualConyugue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioMensualConyugue_KeyPress);
             // 
@@ -1048,10 +975,9 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Gray;
-            this.label24.Location = new System.Drawing.Point(1300, 623);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(975, 506);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(258, 23);
+            this.label24.Size = new System.Drawing.Size(199, 17);
             this.label24.TabIndex = 65;
             this.label24.Text = "SALARIO MENSUAL CONYUGUE";
             // 
@@ -1067,12 +993,10 @@
             this.txtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdCliente.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdCliente.ForeColor = System.Drawing.Color.Gray;
-            this.txtIdCliente.Location = new System.Drawing.Point(47, 137);
-            this.txtIdCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdCliente.Location = new System.Drawing.Point(35, 111);
             this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(325, 25);
+            this.txtIdCliente.Size = new System.Drawing.Size(244, 20);
             this.txtIdCliente.TabIndex = 77;
-            this.txtIdCliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // rdbAlquilada
             // 
@@ -1080,10 +1004,9 @@
             this.rdbAlquilada.BackColor = System.Drawing.Color.Transparent;
             this.rdbAlquilada.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAlquilada.ForeColor = System.Drawing.Color.Gray;
-            this.rdbAlquilada.Location = new System.Drawing.Point(176, 34);
-            this.rdbAlquilada.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbAlquilada.Location = new System.Drawing.Point(132, 28);
             this.rdbAlquilada.Name = "rdbAlquilada";
-            this.rdbAlquilada.Size = new System.Drawing.Size(133, 29);
+            this.rdbAlquilada.Size = new System.Drawing.Size(107, 24);
             this.rdbAlquilada.TabIndex = 10;
             this.rdbAlquilada.TabStop = true;
             this.rdbAlquilada.Text = "ALQUILADA";
@@ -1095,10 +1018,9 @@
             this.rdbPropia.BackColor = System.Drawing.Color.Transparent;
             this.rdbPropia.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbPropia.ForeColor = System.Drawing.Color.Gray;
-            this.rdbPropia.Location = new System.Drawing.Point(23, 34);
-            this.rdbPropia.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbPropia.Location = new System.Drawing.Point(17, 28);
             this.rdbPropia.Name = "rdbPropia";
-            this.rdbPropia.Size = new System.Drawing.Size(97, 29);
+            this.rdbPropia.Size = new System.Drawing.Size(77, 24);
             this.rdbPropia.TabIndex = 9;
             this.rdbPropia.TabStop = true;
             this.rdbPropia.Text = "PROPIA";
@@ -1110,21 +1032,23 @@
             this.Gcasa.Controls.Add(this.rdbAlquilada);
             this.Gcasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gcasa.ForeColor = System.Drawing.Color.Gray;
-            this.Gcasa.Location = new System.Drawing.Point(455, 511);
+            this.Gcasa.Location = new System.Drawing.Point(341, 415);
+            this.Gcasa.Margin = new System.Windows.Forms.Padding(2);
             this.Gcasa.Name = "Gcasa";
-            this.Gcasa.Size = new System.Drawing.Size(348, 77);
+            this.Gcasa.Padding = new System.Windows.Forms.Padding(2);
+            this.Gcasa.Size = new System.Drawing.Size(261, 63);
             this.Gcasa.TabIndex = 78;
             this.Gcasa.TabStop = false;
             this.Gcasa.Text = "CASA";
             // 
             // FrmMantenimientoClientes1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1707, 886);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.Gcasa);
             this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.label8);
@@ -1201,7 +1125,6 @@
             this.Controls.Add(this.TopPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMantenimientoClientes1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMantenimientoClientes1";

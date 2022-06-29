@@ -7,7 +7,7 @@
     <ProjectGuid>{4600A1F1-7ABF-4061-84B2-8322A046A539}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentacion</RootNamespace>
-    <AssemblyName>Presentacion</AssemblyName>
+    <AssemblyName>SISTEMA MARANATHA</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
@@ -419,6 +422,7 @@
     <Content Include="Img\Iconos\save.png" />
     <Content Include="Img\Iconos\search.png" />
     <Content Include="Img\Iconos\totals.png" />
+    <Content Include="Logo.ico" />
     <None Include="Resources\Pagofactura.html" />
     <None Include="Resources\plantilla_factura.html" />
     <None Include="Resources\LogoTop-1.png" />

@@ -105,8 +105,6 @@ namespace Presentacion
 
         }
 
-        FrmClientes frm = new FrmClientes();
-        FrmMantenimientoClientes1 frmC1 = new FrmMantenimientoClientes1();
         E_Cliente entidades = new E_Cliente();
         N_Cliente negocio = new N_Cliente();
 
@@ -150,8 +148,6 @@ namespace Presentacion
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {   
-            
-            
             this.Hide();
             FrmMantenimientoClientes1 frm = new FrmMantenimientoClientes1();
 
@@ -179,8 +175,6 @@ namespace Presentacion
             frm.txtTelefonoSuperiorConyugue.Text = TelefonoSuperiorConyugue;
             frm.txtTiempoLaborandoConyugue.Text = TiempoLaborandoConyugue;
             frm.txtSalarioMensualConyugue.Text = SalarioMensualConyugue.ToString();
-
-
       
             frm.ShowDialog();
         }
@@ -192,11 +186,10 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (Idcliente < 0)
+            if (Update == false)
             {
                 try
                 {
-
                     entidades.Nombre = Nombre;
                     entidades.Apellido = Apellido;
                     entidades.Cedula = Cedula;
@@ -236,12 +229,12 @@ namespace Presentacion
 
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("No se pudo guardar el cliente" + ex);
+                    FrmWarning.AdvertenciaForm("NO SE PUDO GUARDAR EL CLIENTE");
                 }
             }
-            if (Idcliente >= 0)
+            else
             {
                 try
                 {
@@ -283,16 +276,11 @@ namespace Presentacion
                     Close();
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("No se pudo editar el cliente" + ex);
+                    FrmWarning.AdvertenciaForm("NO SE PUDO EDITAR EL CLIENTE");
                 }
             }
-
-        }
-
-        private void txtTelefonoReferenciaPer1_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

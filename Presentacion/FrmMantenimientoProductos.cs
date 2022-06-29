@@ -105,8 +105,6 @@ namespace Presentacion
                 m.Result = (IntPtr)HTCAPTION;
 
         }
-
-        FrmProductos frm = new FrmProductos();
         E_Productos entidades = new E_Productos();
         N_Productos negocio = new N_Productos();
 
@@ -161,9 +159,9 @@ namespace Presentacion
 
                     Close();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("No se pudo guardar el producto" + ex);
+                    FrmWarning.AdvertenciaForm("NO SE PUDO GUARDAR EL PRODUCTO");
                 }
             }
             if (Update == true)
@@ -186,27 +184,24 @@ namespace Presentacion
 
                     Update = false;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("No se pudo editar el producto" + ex);
+                    FrmWarning.AdvertenciaForm("NO SE PUDO EDITAR EL PRODUCTO");
                 }
             }
         }
 
-        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtPrecioCompra_TextChanged(object sender, EventArgs e)
         {
-   
-            N_Categoria categoria = new N_Categoria();
-            int id = Convert.ToInt32(cmbCategorias.SelectedValue);
-            DataProduct.ListCategoria = categoria.BuscarCategoriasXID(id);
+            try
+            {
+                N_Categoria categoria = new N_Categoria();
+                int id = Convert.ToInt32(cmbCategorias.SelectedValue);
+                DataProduct.ListCategoria = categoria.BuscarCategoriasXID(id);
 
-            int PrecioCompra = Convert.ToInt32(txtPrecioCompra.Text);
-            txtPrecioVenta.Text = (PrecioCompra * ((DataProduct.ListCategoria[0].Porciento_Venta / 100)+1)).ToString();
+                int PrecioCompra = Convert.ToInt32(txtPrecioCompra.Text);
+                txtPrecioVenta.Text = (PrecioCompra * ((DataProduct.ListCategoria[0].Porciento_Venta / 100) + 1)).ToString();
+            } catch{}
         }
     }
 }
